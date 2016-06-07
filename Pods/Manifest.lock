@@ -1,0 +1,36 @@
+PODS:
+  - Bolts/Tasks (1.5.1)
+  - CorePlot (2.0)
+  - Keys (1.0.0)
+  - Nimbus/Core (1.2.2)
+  - Nimbus/Models (1.2.2):
+    - Nimbus/Core
+  - Parse (1.12.0):
+    - Bolts/Tasks (~> 1.5)
+
+DEPENDENCIES:
+  - CorePlot (= 2.0)
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Nimbus/Models (from `git@gitlab.rambler.ru:cocoapods/nimbus.git`, tag `1.2.2`)
+  - Parse (~> 1.12)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+  Nimbus:
+    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
+    :tag: 1.2.2
+
+CHECKOUT OPTIONS:
+  Nimbus:
+    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
+    :tag: 1.2.2
+
+SPEC CHECKSUMS:
+  Bolts: a12663244b1d3351c738882e71902fc74db54f64
+  CorePlot: b7f422ad363f2b0e48152471d6da45ce232eb8c6
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Nimbus: 355131d4656498bf072fecc142752a9f343eb59b
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+
+COCOAPODS: 0.39.0
