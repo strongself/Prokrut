@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A6A058CDB6419E1FB2D88B3D'
-               BlueprintName = 'Nimbus'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Nimbus.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "48368C73D5E28E720D134BB7E16A31CC"
+               BlueprintName = "Nimbus"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "Nimbus.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
