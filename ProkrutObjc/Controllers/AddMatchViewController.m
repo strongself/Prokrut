@@ -3,6 +3,7 @@
 // Copyright (c) 2016 DevAlloy. All rights reserved.
 //
 
+#import <Parse/PFObject.h>
 #import "AddMatchViewController.h"
 
 #import "ChooseUserViewController.h"
@@ -14,9 +15,9 @@
 @interface AddMatchViewController() <AddMatchDataDisplayManagerDelegate>
 
 @property (nonatomic, strong) AddMatchDataDisplayManager *addMatchDataDisplayManager;
-@property (nonatomic, strong) PFObject *match;
 @property (nonatomic) NSInteger lastUserIndex;
 @property (nonatomic) NSInteger lastScoreIndex;
+@property (nonatomic) BOOL isNewMatch;
 
 @end
 
@@ -24,11 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.match = [PFObject objectWithClassName:@"Match"];
+
     self.addMatchDataDisplayManager = [AddMatchDataDisplayManager new];
     self.addMatchDataDisplayManager.ddmDelegate = self;
     self.tableView.dataSource = [self.addMatchDataDisplayManager dataSource];
     self.tableView.delegate = [self.addMatchDataDisplayManager delegate];
+
+    if (self.match) {
+        [self updateWithMatch];
+        self.isNewMatch = NO;
+    } else {
+        self.isNewMatch = YES;
+        self.match = [PFObject objectWithClassName:@"Match"];
+    }
 
     [self.tableView reloadData];
 }
@@ -41,8 +50,10 @@
                                                    message:@"Неверно указаны данные матча"];
         return;
     }
-    
-    self.match[@"createdDate"] = [NSDate date];
+
+    if (self.isNewMatch) {
+        self.match[@"createdDate"] = [NSDate date];
+    }
     self.match[@"seasonId"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentSeasonId"];
     
     [self.match saveEventually];
@@ -75,6 +86,16 @@
             [self.addMatchDataDisplayManager updateTitleForScoreCellAtIndex:self.lastScoreIndex title:[@(score) stringValue]];
         };
     }
+}
+
+- (void)updateWithMatch {
+    [self.addMatchDataDisplayManager updateTitleForScoreCellAtIndex:0 title:[self.match[@"redTeamScore"] stringValue]];
+    [self.addMatchDataDisplayManager updateTitleForScoreCellAtIndex:1 title:[self.match[@"blueTeamScore"] stringValue]];
+
+    [self.addMatchDataDisplayManager updateTitleForUserCellAtIndex:0 title:[self.match[@"firstRedPlayer"] username]];
+    [self.addMatchDataDisplayManager updateTitleForUserCellAtIndex:1 title:[self.match[@"secondRedPlayer"] username]];
+    [self.addMatchDataDisplayManager updateTitleForUserCellAtIndex:2 title:[self.match[@"firstBluePlayer"] username]];
+    [self.addMatchDataDisplayManager updateTitleForUserCellAtIndex:3 title:[self.match[@"secondBluePlayer"] username]];
 }
 
 - (void)fillMatchWithUser:(PFUser *)user {
@@ -148,19 +169,5 @@
     
     return YES;
 }
-
-//#pragma mark - UITableView
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return 10;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *tableViewCell = [UITableViewCell new];
-//    return tableViewCell;
-//}
 
 @end

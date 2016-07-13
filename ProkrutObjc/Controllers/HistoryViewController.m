@@ -13,6 +13,7 @@
 
 #import "MatchCellObject.h"
 #import "DateFormatter.h"
+#import "AddMatchViewController.h"
 
 @interface HistoryViewController ()<UITableViewDelegate>
 
@@ -20,6 +21,9 @@
 @property (nonatomic, strong) NITableViewModel *model;
 @property (nonatomic, strong) NSDate *tempDate;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSArray *matches;
+
+@property (nonatomic, strong) PFObject *selectedMatch;
 
 @end
 
@@ -61,6 +65,7 @@
     }
     [query addDescendingOrder:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        self.matches = objects;
         if (objects.count == 0 && fromLocalStorage) {
             // пробуем получить из сети
             [self recieveMathcesDataFromLocalStorage:NO];
@@ -109,7 +114,7 @@
 
 - (void)addDateWithMatch:(PFObject *)match forModel:(NSMutableArray *)dateModel {
     NSDate *matchDate = match[@"createdDate"];
-        if (!isSameDay(matchDate, self.tempDate)) {
+    if (!isSameDay(matchDate, self.tempDate)) {
         self.tempDate = matchDate;
         NSString *sectionString = [self.dateFormatter stringFromDate:matchDate];
         [dateModel addObject:sectionString];
@@ -124,10 +129,20 @@
     return _dateFormatter;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    AddMatchViewController *destinationController = [segue destinationViewController];
+    destinationController.match = self.selectedMatch;
+}
+
 #pragma mark - <UITableViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 105.f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedMatch = self.matches[indexPath.row];
+    [self performSegueWithIdentifier:@"editMatch" sender:self];
 }
 
 @end

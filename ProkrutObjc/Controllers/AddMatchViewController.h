@@ -5,5 +5,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class PFObject;
+
 @interface AddMatchViewController : UITableViewController
+
+@property (nonatomic, strong) PFObject *match;
+
 @end
