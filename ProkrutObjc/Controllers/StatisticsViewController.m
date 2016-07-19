@@ -26,6 +26,7 @@
 @property (nonatomic, strong) NITableViewActions *tableViewActions;
 @property (nonatomic, strong) NITableViewModel *model;
 @property (nonatomic, strong) StatisticsService *statisticsService;
+@property (nonatomic, strong) StatisticsProcessor *statisticsProcessor;
 
 @property (nonatomic, strong) NSDate *currentMatchDate;
 
@@ -34,17 +35,24 @@
 @implementation StatisticsViewController
 
 - (StatisticsService *)statisticsService {
-  if (!_statisticsService) {
-    _statisticsService = [StatisticsService new];
-  }
-  return _statisticsService;
+    if (!_statisticsService) {
+        _statisticsService = [StatisticsService new];
+    }
+    return _statisticsService;
+}
+
+- (StatisticsProcessor *)statisticsProcessor {
+    if (!_statisticsProcessor) {
+        _statisticsProcessor = [StatisticsProcessor new];
+    }
+    return _statisticsProcessor;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  UIRefreshControl *pullToRefreshControl = [UIRefreshControl new];
-  [pullToRefreshControl addTarget:self action:@selector(didPullToRefesh:) forControlEvents:UIControlEventValueChanged];
-  self.refreshControl = pullToRefreshControl;
+    [super viewDidLoad];
+    UIRefreshControl *pullToRefreshControl = [UIRefreshControl new];
+    [pullToRefreshControl addTarget:self action:@selector(didPullToRefesh:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = pullToRefreshControl;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,19 +83,15 @@
 }
 
 - (void)didPullToRefesh:(UIRefreshControl *)refreshControl {
-  [self recieveMatchesData];
+    [self recieveMatchesData];
 }
 
 #pragma mark - table view
 - (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
     NSMutableArray *mutableModel = [NSMutableArray array];
     
-    NSString *sortKey = NSStringFromSelector(@selector(winrate));
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:sortKey
-                                                                     ascending:NO];
-    NSArray *orderedStats = [stats sortedArrayUsingDescriptors:@[sortDescriptor]];
-    
-    for (AllUserStats *statistics in orderedStats) {
+    NSArray *filteredStatistics = [self.statisticsProcessor processStatistics:stats];
+    for (AllUserStats *statistics in filteredStatistics) {
         AllStatsCellObject *cellObject = [AllStatsCellObject cellObjectWithAllStats:statistics];
         [mutableModel addObject:cellObject];
     }
@@ -97,22 +101,22 @@
 }
 
 - (void)updateTableView {
-  self.tableView.delegate = [self.tableViewActions forwardingTo:self];
-  self.tableView.dataSource = self.model;
-  [self.tableView reloadData];
+    self.tableView.delegate = [self.tableViewActions forwardingTo:self];
+    self.tableView.dataSource = self.model;
+    [self.tableView reloadData];
 }
 
 - (NITableViewActions *)tableViewActions {
-  if (_tableViewActions == nil) {
-    _tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
-  }
-  return _tableViewActions;
+    if (_tableViewActions == nil) {
+        _tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
+    }
+    return _tableViewActions;
 }
 
 #pragma mark - <UITableViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 260.f;
+    return 260.f;
 }
 
 #pragma mark <Actions>
