@@ -1,5 +1,4 @@
 platform :ios, "9.0"
-use_frameworks!
 
 source 'git@gitlab.rambler.ru:cocoapods/cocoapods.git'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -12,7 +11,7 @@ plugin 'cocoapods-keys', {
     ]}
 
 pod 'Parse', '~> 1.12'
-pod 'Nimbus/Models', :git => 'git@gitlab.rambler.ru:cocoapods/nimbus.git', :tag => '1.2.2'
+pod 'Nimbus/Models', :git => 'https://github.com/rambler-ios/nimbus'
 pod 'CorePlot', '2.0'
 
 post_install do |installer|

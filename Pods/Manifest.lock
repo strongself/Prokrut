@@ -11,20 +11,19 @@ PODS:
 DEPENDENCIES:
   - CorePlot (= 2.0)
   - Keys (from `Pods/CocoaPodsKeys`)
-  - Nimbus/Models (from `git@gitlab.rambler.ru:cocoapods/nimbus.git`, tag `1.2.2`)
+  - Nimbus/Models (from `https://github.com/rambler-ios/nimbus`)
   - Parse (~> 1.12)
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
   Nimbus:
-    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
-    :tag: 1.2.2
+    :git: https://github.com/rambler-ios/nimbus
 
 CHECKOUT OPTIONS:
   Nimbus:
-    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
-    :tag: 1.2.2
+    :commit: dbe381217100e68c22d6fdf8780f493d57d9f5d2
+    :git: https://github.com/rambler-ios/nimbus
 
 SPEC CHECKSUMS:
   Bolts: a12663244b1d3351c738882e71902fc74db54f64

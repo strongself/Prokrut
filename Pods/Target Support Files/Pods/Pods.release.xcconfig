@@ -1,7 +1,6 @@
 ALWAYS_SEARCH_USER_PATHS = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Bolts.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/CorePlot.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Keys.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Nimbus.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Parse.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Bolts" -framework "CorePlot" -framework "Keys" -framework "Nimbus" -framework "Parse"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/CorePlot" "${PODS_ROOT}/Headers/Public/Keys" "${PODS_ROOT}/Headers/Public/Nimbus" "${PODS_ROOT}/Headers/Public/Parse"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/CorePlot" -isystem "${PODS_ROOT}/Headers/Public/Keys" -isystem "${PODS_ROOT}/Headers/Public/Nimbus" -isystem "${PODS_ROOT}/Headers/Public/Parse"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Bolts" -l"CorePlot" -l"Keys" -l"Nimbus" -l"Parse" -l"sqlite3" -l"z" -framework "Accelerate" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "Foundation" -framework "QuartzCore" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "Social"
 PODS_ROOT = ${SRCROOT}/Pods

@@ -12,8 +12,8 @@
 #import "UserStatistics.h"
 #import "StatisticsService.h"
 
-#import <CorePlot/CorePlot.h>
 #import <Parse/Parse.h>
+#import <CorePlot/ios/CorePlot.h>
 
 @class GraphStatisticsModel;
 
