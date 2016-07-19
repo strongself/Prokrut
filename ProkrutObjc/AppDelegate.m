@@ -22,8 +22,8 @@
     // Override point for customization after application launch.
     
     ProkrutobjcKeys *prokrutKeys = [ProkrutobjcKeys new];
-    NSString *applicationId = [prokrutKeys parseApplicationId];
-    NSString *clientKey = [prokrutKeys parseClientKey];
+    NSString *applicationId = @"";
+    NSString *clientKey = @"";
     
     [Parse enableLocalDatastore];
     [Parse setApplicationId:applicationId

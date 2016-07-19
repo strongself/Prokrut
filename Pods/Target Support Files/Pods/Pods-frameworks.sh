@@ -82,18 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/Bolts.framework"
-  install_framework "Pods/CorePlot.framework"
-  install_framework "Pods/Keys.framework"
-  install_framework "Pods/Nimbus.framework"
-  install_framework "Pods/Parse.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/Bolts.framework"
-  install_framework "Pods/CorePlot.framework"
-  install_framework "Pods/Keys.framework"
-  install_framework "Pods/Nimbus.framework"
-  install_framework "Pods/Parse.framework"
-fi

@@ -9,8 +9,7 @@
 
 #import "StatisticsViewController.h"
 
-#import "Parse/Parse.h"
-#import "NimbusModels.h"
+#import <Nimbus/NimbusModels.h>
 
 #import "OnDateUserStatisctics.h"
 #import "UserStatistics.h"
@@ -19,6 +18,7 @@
 #import "AllStatsCellObject.h"
 #import "UserStatiscticsCellObject.h"
 #import "SeasonViewController.h"
+#import "StatisticsProcessor.h"
 
 @interface StatisticsViewController () <UITableViewDelegate>
 
