@@ -9,9 +9,9 @@ iOS-приложение для ведения статистики матчей
 - Заводим приложение в Parse.com
 - Устанавливаем ключи нашего приложения:
 ```
-pod keys set ParseApplicationId "***REMOVED***"
+pod keys set ParseApplicationId "PASTE_YOUR_ID_HERE"
 
-pod keys set ParseClientKey "***REMOVED***"
+pod keys set ParseClientKey "PASTE_YOUR_CLIENT_KEY"
 ```
 
 > Приложение использует плагин cocoapods-keys(https://github.com/orta/cocoapods-keys), id приложения Parse и ключ можно получить у Стаса Цыганова(пока для внутреннего пользования)
