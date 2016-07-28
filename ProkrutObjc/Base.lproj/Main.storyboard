@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n7y-eS-Ko8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VEz-xC-Eh6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -324,6 +324,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAs-DH-jRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1529" y="865"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="nPc-oA-kef">
+            <objects>
+                <viewController id="VEz-xC-Eh6" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6Y-9H-Oob"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gel-le-Ngh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nT7-zA-ouf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gMb-ce-bDD"/>
+                    <connections>
+                        <segue destination="n7y-eS-Ko8" kind="custom" identifier="ShowTabController" customClass="RootSegue" id="Zph-hr-yLS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhF-bu-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2617" y="191"/>
         </scene>
     </scenes>
     <resources>
