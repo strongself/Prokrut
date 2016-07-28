@@ -19,13 +19,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     ProkrutobjcKeys *prokrutKeys = [ProkrutobjcKeys new];
     
+    NSString *applicationId = [prokrutKeys parseApplicationId];
+    NSString *clientKey = [prokrutKeys parseClientKey];
+    
     [Parse enableLocalDatastore];
-    [Parse setApplicationId:applicationId
-                  clientKey:clientKey];
+    [Parse setApplicationId:applicationId clientKey:clientKey];
     [self registerPushForApplication:application];
     
     return YES;
