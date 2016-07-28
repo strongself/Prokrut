@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11704F6B1D45560D00B753C5 /* SplashViewController.m */; };
-		11704F701D45568600B753C5 /* RootSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11704F6F1D45568600B753C5 /* RootSegue.m */; };
-		11704F741D45573000B753C5 /* SegueIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 11704F731D45573000B753C5 /* SegueIdentifiers.m */; };
+		11D332071D4AA34D00CE1434 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332061D4AA34D00CE1434 /* AuthorizationViewController.m */; };
+		11D332121D4AA45800CE1434 /* UITextField+Inspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3320B1D4AA45800CE1434 /* UITextField+Inspectable.m */; };
+		11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3320E1D4AA45800CE1434 /* UIView+Inspectable.m */; };
+		11D332141D4AA45800CE1434 /* RootSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332111D4AA45800CE1434 /* RootSegue.m */; };
+		11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */; };
 		3AB0A4E49511A9075AA39571 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746A5A91C64819A8B5D740E /* libPods.a */; };
 		5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781121C74D0C30091269F /* SeasonViewController.m */; };
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
@@ -49,10 +52,16 @@
 /* Begin PBXFileReference section */
 		11704F6A1D45560D00B753C5 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		11704F6B1D45560D00B753C5 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
-		11704F6E1D45568600B753C5 /* RootSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSegue.h; sourceTree = "<group>"; };
-		11704F6F1D45568600B753C5 /* RootSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSegue.m; sourceTree = "<group>"; };
-		11704F721D45573000B753C5 /* SegueIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueIdentifiers.h; sourceTree = "<group>"; };
-		11704F731D45573000B753C5 /* SegueIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueIdentifiers.m; sourceTree = "<group>"; };
+		11D332051D4AA34D00CE1434 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
+		11D332061D4AA34D00CE1434 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		11D3320A1D4AA45800CE1434 /* UITextField+Inspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Inspectable.h"; sourceTree = "<group>"; };
+		11D3320B1D4AA45800CE1434 /* UITextField+Inspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Inspectable.m"; sourceTree = "<group>"; };
+		11D3320D1D4AA45800CE1434 /* UIView+Inspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Inspectable.h"; sourceTree = "<group>"; };
+		11D3320E1D4AA45800CE1434 /* UIView+Inspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Inspectable.m"; sourceTree = "<group>"; };
+		11D332101D4AA45800CE1434 /* RootSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSegue.h; sourceTree = "<group>"; };
+		11D332111D4AA45800CE1434 /* RootSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSegue.m; sourceTree = "<group>"; };
+		11D332161D4AA45F00CE1434 /* SegueIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueIdentifiers.h; sourceTree = "<group>"; };
+		11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueIdentifiers.m; sourceTree = "<group>"; };
 		5D3781111C74D0C30091269F /* SeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonViewController.h; sourceTree = "<group>"; };
 		5D3781121C74D0C30091269F /* SeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonViewController.m; sourceTree = "<group>"; };
 		5D3781141C74D10C0091269F /* Season.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
@@ -139,20 +148,58 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
-		11704F6D1D45568600B753C5 /* Segues */ = {
+		11D332041D4AA34D00CE1434 /* AuthorizationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				11704F6E1D45568600B753C5 /* RootSegue.h */,
-				11704F6F1D45568600B753C5 /* RootSegue.m */,
+				11D332051D4AA34D00CE1434 /* AuthorizationViewController.h */,
+				11D332061D4AA34D00CE1434 /* AuthorizationViewController.m */,
 			);
-			path = Segues;
+			path = AuthorizationScreen;
 			sourceTree = "<group>";
 		};
-		11704F711D45571000B753C5 /* Constants */ = {
+		11D332081D4AA45800CE1434 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				11704F721D45573000B753C5 /* SegueIdentifiers.h */,
-				11704F731D45573000B753C5 /* SegueIdentifiers.m */,
+				11D332091D4AA45800CE1434 /* UITextField */,
+				11D3320C1D4AA45800CE1434 /* UIView */,
+			);
+			name = Categories;
+			path = Helpers/Categories;
+			sourceTree = "<group>";
+		};
+		11D332091D4AA45800CE1434 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				11D3320A1D4AA45800CE1434 /* UITextField+Inspectable.h */,
+				11D3320B1D4AA45800CE1434 /* UITextField+Inspectable.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		11D3320C1D4AA45800CE1434 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				11D3320D1D4AA45800CE1434 /* UIView+Inspectable.h */,
+				11D3320E1D4AA45800CE1434 /* UIView+Inspectable.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		11D3320F1D4AA45800CE1434 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				11D332101D4AA45800CE1434 /* RootSegue.h */,
+				11D332111D4AA45800CE1434 /* RootSegue.m */,
+			);
+			name = Segues;
+			path = Helpers/Segues;
+			sourceTree = "<group>";
+		};
+		11D332151D4AA45F00CE1434 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				11D332161D4AA45F00CE1434 /* SegueIdentifiers.h */,
+				11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -160,8 +207,8 @@
 		5D4B1C401C5A11730022CA42 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				11704F711D45571000B753C5 /* Constants */,
-				11704F6D1D45568600B753C5 /* Segues */,
+				11D332081D4AA45800CE1434 /* Categories */,
+				11D3320F1D4AA45800CE1434 /* Segues */,
 				5D4B1C411C5A11A20022CA42 /* AlertBuilder.h */,
 				5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */,
 				5D4B1C441C5A11C50022CA42 /* DateFormatter.h */,
@@ -191,6 +238,7 @@
 				B1251C3B1DE154471414324B /* AppDelegate.h */,
 				B1251F7E331666D909D1E257 /* AppDelegate.m */,
 				B1251FB70CDCCE955D611281 /* Main.storyboard */,
+				11D332151D4AA45F00CE1434 /* Constants */,
 				5D4B1C401C5A11730022CA42 /* Helpers */,
 				B1251576C5219D4518F323F0 /* Controllers */,
 				B12518FD56E1640A14457EF6 /* Models */,
@@ -213,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				11704F691D45560D00B753C5 /* SplashScreen */,
+				11D332041D4AA34D00CE1434 /* AuthorizationScreen */,
 				B1251AB47F5451C01D48D3B8 /* StatisticsViewController.h */,
 				B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */,
 				B125189FBBB732BBEC436779 /* AddMatchViewController.h */,
@@ -443,13 +492,14 @@
 				FD4349B11C4864D200567AAF /* UserStatiscticsCellObject.m in Sources */,
 				9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */,
 				FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */,
-				11704F701D45568600B753C5 /* RootSegue.m in Sources */,
 				FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */,
 				B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */,
 				FD7C8A161C4C239000A6B424 /* HistoryViewController.m in Sources */,
 				5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */,
 				9FD2BE1D1C53DE65002EA024 /* StatisticsService.m in Sources */,
 				FD4349B41C48657000567AAF /* UserStatisticsCell.m in Sources */,
+				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
+				11D332071D4AA34D00CE1434 /* AuthorizationViewController.m in Sources */,
 				5D3781161C74D10C0091269F /* Season.m in Sources */,
 				FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */,
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
@@ -457,13 +507,15 @@
 				CD80FE2D1C5D06400000AE22 /* AllStatsCell.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
 				FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */,
-				11704F741D45573000B753C5 /* SegueIdentifiers.m in Sources */,
 				B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */,
 				5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */,
 				B1251273DE3CC8715F59665C /* AddMatchDataDisplayManager.m in Sources */,
+				11D332121D4AA45800CE1434 /* UITextField+Inspectable.m in Sources */,
 				11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */,
 				B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */,
+				11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */,
 				FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */,
+				11D332141D4AA45800CE1434 /* RootSegue.m in Sources */,
 				B1251905E2ABD602B974704F /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self performSegueWithIdentifier:ShowTabControllerSegueIdentifier sender:nil];
+    [self performSegueWithIdentifier:ShowAuthorizationControllerSegueIdentifier sender:nil];
 }
 
 @end

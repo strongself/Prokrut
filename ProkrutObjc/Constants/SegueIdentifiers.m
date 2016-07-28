@@ -9,3 +9,4 @@
 #import "SegueIdentifiers.h"
 
 NSString *const ShowTabControllerSegueIdentifier = @"ShowTabController";
+NSString *const ShowAuthorizationControllerSegueIdentifier = @"ShowAuthorizationController";

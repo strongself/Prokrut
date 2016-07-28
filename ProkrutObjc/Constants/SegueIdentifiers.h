@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 FOUNDATION_EXTERN NSString *const ShowTabControllerSegueIdentifier;
+FOUNDATION_EXTERN NSString *const ShowAuthorizationControllerSegueIdentifier;
