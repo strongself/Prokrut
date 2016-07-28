@@ -3,6 +3,7 @@ PODS:
   - CorePlot (2.0)
   - InputValidators (1.0.0)
   - Keys (1.0.0)
+  - MBProgressHUD (1.0.0)
   - Nimbus/Core (1.2.2)
   - Nimbus/Models (1.2.2):
     - Nimbus/Core
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - CorePlot (= 2.0)
   - InputValidators (~> 1.0)
   - Keys (from `Pods/CocoaPodsKeys`)
+  - MBProgressHUD (~> 1.0)
   - Nimbus/Models (from `https://github.com/rambler-ios/nimbus`)
   - Parse (~> 1.12)
 
@@ -32,6 +34,7 @@ SPEC CHECKSUMS:
   CorePlot: b7f422ad363f2b0e48152471d6da45ce232eb8c6
   InputValidators: b278d3042d23893533d688cfb1563370d4cb184e
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Nimbus: 355131d4656498bf072fecc142752a9f343eb59b
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
 
