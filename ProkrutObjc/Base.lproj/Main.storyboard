@@ -23,7 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALu-JZ-xAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2303" y="-358"/>
+            <point key="canvasLocation" x="-1867" y="-662"/>
         </scene>
         <!--Статистика-->
         <scene sceneID="ztt-2h-h8y">
@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hZ-Ih-nbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="110"/>
+            <point key="canvasLocation" x="237" y="110"/>
         </scene>
         <!--Выберите сезон-->
         <scene sceneID="I1e-y2-nA2">
@@ -111,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNS-9Q-aOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="100"/>
+            <point key="canvasLocation" x="1119" y="100"/>
         </scene>
         <!--Graph View Controller-->
         <scene sceneID="bjI-dp-EDv">
@@ -242,7 +242,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOP-dx-LKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="100"/>
+            <point key="canvasLocation" x="1812" y="100"/>
         </scene>
         <!--Choose User View Controller-->
         <scene sceneID="d9t-dB-01q">
@@ -276,7 +276,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZV8-9j-iYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784" y="100"/>
+            <point key="canvasLocation" x="2596" y="100"/>
         </scene>
         <!--Choose Score View Controller-->
         <scene sceneID="2Sz-UL-pQP">
@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhF-bu-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3225" y="87"/>
+            <point key="canvasLocation" x="-2789" y="-217"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="Bn3-0n-MOj">
@@ -479,6 +479,7 @@
                         <outlet property="enterButton" destination="pDG-f3-mnD" id="dkd-xf-Osc"/>
                         <outlet property="loginTextField" destination="Vm0-Oa-tSl" id="dlP-nf-WMI"/>
                         <outlet property="passwordTextField" destination="aRI-Ls-o2O" id="KsO-OL-bBz"/>
+                        <segue destination="n7y-eS-Ko8" kind="custom" identifier="ShowTabController" customClass="RootSegue" id="OPg-Nb-TMp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYL-nh-mii" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,7 +489,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2303" y="403"/>
+            <point key="canvasLocation" x="-1987" y="143"/>
         </scene>
     </scenes>
     <resources>
@@ -500,5 +501,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mdw-db-0Pm"/>
+        <segue reference="OPg-Nb-TMp"/>
     </inferredMetricsTieBreakers>
 </document>

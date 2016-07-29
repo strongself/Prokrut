@@ -13,6 +13,10 @@
 		11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3320E1D4AA45800CE1434 /* UIView+Inspectable.m */; };
 		11D332141D4AA45800CE1434 /* RootSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332111D4AA45800CE1434 /* RootSegue.m */; };
 		11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */; };
+		11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3322D1D4AAD0D00CE1434 /* AuthorizationService.m */; };
+		11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3322F1D4AAD0D00CE1434 /* StatisticsService.m */; };
+		11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332361D4AB9BF00CE1434 /* LocalizableConstants.m */; };
+		11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11D3323C1D4AB9D500CE1434 /* Localizable.strings */; };
 		3AB0A4E49511A9075AA39571 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746A5A91C64819A8B5D740E /* libPods.a */; };
 		5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781121C74D0C30091269F /* SeasonViewController.m */; };
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
@@ -20,7 +24,6 @@
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
-		9FD2BE1D1C53DE65002EA024 /* StatisticsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE1C1C53DE65002EA024 /* StatisticsService.m */; };
 		B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */; };
 		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
 		B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251F7E331666D909D1E257 /* AppDelegate.m */; };
@@ -62,6 +65,13 @@
 		11D332111D4AA45800CE1434 /* RootSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSegue.m; sourceTree = "<group>"; };
 		11D332161D4AA45F00CE1434 /* SegueIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueIdentifiers.h; sourceTree = "<group>"; };
 		11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueIdentifiers.m; sourceTree = "<group>"; };
+		11D3322C1D4AAD0D00CE1434 /* AuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationService.h; sourceTree = "<group>"; };
+		11D3322D1D4AAD0D00CE1434 /* AuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationService.m; sourceTree = "<group>"; };
+		11D3322E1D4AAD0D00CE1434 /* StatisticsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsService.h; sourceTree = "<group>"; };
+		11D3322F1D4AAD0D00CE1434 /* StatisticsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsService.m; sourceTree = "<group>"; };
+		11D332351D4AB9BF00CE1434 /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
+		11D332361D4AB9BF00CE1434 /* LocalizableConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizableConstants.m; sourceTree = "<group>"; };
+		11D3323B1D4AB9D500CE1434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D3781111C74D0C30091269F /* SeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonViewController.h; sourceTree = "<group>"; };
 		5D3781121C74D0C30091269F /* SeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonViewController.m; sourceTree = "<group>"; };
 		5D3781141C74D10C0091269F /* Season.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
@@ -76,8 +86,6 @@
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		9FD2BE191C53D493002EA024 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
-		9FD2BE1B1C53DE65002EA024 /* StatisticsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsService.h; sourceTree = "<group>"; };
-		9FD2BE1C1C53DE65002EA024 /* StatisticsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsService.m; sourceTree = "<group>"; };
 		B12512EFA4AE32E96587CBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1251351B06A82EB12930414 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		B125151C307CF05E1A6A41B1 /* ProkrutObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProkrutObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,8 +208,21 @@
 			children = (
 				11D332161D4AA45F00CE1434 /* SegueIdentifiers.h */,
 				11D332171D4AA45F00CE1434 /* SegueIdentifiers.m */,
+				11D332351D4AB9BF00CE1434 /* LocalizableConstants.h */,
+				11D332361D4AB9BF00CE1434 /* LocalizableConstants.m */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		11D3322B1D4AAD0D00CE1434 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11D3322C1D4AAD0D00CE1434 /* AuthorizationService.h */,
+				11D3322D1D4AAD0D00CE1434 /* AuthorizationService.m */,
+				11D3322E1D4AAD0D00CE1434 /* StatisticsService.h */,
+				11D3322F1D4AAD0D00CE1434 /* StatisticsService.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5D4B1C401C5A11730022CA42 /* Helpers */ = {
@@ -241,6 +262,7 @@
 				11D332151D4AA45F00CE1434 /* Constants */,
 				5D4B1C401C5A11730022CA42 /* Helpers */,
 				B1251576C5219D4518F323F0 /* Controllers */,
+				11D3322B1D4AAD0D00CE1434 /* Services */,
 				B12518FD56E1640A14457EF6 /* Models */,
 				B125116CF20C293076BE203F /* DataDisplayManagers */,
 				B1251CBAC23A8251779C5FDD /* CellObjects */,
@@ -274,8 +296,6 @@
 				FD7C8A151C4C239000A6B424 /* HistoryViewController.m */,
 				9FD2BE181C53D493002EA024 /* GraphViewController.h */,
 				9FD2BE191C53D493002EA024 /* GraphViewController.m */,
-				9FD2BE1B1C53DE65002EA024 /* StatisticsService.h */,
-				9FD2BE1C1C53DE65002EA024 /* StatisticsService.m */,
 				5D3781111C74D0C30091269F /* SeasonViewController.h */,
 				5D3781121C74D0C30091269F /* SeasonViewController.m */,
 			);
@@ -345,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				B12519C1B4F6209364DE821C /* main.m */,
+				11D3323C1D4AB9D500CE1434 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -425,6 +446,7 @@
 				B125163B3024887E7D9841A5 /* LaunchScreen.storyboard in Resources */,
 				FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */,
 				CD80FE2E1C5D06400000AE22 /* AllStatsCell.xib in Resources */,
+				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
 				B12510E9DD410333CEB4891D /* Main.storyboard in Resources */,
 				FD4349B61C48659000567AAF /* UserStatisticsCell.xib in Resources */,
 			);
@@ -496,7 +518,6 @@
 				B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */,
 				FD7C8A161C4C239000A6B424 /* HistoryViewController.m in Sources */,
 				5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */,
-				9FD2BE1D1C53DE65002EA024 /* StatisticsService.m in Sources */,
 				FD4349B41C48657000567AAF /* UserStatisticsCell.m in Sources */,
 				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
 				11D332071D4AA34D00CE1434 /* AuthorizationViewController.m in Sources */,
@@ -505,8 +526,10 @@
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
 				CD80FE2D1C5D06400000AE22 /* AllStatsCell.m in Sources */,
+				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
 				FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */,
+				11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */,
 				B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */,
 				5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */,
 				B1251273DE3CC8715F59665C /* AddMatchDataDisplayManager.m in Sources */,
@@ -514,6 +537,7 @@
 				11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */,
 				B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */,
 				11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */,
+				11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */,
 				FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */,
 				11D332141D4AA45800CE1434 /* RootSegue.m in Sources */,
 				B1251905E2ABD602B974704F /* PlayerCell.m in Sources */,
@@ -523,6 +547,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		11D3323C1D4AB9D500CE1434 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11D3323B1D4AB9D500CE1434 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B12514B7F11AC574640BBD50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

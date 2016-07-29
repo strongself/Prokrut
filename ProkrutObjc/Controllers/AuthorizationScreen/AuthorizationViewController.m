@@ -8,7 +8,18 @@
 
 #import "AuthorizationViewController.h"
 
-#import <InputValidators/LKEmailValidator.h>
+#import "AuthorizationService.h"
+
+#import "SegueIdentifiers.h"
+#import "LocalizableConstants.h"
+
+#import <MBProgressHUD/MBProgressHUD.h>
+
+@interface AuthorizationViewController ()
+
+@property (nonatomic, strong) AuthorizationService *authorizationService;
+
+@end
 
 @implementation AuthorizationViewController
 
@@ -27,11 +38,24 @@
 }
 
 - (BOOL)loginIsValid {
-    return [[LKEmailValidator validator] validate:self.loginTextField.text error:nil];
+    return self.loginTextField.text.length > 0;
 }
 
 - (BOOL)passwordIsValid {
     return self.passwordTextField.text.length > 0;
+}
+
+- (void)showAlertControllerWithMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                             message:NSLocalizedString(message, nil)
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(OkayTitle, nil)
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)textFieldValueChanged {
@@ -39,7 +63,20 @@
 }
 
 - (IBAction)enterButtonAction {
+    NSString *login = self.loginTextField.text;
+    NSString *password = self.passwordTextField.text;
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [self.authorizationService authorizeWithLogin:login password:password completion:^(PFUser *user, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
+        if (user) {
+            [self performSegueWithIdentifier:ShowTabControllerSegueIdentifier sender:nil];
+        } else {
+            [self showAlertControllerWithMessage:InvalidLoginOrPassword];
+        }
+    }];
 }
 
 - (IBAction)tapGestureRecognizerAction {
@@ -55,6 +92,14 @@
     
     [textField resignFirstResponder];
     return YES;
+}
+
+- (AuthorizationService *)authorizationService {
+    if (!_authorizationService) {
+        _authorizationService = [AuthorizationService new];
+    }
+    
+    return _authorizationService;
 }
 
 @end

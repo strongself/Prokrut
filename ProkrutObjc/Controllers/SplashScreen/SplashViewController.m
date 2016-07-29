@@ -8,19 +8,20 @@
 
 #import "SplashViewController.h"
 
+#import "AuthorizationService.h"
+
 #import "SegueIdentifiers.h"
 
 @implementation SplashViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self performSegueWithIdentifier:ShowAuthorizationControllerSegueIdentifier sender:nil];
+
+    if ([AuthorizationService currentUser]) {
+    	[self performSegueWithIdentifier:ShowTabControllerSegueIdentifier sender:nil];
+    } else {
+        [self performSegueWithIdentifier:ShowAuthorizationControllerSegueIdentifier sender:nil];
+    }
 }
 
 @end
