@@ -16,8 +16,7 @@
     return CGRectGetWidth(self.leftView.bounds);
 }
 
-- (void)setLeftPadding:(CGFloat)leftPadding
-{
+- (void)setLeftPadding:(CGFloat)leftPadding {
     self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, leftPadding, self.bounds.size.height)];
     self.leftViewMode = UITextFieldViewModeAlways;
 }
