@@ -16,6 +16,16 @@ typedef void(^AuthorizationCompletionBlock)(PFUser *user, NSError *error);
 
 + (PFUser *)currentUser;
 
+/**
+ @author Beniamin Sarkisyan
+ 
+ Метод для авторизации в приложении.
+ В качестве логина можно передавать email или имя фамилию
+ 
+ @param login      - логин
+ @param password   - пароль
+ @param completion - блок, который будет вызван, когда придет ответ от сервера
+ */
 - (void)authorizeWithLogin:(NSString *)login
                   password:(NSString *)password
                 completion:(AuthorizationCompletionBlock)completion;

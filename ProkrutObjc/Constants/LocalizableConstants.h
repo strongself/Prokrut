@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXTERN NSString *const OkayTitle;
-FOUNDATION_EXTERN NSString *const InvalidLoginOrPassword;
+extern NSString *const OkayTitle;
+extern NSString *const InvalidLoginOrPassword;
