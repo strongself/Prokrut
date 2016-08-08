@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ProkrutObjc
+
+  Created by Beniamin Sarkisyan on 29/07/16.
+  Copyright © 2016 DevAlloy. All rights reserved.
+*/
+
+"OkayTitle" = "Хорошо";
+"InvalidLoginOrPassword" = "Неверный логин или пароль";

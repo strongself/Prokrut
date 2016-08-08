@@ -13,6 +13,8 @@ plugin 'cocoapods-keys', {
 pod 'Parse', '~> 1.12'
 pod 'Nimbus/Models', :git => 'https://github.com/rambler-ios/nimbus'
 pod 'CorePlot', '2.0'
+pod 'InputValidators', '~> 1.0'
+pod 'MBProgressHUD', '~> 1.0'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
