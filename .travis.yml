@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode7.3
+branches:
+  only:
+  - master
+  - develop
+script: fastlane beta
+before_install:
+- gem update --system
+- gem --version
+- gem install bundler
+- bundle install --gemfile fastlane/Gemfile
+- brew install imagemagick
+before_script:
+- openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/Certificates/distribution.p12.enc -d -a -out fastlane/Certificates/distribution.p12
+env:
+  global:
+  - SCHEME="ProkrutObjc"
+  - XCODEPROJ_NAME="ProkrutObjc.xcodeproj"
+  - XCWORKSPACE_NAME="ProkrutObjc.xcworkspace"
+  - INFO_PLIST_PATH="ProkrutObjc/Info.plist"
+  - APP_IDENTIFIER="com.rambler.ProkrutObjc"
+  - secure: TLkotM760IpT2cvRcDDB/sRhux6C6gKzlwAjO6xK2asYIrGjHm5n9dyh9y5COLHwIyHjrS5/0f3PK+dsbHBHwdyzLDSsMzQmPUpXGKVBg9lc+yS9EENJ/v8nmj1CtyLraCoyJLwbLINzqW558/AtxFUu99KeWSamEQsdluLK0SZpZ0UKqJ6ER3m9sJo95boUrqLzfxaGyyldMCKNYEWChjnfBiXKU3HTavQoEHbBcJSLZkdmXBpXuEx3XOlfyRZwH24hHe7eGT2OqlXPupdF8ZjeQx97gV5o/0hdJIgUj2cHx39OK4MRcZDu8hxJ2ViW+dGhy23APmmZZzJobYYx8VhYzumXUrwq3/WOxGP8fu1jGwKj20oCXPMfOzbvkSZmm2LtXN4IWmLkzRL3pttQE61moEfRCRAt8wdw8UnB0v2fdaTnbcEQwQJYINIHN+dFIKepr0rzcpTL8wt8HoYHzuOtA1C6+9E4zJed1EvDTOv+F+pPr457iKLvipKz6pZV+lhmCOGMi4kdkoNHnCRnwHNgC/XflIMtXDw8H5WEKND9VkjJ/ezfvevZCHOo9VOIiuTX7ecNgm7r1s9HN6WLSzd7vbbp5+6I7eFhsDvnQM7dUlxU8RWfl+qXkTjW0/ZFLQhztHT87fmg5k0iSaTKqGxHteBi27gLyRwaLOTPezo=
+  - secure: cwaBKS7G+owrtxedG3Ebjvw6VFkGfQOjqQUHvhDmQ9u+pxX+JVq2Kdxlosz4ZbLCKyH+FADBSkUSm9R6WVxGkMKzxgj4cucfg3y9NQgN9g2VM06eWuM4GX7xa8L4jOjr/BiDwZZ0zD7v9qz5MkkMhe8NwF1DLTe5qkTesprwI31fk3ukV1oPf7xS3EdIMlq63lJFknzP6UdZUJ6yLFrtux+baWq5NHg2E179FuzxSyF8aEExHOnXC4D6zfwB4cQPW9L+DY8vTF/XV99e693znVD7WZXIMCaJG+TOc4KdZheCcv0L0zCuzM5hbz6ZfnQmemBRNXbMnPEO0FPwRuP6LSVLjoR331gKGd9Kyu2WP+c7+qGy+bZ8qug0+xuVwI4amqS/2HspT2QnrTmS6mX2nvI5aomvjDM+lJej8lsuNSmXg8yGCqNydJ+Begt7yYstF1i0TcTR/eTjRvp6ViRV7r9YxwbqliOkzkM6I/4ZKEe+IZInpiEmuT5QNyIAUN6jzCOkjIucYXtgfP3H4/HUijMuPOrjXh1gh/DKxDp6Cb0SVgwkPokd/nYRD02YnqwqvbOMKW11CfeHYrJCzvjxVxTTn3bHwJeShDhYA8FrpGG8ArBX8jq07ejWWLikHlS7Bht741JHqv6nGUpH03YWJPUTgDYwhaui6b9yhKNCv44=
