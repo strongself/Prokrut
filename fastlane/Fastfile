@@ -1,0 +1,58 @@
+lane :beta do |options|
+  # Create keychain for store certificate
+  keychain_name = 'ci-keychain'
+  create_keychain(
+    name: keychain_name,
+    default_keychain: true,
+    unlock: true,
+    timeout: 3600,
+    lock_when_sleeps: true,
+    password: SecureRandom.base64
+  )
+
+  # Import distribution certificate
+  import_certificate(
+    certificate_path: 'fastlane/Certificates/distribution.p12',
+    certificate_password: ENV['KEY_PASSWORD'],
+    keychain_name: keychain_name
+  )
+
+  # Prepare project
+  update_app_identifier(
+    xcodeproj: ENV['XCODEPROJ_NAME'],
+    app_identifier: ENV['APP_IDENTIFIER'],
+    plist_path: ENV['INFO_PLIST_PATH']
+  )
+  sigh(
+    username: ENV['APPLE_ID'],
+    app_identifier: ENV['APP_IDENTIFIER'],
+    team_id: ENV['TEAM_ID']
+  )
+
+  # Setting up the icon badge
+  shield_text = options[:shield_text]
+  shield_data = "#{shield_text}-blue"
+  badge(shield: shield_data, dark: true)
+
+  # Building the ipa file of the enterprise build
+  gym(
+    workspace: ENV['XCWORKSPACE_NAME'],
+    scheme: ENV['SCHEME'],
+    use_legacy_build_api: true,
+    export_method: 'enterprise'
+  )
+
+  # Uploading
+  ipa_path = lane_context[SharedValues::IPA_OUTPUT_PATH]
+  branch_name = git_branch
+  upload_path = "#{ENV['DROPBOX_UPLOAD_PATH']}/#{branch_name}"
+  dropbox_token = ENV['DROPBOX_KEY']
+  dropbox_upload(
+    dropbox_access_token: dropbox_token,
+    ipa_path: ipa_path,
+    upload_path: upload_path
+  )
+
+  # Delete keychain
+  delete_keychain(name: keychain_name)
+end
