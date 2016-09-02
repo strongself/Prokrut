@@ -16,5 +16,6 @@
  Метод сообщает презентеру о том, что view готова к работе
  */
 - (void)didTriggerViewReadyEvent;
+- (void)didTriggerPullToRefreshEvent;
 
 @end

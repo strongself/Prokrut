@@ -61,7 +61,7 @@
 }
 
 - (void)recieveMatchesData {
-  __weak typeof(self)weakSelf = self;
+    __weak typeof(self)weakSelf = self;
     NSString *currentSeasonId = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentSeasonId"];
     NSDictionary *params;
     if (currentSeasonId) {
@@ -71,14 +71,14 @@
                        withParameters:params
                                 block:^(id  _Nullable object, NSError * _Nullable error)
      {
-        typeof(weakSelf) stongSelf = weakSelf;
-        if (object) {
-          NSArray *allStats = [AllUserStats userStatisticsFromExternalRepresentation:object];
-          [stongSelf createAllUserStatsCellObjectsWithStats:allStats];
-        } else if (error) {
-          NSLog(@"%@", error.localizedDescription);
-        }
-        [stongSelf.refreshControl endRefreshing];
+         typeof(weakSelf) stongSelf = weakSelf;
+         if (object) {
+             NSArray *allStats = [AllUserStats userStatisticsFromExternalRepresentation:object];
+             [stongSelf createAllUserStatsCellObjectsWithStats:allStats];
+         } else if (error) {
+             NSLog(@"%@", error.localizedDescription);
+         }
+         [stongSelf.refreshControl endRefreshing];
      }];
 }
 

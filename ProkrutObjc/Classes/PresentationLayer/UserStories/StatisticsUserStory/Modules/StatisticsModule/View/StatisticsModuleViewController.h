@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #import "StatisticsModuleViewInput.h"
+#import "StatisticsDataDisplayManager.h"
 
 @protocol StatisticsModuleViewOutput;
 
 @interface StatisticsModuleViewController : UIViewController <StatisticsModuleViewInput>
 
+#pragma mark - Зависимости
+
+@property (strong, nonatomic) StatisticsDataDisplayManager *dataDisplayManager;
 @property (nonatomic, strong) id<StatisticsModuleViewOutput> output;
 
 @end

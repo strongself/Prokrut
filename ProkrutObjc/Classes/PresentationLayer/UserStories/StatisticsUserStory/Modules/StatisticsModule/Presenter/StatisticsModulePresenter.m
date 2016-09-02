@@ -24,8 +24,22 @@
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
+    [self.interactor obtainStatisticsFromNetwork];
+}
+
+- (void)didTriggerPullToRefreshEvent {
+    [self.interactor obtainStatisticsFromNetwork];
 }
 
 #pragma mark - Методы StatisticsModuleInteractorOutput
+
+- (void)didObtainStatisticsFromNetworkWithData:(NSArray *)statistics
+                                         error:(NSError *)error{
+    if (statistics) {
+        [self.view updateViewWithStatisticsData:statistics];
+    } else {
+        [self.view showErrorStateWithError:error];
+    }
+}
 
 @end

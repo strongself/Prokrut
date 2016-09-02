@@ -10,4 +10,7 @@
 
 @protocol StatisticsModuleInteractorOutput <NSObject>
 
+- (void)didObtainStatisticsFromNetworkWithData:(id)statistics
+                                         error:(NSError *)error;
+
 @end

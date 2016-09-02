@@ -17,4 +17,8 @@
  */
 - (void)setupInitialState;
 
+- (void)updateViewWithStatisticsData:(NSArray *)statisticsData;
+
+- (void)showErrorStateWithError:(NSError *)error;
+
 @end

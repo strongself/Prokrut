@@ -8,7 +8,6 @@
 
 #import "StatisticsModuleRouter.h"
 
-#import <ViperMcFlurry/ViperMcFlurry.h>
 
 @implementation StatisticsModuleRouter
 

@@ -10,4 +10,6 @@
 
 @protocol StatisticsModuleInteractorInput <NSObject>
 
+- (void)obtainStatisticsFromNetwork;
+
 @end
