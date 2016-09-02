@@ -22,6 +22,11 @@
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
 		5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */; };
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
+		66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */; };
+		66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */; };
+		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
+		66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */; };
+		66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
 		B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */; };
@@ -80,6 +85,22 @@
 		5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertBuilder.m; path = Helpers/AlertBuilder.m; sourceTree = "<group>"; };
 		5D4B1C441C5A11C50022CA42 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateFormatter.h; path = Helpers/DateFormatter.h; sourceTree = "<group>"; };
 		5D4B1C451C5A11C50022CA42 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateFormatter.m; path = Helpers/DateFormatter.m; sourceTree = "<group>"; };
+		66B353061D79C57E006620FA /* StatisticsModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleAssembly.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.h; sourceTree = SOURCE_ROOT; };
+		66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleAssembly.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.m; sourceTree = SOURCE_ROOT; };
+		66B353091D79C586006620FA /* StatisticsModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewController.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewController.h; sourceTree = SOURCE_ROOT; };
+		66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleViewController.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewController.m; sourceTree = SOURCE_ROOT; };
+		66B3530B1D79C586006620FA /* StatisticsModuleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewInput.h; sourceTree = SOURCE_ROOT; };
+		66B3530C1D79C586006620FA /* StatisticsModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewOutput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewOutput.h; sourceTree = SOURCE_ROOT; };
+		66B3530E1D79C591006620FA /* StatisticsModuleModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleModuleInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Presenter/StatisticsModuleModuleInput.h; sourceTree = SOURCE_ROOT; };
+		66B3530F1D79C591006620FA /* StatisticsModulePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModulePresenter.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Presenter/StatisticsModulePresenter.h; sourceTree = SOURCE_ROOT; };
+		66B353101D79C591006620FA /* StatisticsModulePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModulePresenter.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Presenter/StatisticsModulePresenter.m; sourceTree = SOURCE_ROOT; };
+		66B353121D79C59E006620FA /* StatisticsModuleInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleInteractor.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Interactor/StatisticsModuleInteractor.h; sourceTree = SOURCE_ROOT; };
+		66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleInteractor.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Interactor/StatisticsModuleInteractor.m; sourceTree = SOURCE_ROOT; };
+		66B353141D79C59E006620FA /* StatisticsModuleInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleInteractorInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Interactor/StatisticsModuleInteractorInput.h; sourceTree = SOURCE_ROOT; };
+		66B353151D79C59E006620FA /* StatisticsModuleInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleInteractorOutput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Interactor/StatisticsModuleInteractorOutput.h; sourceTree = SOURCE_ROOT; };
+		66B353171D79C5BF006620FA /* StatisticsModuleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleRouter.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouter.h; sourceTree = SOURCE_ROOT; };
+		66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleRouter.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouter.m; sourceTree = SOURCE_ROOT; };
+		66B353191D79C5BF006620FA /* StatisticsModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleRouterInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouterInput.h; sourceTree = SOURCE_ROOT; };
 		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
@@ -147,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0102B474ACB22EEC5AF1BE26 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				66B3530E1D79C591006620FA /* StatisticsModuleModuleInput.h */,
+				66B3530F1D79C591006620FA /* StatisticsModulePresenter.h */,
+				66B353101D79C591006620FA /* StatisticsModulePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		11704F691D45560D00B753C5 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +271,107 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		66B352F91D79C344006620FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66B352FE1D79C375006620FA /* ApplicationLayer */,
+				66B352FD1D79C36A006620FA /* Models */,
+				66B352FC1D79C360006620FA /* CoreLayer */,
+				66B352FB1D79C353006620FA /* BusinessLogicLayer */,
+				66B352FA1D79C348006620FA /* PresentationLayer */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		66B352FA1D79C348006620FA /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				66B352FF1D79C384006620FA /* UserStories */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		66B352FB1D79C353006620FA /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		66B352FC1D79C360006620FA /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreLayer;
+			sourceTree = "<group>";
+		};
+		66B352FD1D79C36A006620FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		66B352FE1D79C375006620FA /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		66B352FF1D79C384006620FA /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				66B353001D79C38D006620FA /* StatisticsUserStory */,
+			);
+			name = UserStories;
+			sourceTree = "<group>";
+		};
+		66B353001D79C38D006620FA /* StatisticsUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				66B353021D79C3AC006620FA /* Storyboard */,
+				66B353011D79C3A0006620FA /* Modules */,
+			);
+			name = StatisticsUserStory;
+			sourceTree = "<group>";
+		};
+		66B353011D79C3A0006620FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B98DCC65C19C75303842410B /* StatisticsModule */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		66B353021D79C3AC006620FA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		7C73BD5E927F9246365A8669 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66B353091D79C586006620FA /* StatisticsModuleViewController.h */,
+				66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */,
+				66B3530B1D79C586006620FA /* StatisticsModuleViewInput.h */,
+				66B3530C1D79C586006620FA /* StatisticsModuleViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4C62622EA01B2F252007D47 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				66B353171D79C5BF006620FA /* StatisticsModuleRouter.h */,
+				66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */,
+				66B353191D79C5BF006620FA /* StatisticsModuleRouterInput.h */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B125116CF20C293076BE203F /* DataDisplayManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +384,7 @@
 		B12511B35192D81B8971D0CA /* ProkrutObjc */ = {
 			isa = PBXGroup;
 			children = (
+				66B352F91D79C344006620FA /* Classes */,
 				B1251EB1170E6C5CFA2F6E13 /* Info.plist */,
 				B12512EFA4AE32E96587CBE5 /* Assets.xcassets */,
 				B12514B7F11AC574640BBD50 /* LaunchScreen.storyboard */,
@@ -370,6 +503,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B98DCC65C19C75303842410B /* StatisticsModule */ = {
+			isa = PBXGroup;
+			children = (
+				BCE298BFC3984B7B233F868D /* Assembly */,
+				7C73BD5E927F9246365A8669 /* View */,
+				0102B474ACB22EEC5AF1BE26 /* Presenter */,
+				D448CBE1641ED57A8DB9822F /* Interactor */,
+				A4C62622EA01B2F252007D47 /* Router */,
+			);
+			path = StatisticsModule;
+			sourceTree = "<group>";
+		};
+		BCE298BFC3984B7B233F868D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				66B353061D79C57E006620FA /* StatisticsModuleAssembly.h */,
+				66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		C0EC97562CCB20CC63D21262 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +531,17 @@
 				C1E147EAE57EA703A53559B7 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D448CBE1641ED57A8DB9822F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				66B353121D79C59E006620FA /* StatisticsModuleInteractor.h */,
+				66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */,
+				66B353141D79C59E006620FA /* StatisticsModuleInteractorInput.h */,
+				66B353151D79C59E006620FA /* StatisticsModuleInteractorOutput.h */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EAB19CFCB70FB486EEF5D98D /* Frameworks */ = {
@@ -512,6 +677,7 @@
 				B125182A86887BABB5C14498 /* main.m in Sources */,
 				B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */,
 				FD4349B11C4864D200567AAF /* UserStatiscticsCellObject.m in Sources */,
+				66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */,
 				9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */,
 				FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */,
 				FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */,
@@ -527,8 +693,11 @@
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
 				CD80FE2D1C5D06400000AE22 /* AllStatsCell.m in Sources */,
 				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
+				66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
 				FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */,
+				66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */,
+				66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */,
 				11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */,
 				B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */,
 				5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */,
@@ -536,6 +705,7 @@
 				11D332121D4AA45800CE1434 /* UITextField+Inspectable.m in Sources */,
 				11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */,
 				B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */,
+				66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */,
 				11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */,
 				11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */,
 				FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */,
