@@ -16,6 +16,10 @@ pod 'CorePlot', '2.0'
 pod 'InputValidators', '~> 1.0'
 pod 'MBProgressHUD', '~> 1.0'
 
+pod 'Typhoon'
+pod 'RamblerTyphoonUtils/AssemblyCollector'
+pod 'ViperMcFlurry'
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if target.name == 'Nimbus'
