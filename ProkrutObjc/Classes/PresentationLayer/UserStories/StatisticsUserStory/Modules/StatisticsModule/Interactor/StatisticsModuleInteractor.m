@@ -12,7 +12,6 @@
 #import "StatisticsModuleInteractorOutput.h"
 #import "AllUserStats.h"
 
-
 @implementation StatisticsModuleInteractor
 
 #pragma mark - Методы StatisticsModuleInteractorInput
@@ -27,13 +26,14 @@
                        withParameters:params
                                 block:^(id  _Nullable object, NSError * _Nullable error)
      {
-         NSArray *allStats = nil;
+         NSArray *filteredStatistics = nil;
          if (object) {
-             allStats = [AllUserStats userStatisticsFromExternalRepresentation:object];
+             NSArray *allStats = [AllUserStats userStatisticsFromExternalRepresentation:object];
+             filteredStatistics = [self.statisticsProcessor processStatistics:allStats];
          } else if (error) {
              NSLog(@"%@", error.localizedDescription);
          }
-         [self.output didObtainStatisticsFromNetworkWithData:allStats
+         [self.output didObtainStatisticsFromNetworkWithData:filteredStatistics
                                                        error:error];
      }];
 }

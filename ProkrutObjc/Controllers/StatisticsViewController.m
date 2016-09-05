@@ -28,6 +28,7 @@
 @property (nonatomic, strong) StatisticsService *statisticsService;
 @property (nonatomic, strong) StatisticsProcessor *statisticsProcessor;
 
+
 @property (nonatomic, strong) NSDate *currentMatchDate;
 
 @end

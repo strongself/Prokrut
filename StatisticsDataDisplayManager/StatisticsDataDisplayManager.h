@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "DataDisplayManager.h"
+#import "StatisticsDataDisplayManagerDelegate.h"
 
 @interface StatisticsDataDisplayManager : NSObject <DataDisplayManager, UITableViewDelegate>
+
+
+@property (nonatomic, weak) id<StatisticsDataDisplayManagerDelegate> delegate;
+
+- (void)updateTableViewModelWithObjects:(NSArray *)statistics;
 
 @end

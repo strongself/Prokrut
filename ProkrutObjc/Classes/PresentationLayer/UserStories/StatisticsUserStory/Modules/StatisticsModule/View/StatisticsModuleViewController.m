@@ -10,6 +10,12 @@
 
 #import "StatisticsModuleViewOutput.h"
 
+@interface StatisticsModuleViewController ()
+
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
+@end
+
 @implementation StatisticsModuleViewController
 
 #pragma mark - Методы жизненного цикла
@@ -25,37 +31,32 @@
 - (void)setupInitialState {
     [self setupPullToRefresh];
     [self setupTableView];
-    
 }
 
 - (void)updateViewWithStatisticsData:(NSArray *)statisticsData {
+    [self.dataDisplayManager updateTableViewModelWithObjects:statisticsData];
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
     
 }
 
 - (void)showErrorStateWithError:(NSError *)error {
-    
 }
 
 #pragma mark - private
 
 - (void)setupPullToRefresh {
-    
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(didPullToRefesh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
 }
 
 - (void)setupTableView {
-//    [self.tableView layoutIfNeeded];
-//    self.dataDisplayManager.feedType = feedType;
-//    self.dataDisplayManager.tableWidth = self.tableView.frame.size.width;
-//    self.dataDisplayManager.tableViewAnimator = [RamblerTableViewAnimator objectWithTableView:self.tableView];
-//    
-//    id <UITableViewDataSource> dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
-//    id <UITableViewDelegate> delegate = [self.dataDisplayManager delegateForTableView:self.tableView
-//                                                                     withBaseDelegate:nil];
-//    self.proxy = [[CDObserversProxy alloc] initWithProtocols:@[@protocol(UITableViewDelegate), @protocol(UIScrollViewDelegate)]
-//                                                   observers:@[self.dataDisplayManager, self.scrollingHandler, delegate]];
-//    
-//    self.tableView.dataSource = dataSource;
-//    self.tableView.delegate = (id<UITableViewDelegate>)self.proxy;
+    self.dataDisplayManager.delegate = self;
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
+                                                           withBaseDelegate:nil];
 }
 
 #pragma mark 

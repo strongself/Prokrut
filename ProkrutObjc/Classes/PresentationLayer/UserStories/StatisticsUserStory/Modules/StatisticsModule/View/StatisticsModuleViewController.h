@@ -10,14 +10,17 @@
 
 #import "StatisticsModuleViewInput.h"
 #import "StatisticsDataDisplayManager.h"
+#import "StatisticsDataDisplayManagerDelegate.h"
 
 @protocol StatisticsModuleViewOutput;
 
-@interface StatisticsModuleViewController : UIViewController <StatisticsModuleViewInput>
+@interface StatisticsModuleViewController : UIViewController <StatisticsModuleViewInput, StatisticsDataDisplayManagerDelegate>
 
 #pragma mark - Зависимости
 
-@property (strong, nonatomic) StatisticsDataDisplayManager *dataDisplayManager;
+@property (nonatomic, strong) StatisticsDataDisplayManager *dataDisplayManager;
 @property (nonatomic, strong) id<StatisticsModuleViewOutput> output;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import "StatisticsModuleInteractorInput.h"
+#import "StatisticsProcessor.h"
 
 @protocol StatisticsModuleInteractorOutput;
 
 @interface StatisticsModuleInteractor : NSObject <StatisticsModuleInteractorInput>
 
 @property (nonatomic, weak) id<StatisticsModuleInteractorOutput> output;
+@property (nonatomic, strong) StatisticsProcessor *statisticsProcessor;
 
 @end

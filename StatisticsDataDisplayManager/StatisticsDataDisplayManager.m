@@ -7,8 +7,16 @@
 //
 
 #import "StatisticsDataDisplayManager.h"
+#import <Nimbus/NimbusModels.h>
 
-@interface StatisticsDataDisplayManager () <UITableViewDataSource>
+#import "AllUserStats.h"
+#import "AllStatsCellObject.h"
+
+@interface StatisticsDataDisplayManager ()
+
+@property (strong, nonatomic) NITableViewModel *tableViewModel;
+@property (strong, nonatomic) NITableViewActions *tableViewActions;
+@property (strong, nonatomic) NSArray *cellObjects;
 
 @end
 
@@ -17,14 +25,45 @@
 #pragma mark - Методы DataDisplayManager
 
 - (id<UITableViewDataSource>)dataSourceForTableView:(UITableView *)tableView {
-    return self;
+    if (!self.tableViewModel) {
+        [self updateTableViewModelWithObjects:nil];
+    }
+    return self.tableViewModel;
 }
 
-- (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView
-                               withBaseDelegate:(id<UITableViewDelegate>)baseTableViewDelegate {
-    return self;
+- (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView withBaseDelegate:(id<UITableViewDelegate>)baseTableViewDelegate {
+    if (!self.tableViewActions) {
+        [self setupActionBlocks];
+    }
+    return [self.tableViewActions forwardingTo:self];
 }
 
+#pragma mark - UITableViewDelegate methods
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [NICellFactory tableView:tableView heightForRowAtIndexPath:indexPath model:self.tableViewModel];
+}
+
+#pragma mark - Private methods
+
+- (void)setupActionBlocks {
+    self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
+}
+
+- (void)updateTableViewModelWithObjects:(NSArray *)objects {
+    [self createAllUserStatsCellObjectsWithStats:objects];
+}
+
+- (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
+    NSMutableArray *mutableModel = [NSMutableArray array];
+    
+    for (AllUserStats *statistics in stats) {
+        AllStatsCellObject *cellObject = [AllStatsCellObject cellObjectWithAllStats:statistics];
+        [mutableModel addObject:cellObject];
+    }
+    self.tableViewModel = [[NITableViewModel alloc] initWithListArray:[mutableModel copy]
+                                                    delegate:(id)[NICellFactory class]];
+}
 
 
 @end
