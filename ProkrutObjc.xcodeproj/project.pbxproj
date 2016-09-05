@@ -33,10 +33,8 @@
 		66B353201D79CB94006620FA /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */; };
 		66EE7BB01D7D691E00F8F724 /* UserStatiscticsCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */; };
 		66EE7BB41D7D692900F8F724 /* UserStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */; };
-		66EE7BB71D7D69B700F8F724 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EE7BB61D7D69B700F8F724 /* Statistics.storyboard */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
-		B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */; };
 		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
 		B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251F7E331666D909D1E257 /* AppDelegate.m */; };
 		B1251273DE3CC8715F59665C /* AddMatchDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251D2886C5F6084CF96A2B /* AddMatchDataDisplayManager.m */; };
@@ -115,7 +113,6 @@
 		66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatiscticsCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/UserStatiscticsCellObject.m; sourceTree = SOURCE_ROOT; };
 		66EE7BB11D7D692900F8F724 /* UserStatisticsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatisticsCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/UserStatisticsCell.h; sourceTree = SOURCE_ROOT; };
 		66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatisticsCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/UserStatisticsCell.m; sourceTree = SOURCE_ROOT; };
-		66EE7BB61D7D69B700F8F724 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Statistics.storyboard; path = Classes/PresentationLayer/UserStories/StatisticsUserStory/Storyboard/Statistics.storyboard; sourceTree = "<group>"; };
 		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
@@ -129,9 +126,7 @@
 		B12516420EFF3DF495B45E96 /* PlayerCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCellObject.h; sourceTree = "<group>"; };
 		B125189FBBB732BBEC436779 /* AddMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMatchViewController.h; sourceTree = "<group>"; };
 		B12519C1B4F6209364DE821C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		B1251AAFFB44A16369053D94 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
-		B1251AB47F5451C01D48D3B8 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		B1251AF5034D93A97F3F3C45 /* AddMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMatchViewController.m; sourceTree = "<group>"; };
 		B1251AF82427D6A7E6908F39 /* PlayerCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCellObject.m; sourceTree = "<group>"; };
 		B1251C3B1DE154471414324B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -353,7 +348,6 @@
 		66B353021D79C3AC006620FA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				66EE7BB61D7D69B700F8F724 /* Statistics.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -476,8 +470,6 @@
 			children = (
 				11704F691D45560D00B753C5 /* SplashScreen */,
 				11D332041D4AA34D00CE1434 /* AuthorizationScreen */,
-				B1251AB47F5451C01D48D3B8 /* StatisticsViewController.h */,
-				B1251A1A0BE911D6C6F26C1C /* StatisticsViewController.m */,
 				B125189FBBB732BBEC436779 /* AddMatchViewController.h */,
 				B1251AF5034D93A97F3F3C45 /* AddMatchViewController.m */,
 				FDEC84B61C46F99C008C720B /* ChooseUserViewController.h */,
@@ -665,7 +657,6 @@
 				662A2D461D7D72E600B1FABF /* AllStatsCell.xib in Resources */,
 				B125163B3024887E7D9841A5 /* LaunchScreen.storyboard in Resources */,
 				FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */,
-				66EE7BB71D7D69B700F8F724 /* Statistics.storyboard in Resources */,
 				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
 				B12510E9DD410333CEB4891D /* Main.storyboard in Resources */,
 			);
@@ -735,7 +726,6 @@
 				FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */,
 				FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */,
 				66EE7BB41D7D692900F8F724 /* UserStatisticsCell.m in Sources */,
-				B125104217A7F2926835FDE2 /* StatisticsViewController.m in Sources */,
 				FD7C8A161C4C239000A6B424 /* HistoryViewController.m in Sources */,
 				5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */,
 				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
