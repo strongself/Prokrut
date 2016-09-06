@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fau-TG-0Y2" kind="relationship" relationship="rootViewController" id="3Gg-Ll-1Q8"/>
+                        <segue destination="uhe-Nq-SHo" kind="relationship" relationship="rootViewController" id="bWh-ba-UBN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hZ-Ih-nbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,41 +78,6 @@
             </objects>
             <point key="canvasLocation" x="238" y="897"/>
         </scene>
-        <!--Статистика-->
-        <scene sceneID="vNb-id-d7N">
-            <objects>
-                <tableViewController id="fau-TG-0Y2" customClass="StatisticsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="o7y-ie-DF8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GLC-WS-zX9">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLC-WS-zX9" id="MrQ-vz-KgJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fau-TG-0Y2" id="Kax-gz-gTW"/>
-                            <outlet property="delegate" destination="fau-TG-0Y2" id="1Mb-ol-oPr"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Статистика" id="IkD-fN-mhw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jbf-sN-bWK">
-                            <connections>
-                                <segue destination="6aK-Te-b2y" kind="show" id="Lgc-qv-b65"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNS-9Q-aOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1119" y="100"/>
-        </scene>
         <!--Graph View Controller-->
         <scene sceneID="bjI-dp-EDv">
             <objects>
@@ -152,6 +117,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXT-Ta-gUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="883"/>
+        </scene>
+        <!--Статистика-->
+        <scene sceneID="gfv-G6-dA9">
+            <objects>
+                <viewController id="uhe-Nq-SHo" customClass="StatisticsModuleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p8o-2S-i9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="qQK-tp-aQY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWR-AX-1Fv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uQ5-Rh-mCj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uQ5-Rh-mCj" secondAttribute="trailing" id="8Xj-OB-bns"/>
+                            <constraint firstAttribute="bottom" secondItem="uQ5-Rh-mCj" secondAttribute="bottom" id="aTM-eA-aOT"/>
+                            <constraint firstItem="uQ5-Rh-mCj" firstAttribute="top" secondItem="hWR-AX-1Fv" secondAttribute="top" id="rZ4-Ev-HYp"/>
+                            <constraint firstItem="uQ5-Rh-mCj" firstAttribute="leading" secondItem="hWR-AX-1Fv" secondAttribute="leading" id="zac-2N-nom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Статистика" id="XOj-Ie-2Ey">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yzm-QA-5zK">
+                            <connections>
+                                <segue destination="6aK-Te-b2y" kind="show" id="eHI-Hu-Wxp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="uQ5-Rh-mCj" id="m54-Tl-z2G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0y-XD-8Og" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="110"/>
         </scene>
         <!--Item-->
         <scene sceneID="FAU-j0-sQV">
@@ -500,7 +505,7 @@
         <image name="signInBG" width="304" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mdw-db-0Pm"/>
         <segue reference="OPg-Nb-TMp"/>
+        <segue reference="eHI-Hu-Wxp"/>
     </inferredMetricsTieBreakers>
 </document>

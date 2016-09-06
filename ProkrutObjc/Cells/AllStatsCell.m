@@ -76,4 +76,9 @@
   }
 }
 
++ (CGFloat)heightForObject:(AllStatsCellObject *)object
+               atIndexPath:(NSIndexPath *)indexPath
+                 tableView:(UITableView *)tableView {
+    return 260.0;
+}
 @end

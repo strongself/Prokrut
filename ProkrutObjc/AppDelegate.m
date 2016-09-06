@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 #import <Keys/ProkrutobjcKeys.h>
+#import <RamblerTyphoonUtils/AssemblyCollector.h>
 #import "Parse/Parse.h"
 
 @interface AppDelegate ()
@@ -55,5 +56,9 @@
     
 }
 
+- (NSArray *)initialAssemblies {
+    RamblerInitialAssemblyCollector *collector = [RamblerInitialAssemblyCollector new];
+    return [collector collectInitialAssemblyClasses];
+}
 
 @end
