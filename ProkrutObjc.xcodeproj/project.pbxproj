@@ -624,11 +624,6 @@
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = DevAlloy;
-				TargetAttributes = {
-					B12510ECB4AFD3A6E2DEDCF2 = {
-						DevelopmentTeam = UM246WFXVS;
-					};
-				};
 			};
 			buildConfigurationList = B1251A8EABDDDDF9E1E7B894 /* Build configuration list for PBXProject "ProkrutObjc" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -796,13 +791,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = UM246WFXVS;
 				INFOPLIST_FILE = ProkrutObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rambler.ProkrutObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -897,13 +890,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UM246WFXVS;
 				INFOPLIST_FILE = ProkrutObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rambler.ProkrutObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
