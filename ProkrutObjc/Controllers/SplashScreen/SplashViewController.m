@@ -17,11 +17,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    if ([AuthorizationService currentUser]) {
-    	[self performSegueWithIdentifier:ShowTabControllerSegueIdentifier sender:nil];
-    } else {
-        [self performSegueWithIdentifier:ShowAuthorizationControllerSegueIdentifier sender:nil];
-    }
+    [self performSegueWithIdentifier:ShowTabControllerSegueIdentifier sender:nil];
 }
 
 @end
