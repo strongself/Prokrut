@@ -16,9 +16,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="duR-hk-5ji" kind="relationship" relationship="viewControllers" id="FjG-bJ-cUP"/>
-                        <segue destination="A9j-Tb-Dbt" kind="relationship" relationship="viewControllers" id="Ps3-Ke-FX7"/>
                         <segue destination="4Lh-Nn-bF2" kind="relationship" relationship="viewControllers" id="MSB-dM-rVe"/>
+                        <segue destination="duR-hk-5ji" kind="relationship" relationship="viewControllers" id="FjG-bJ-cUP"/>
+                        <segue destination="fbz-29-CdX" kind="relationship" relationship="viewControllers" id="oUn-kX-6w9"/>
+                        <segue destination="A9j-Tb-Dbt" kind="relationship" relationship="viewControllers" id="Ps3-Ke-FX7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALu-JZ-xAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,11 +101,11 @@
             </objects>
             <point key="canvasLocation" x="1133" y="883"/>
         </scene>
-        <!--Item-->
+        <!--История-->
         <scene sceneID="FAU-j0-sQV">
             <objects>
                 <navigationController id="duR-hk-5ji" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fsa-wm-spg"/>
+                    <tabBarItem key="tabBarItem" title="История" id="fsa-wm-spg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7NS-2n-YpE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
