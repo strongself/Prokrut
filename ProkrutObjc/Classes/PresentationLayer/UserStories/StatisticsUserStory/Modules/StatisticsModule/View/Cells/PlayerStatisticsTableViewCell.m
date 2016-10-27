@@ -12,10 +12,25 @@
 #import "OnDateUserStatisctics.h"
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
+static NSString *const kNoPhotoImageName = @"no-avatar";
 
 @implementation PlayerStatisticsTableViewCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    
+    self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2;
+    self.photoImageView.clipsToBounds = YES;
+}
+
 - (BOOL)shouldUpdateCellWithObject:(PlayerStatisticsTableViewCellObject *)object {
+    if (!object.photoUrl) {
+        self.photoImageView.image = [UIImage imageNamed:kNoPhotoImageName];
+    }
+    
     self.nameLabel.text = [NSString stringWithFormat:@"%tu. %@", object.ratingPosition, object.name];
     self.emailLabel.text = object.email;
     self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];

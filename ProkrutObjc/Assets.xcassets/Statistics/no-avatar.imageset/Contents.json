@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ovalCopy6.png",
+      "filename" : "no-avatar.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ovalCopy6@2x.png",
+      "filename" : "no-avatar@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "no-avatar@3x.png",
       "scale" : "3x"
     }
   ],
