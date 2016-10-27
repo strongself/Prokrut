@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Nimbus/NimbusModels.h>
 
-@interface PlayerStatisticsTableViewCell : UITableViewCell
+@interface PlayerStatisticsTableViewCell : UITableViewCell <NICell>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;

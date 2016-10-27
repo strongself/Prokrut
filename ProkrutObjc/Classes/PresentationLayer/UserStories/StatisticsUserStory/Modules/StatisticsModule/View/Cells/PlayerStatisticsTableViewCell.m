@@ -8,17 +8,29 @@
 
 #import "PlayerStatisticsTableViewCell.h"
 
+#import "PlayerStatisticsTableViewCellObject.h"
+#import "OnDateUserStatisctics.h"
+
+static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
+
 @implementation PlayerStatisticsTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (BOOL)shouldUpdateCellWithObject:(PlayerStatisticsTableViewCellObject *)object {
+    self.nameLabel.text = [NSString stringWithFormat:@"%tu. %@", object.ratingPosition, object.name];
+    self.emailLabel.text = object.email;
+    self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];
+    self.winrateProgress.progress = object.winrate;
+    self.scoreLabel.text = [NSString stringWithFormat:@"%tu", object.score];
+    self.winsLabel.text = [NSString stringWithFormat:@"%tu", object.wins];
+    self.lossesLabel.text = [NSString stringWithFormat:@"%tu", object.losses];
+    
+    return YES;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
++ (CGFloat)heightForObject:(id)object
+               atIndexPath:(NSIndexPath *)indexPath
+                 tableView:(UITableView *)tableView {
+    return kPlayerStatisticsTableViewCellHeight;
 }
 
 @end

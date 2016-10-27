@@ -151,6 +151,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="LWI-SA-aLc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1gg-h3-Gjx"/>
+                    <constraint firstItem="2Hu-qi-KDP" firstAttribute="top" secondItem="hCZ-ZK-Mln" secondAttribute="bottom" constant="21" id="1ls-Kg-RXv"/>
                     <constraint firstItem="Vcu-Hc-TEr" firstAttribute="top" secondItem="rrW-vF-5h5" secondAttribute="bottom" constant="3" id="2Dg-tS-gpe"/>
                     <constraint firstItem="hCZ-ZK-Mln" firstAttribute="top" secondItem="mlB-Sh-gNb" secondAttribute="bottom" constant="3" id="4Vc-WT-qS8"/>
                     <constraint firstItem="mlB-Sh-gNb" firstAttribute="trailing" secondItem="hCZ-ZK-Mln" secondAttribute="trailing" id="71Z-R7-KDC"/>
@@ -165,7 +166,6 @@
                     <constraint firstAttribute="bottom" secondItem="2Hu-qi-KDP" secondAttribute="bottom" constant="55" id="d0g-sa-yFO"/>
                     <constraint firstItem="Y1K-fb-NBw" firstAttribute="leading" secondItem="hCZ-ZK-Mln" secondAttribute="leading" id="eBV-6X-QOR"/>
                     <constraint firstItem="rrW-vF-5h5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eeQ-XI-c9W"/>
-                    <constraint firstItem="hCZ-ZK-Mln" firstAttribute="top" secondItem="Vcu-Hc-TEr" secondAttribute="bottom" constant="37" id="fiV-EP-s2V"/>
                     <constraint firstItem="4uB-9r-KJn" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.33" id="fzZ-vj-qJk"/>
                     <constraint firstItem="Vcu-Hc-TEr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hSG-09-cz5"/>
                     <constraint firstAttribute="bottom" secondItem="EFf-hO-VSV" secondAttribute="bottom" id="jLo-Te-q4W"/>
