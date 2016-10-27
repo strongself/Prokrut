@@ -10,9 +10,12 @@
 
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "OnDateUserStatisctics.h"
+#import "UIColor+ProkrutPalette.h"
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
 static NSString *const kNoPhotoImageName = @"no-avatar";
+static NSString *const kArrowUpImageName = @"arrow-up";
+static NSString *const kArrowDownImageName = @"arrow-down";
 
 @implementation PlayerStatisticsTableViewCell
 
@@ -35,11 +38,36 @@ static NSString *const kNoPhotoImageName = @"no-avatar";
     self.emailLabel.text = object.email;
     self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];
     self.winrateProgress.progress = object.winrate;
-    self.scoreLabel.text = [NSString stringWithFormat:@"%tu", object.score];
-    self.winsLabel.text = [NSString stringWithFormat:@"%tu", object.wins];
-    self.lossesLabel.text = [NSString stringWithFormat:@"%tu", object.losses];
+    
+    [self setupNumericDataForLabel:self.scoreLabel
+                         diffLabel:self.scoreDiffLabel
+                    arrowImageView:self.scoreArrowImageView
+                      currentValue:object.score
+                         diffValue:object.scoreDiff];
+    [self setupNumericDataForLabel:self.winsLabel
+                         diffLabel:self.winsDiffLabel
+                    arrowImageView:self.winsArrowImageView
+                      currentValue:object.wins
+                         diffValue:object.winsDiff];
+    [self setupNumericDataForLabel:self.lossesLabel
+                         diffLabel:self.lossesDiffLabel
+                    arrowImageView:self.lossesArrowImageView
+                      currentValue:object.losses
+                         diffValue:object.lossesDiff];
     
     return YES;
+}
+
+- (void)setupNumericDataForLabel:(UILabel *)dataLabel
+                       diffLabel:(UILabel *)diffLabel
+                  arrowImageView:(UIImageView *)arrowImageView
+                    currentValue:(NSUInteger)currentValue
+                       diffValue:(NSUInteger)diffValue {
+    dataLabel.text = [NSString stringWithFormat:@"%tu", currentValue];
+    diffLabel.text = [NSString stringWithFormat:@"%tu", diffValue];
+    diffLabel.textColor = diffValue > 0 ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
+    NSString *arrowImageName = diffValue > 0 ? kArrowUpImageName : kArrowDownImageName;
+    arrowImageView.image = [UIImage imageNamed:arrowImageName];
 }
 
 + (CGFloat)heightForObject:(id)object

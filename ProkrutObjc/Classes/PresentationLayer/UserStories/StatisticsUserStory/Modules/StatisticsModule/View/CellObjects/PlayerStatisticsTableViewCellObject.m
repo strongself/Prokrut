@@ -22,6 +22,9 @@
 @property (nonatomic, assign, readwrite) NSUInteger score;
 @property (nonatomic, assign, readwrite) NSUInteger wins;
 @property (nonatomic, assign, readwrite) NSUInteger losses;
+@property (nonatomic, assign, readwrite) NSUInteger scoreDiff;
+@property (nonatomic, assign, readwrite) NSUInteger winsDiff;
+@property (nonatomic, assign, readwrite) NSUInteger lossesDiff;
 
 @end
 
@@ -40,6 +43,9 @@
         _score = statistics.points;
         _wins = statistics.wins;
         _losses = statistics.looses;
+        _scoreDiff = statistics.points - statistics.lastDateStats.points;
+        _winsDiff = statistics.wins - statistics.lastDateStats.wins;
+        _lossesDiff = statistics.looses - statistics.lastDateStats.looses;
     }
     return self;
 }
