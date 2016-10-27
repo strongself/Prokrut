@@ -10,7 +10,6 @@
 #import <Nimbus/NimbusModels.h>
 
 #import "AllUserStats.h"
-#import "AllStatsCellObject.h"
 #import "PlayerStatisticsTableViewCellObject.h"
 
 @interface StatisticsDataDisplayManager ()
