@@ -11,6 +11,7 @@
 
 #import "AllUserStats.h"
 #import "PlayerStatisticsTableViewCellObject.h"
+#import "StatisticsSeparatorCellObject.h"
 
 @interface StatisticsDataDisplayManager ()
 
@@ -60,6 +61,10 @@
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {
         PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics ratingPosition:idx + 1];
         [mutableModel addObject:cellObject];
+        if (idx < stats.count - 1) {
+            StatisticsSeparatorCellObject *separatorObject = [StatisticsSeparatorCellObject new];
+            [mutableModel addObject:separatorObject];
+        }
     }];
     self.tableViewModel = [[NITableViewModel alloc] initWithListArray:[mutableModel copy]
                                                     delegate:(id)[NICellFactory class]];
