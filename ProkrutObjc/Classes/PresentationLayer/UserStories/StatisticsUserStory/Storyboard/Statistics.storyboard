@@ -49,7 +49,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рейтинг" id="gL3-m5-26k">
-                        <barButtonItem key="rightBarButtonItem" image="plus-icon" id="psh-2i-YRA"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus-icon" id="psh-2i-YRA">
+                            <connections>
+                                <segue destination="HxZ-1e-fR3" kind="show" id="mMF-me-6hJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qbp-2g-mg7" id="8Sf-qV-57A"/>
@@ -58,6 +62,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPL-qY-fe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083" y="110"/>
+        </scene>
+        <!--AddMatchViewController-->
+        <scene sceneID="dES-bM-Z1K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="AddMatchViewController" id="HxZ-1e-fR3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABy-vh-Qbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="127"/>
         </scene>
     </scenes>
     <resources>

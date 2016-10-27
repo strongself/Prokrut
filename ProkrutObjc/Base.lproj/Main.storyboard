@@ -164,7 +164,7 @@
         <!--Добавить матч-->
         <scene sceneID="CA8-Oj-dJQ">
             <objects>
-                <tableViewController id="6aK-Te-b2y" customClass="AddMatchViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddMatchViewController" id="6aK-Te-b2y" customClass="AddMatchViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EKW-Eu-3bk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
