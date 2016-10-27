@@ -43,9 +43,9 @@
         _score = statistics.points;
         _wins = statistics.wins;
         _losses = statistics.looses;
-        _scoreDiff = statistics.points - statistics.lastDateStats.points;
-        _winsDiff = statistics.wins - statistics.lastDateStats.wins;
-        _lossesDiff = statistics.looses - statistics.lastDateStats.looses;
+        _scoreDiff = statistics.lastDateStats.points;
+        _winsDiff = statistics.lastDateStats.wins;
+        _lossesDiff = statistics.lastDateStats.looses;
     }
     return self;
 }

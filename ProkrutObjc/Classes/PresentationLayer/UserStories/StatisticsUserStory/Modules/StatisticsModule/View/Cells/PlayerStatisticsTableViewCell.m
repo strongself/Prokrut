@@ -68,6 +68,11 @@ static NSString *const kArrowDownImageName = @"arrow-down";
     diffLabel.textColor = diffValue > 0 ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
     NSString *arrowImageName = diffValue > 0 ? kArrowUpImageName : kArrowDownImageName;
     arrowImageView.image = [UIImage imageNamed:arrowImageName];
+    
+    if (diffValue == 0) {
+        arrowImageView.hidden = YES;
+        diffLabel.hidden = YES;
+    }
 }
 
 + (CGFloat)heightForObject:(id)object
