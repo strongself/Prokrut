@@ -34,6 +34,8 @@
 		66EE7BB01D7D691E00F8F724 /* UserStatiscticsCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */; };
 		66EE7BB41D7D692900F8F724 /* UserStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */; };
 		9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */; };
+		9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */; };
+		9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
 		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
@@ -117,6 +119,9 @@
 		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Statistics.storyboard; path = Classes/PresentationLayer/UserStories/StatisticsUserStory/Storyboard/Statistics.storyboard; sourceTree = "<group>"; };
+		9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerStatisticsTableViewCell.xib; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
@@ -389,6 +394,9 @@
 				662A2D441D7D72E600B1FABF /* AllStatsCell.xib */,
 				66EE7BB11D7D692900F8F724 /* UserStatisticsCell.h */,
 				66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */,
+				9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */,
+				9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */,
+				9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -657,6 +665,7 @@
 				FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */,
 				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
 				B12510E9DD410333CEB4891D /* Main.storyboard in Resources */,
+				9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */,
 				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +730,7 @@
 				B125182A86887BABB5C14498 /* main.m in Sources */,
 				B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */,
 				66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */,
+				9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */,
 				9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */,
 				FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */,
 				FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */,
