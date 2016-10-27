@@ -9,15 +9,12 @@
         <!--Статистика-->
         <scene sceneID="NeO-h6-1y4">
             <objects>
-                <navigationController storyboardIdentifier="StatisticsNavigationController" id="d2z-hF-X6J" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StatisticsNavigationController" id="d2z-hF-X6J" customClass="ProkrutNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Статистика" image="Statistics Icon" id="h4i-Ac-u7M"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="u85-bO-Z2y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.2196078431372549" green="0.39215686274509803" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="itr-zV-t0h" kind="relationship" relationship="rootViewController" id="zY5-84-dRY"/>

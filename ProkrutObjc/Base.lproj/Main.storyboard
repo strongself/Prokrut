@@ -48,7 +48,7 @@
         <!--Графики-->
         <scene sceneID="IwW-Km-KeU">
             <objects>
-                <navigationController id="fbz-29-CdX" sceneMemberID="viewController">
+                <navigationController id="fbz-29-CdX" customClass="ProkrutNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Графики" image="Stat icon" id="3u7-1Z-g3O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tzA-Pt-QVk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -104,7 +104,7 @@
         <!--История-->
         <scene sceneID="FAU-j0-sQV">
             <objects>
-                <navigationController id="duR-hk-5ji" sceneMemberID="viewController">
+                <navigationController id="duR-hk-5ji" customClass="ProkrutNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="История" id="fsa-wm-spg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7NS-2n-YpE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -268,7 +268,7 @@
         <!--Настройки-->
         <scene sceneID="Pqh-nl-IN8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9j-Tb-Dbt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9j-Tb-Dbt" customClass="ProkrutNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Настройки" image="Settings" id="Vwf-sp-q2e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0xS-eK-Qnf">

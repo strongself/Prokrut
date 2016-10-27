@@ -18,4 +18,8 @@
     return [UIColor colorWithRed:254.0f/255.0f green:63.0f/255.0f blue:53.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)prokrutBlueColor {
+    return [UIColor colorWithRed:56.0f/255.0f green:100.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+}
+
 @end

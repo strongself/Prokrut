@@ -33,6 +33,7 @@
 		9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */; };
 		9F2B3D6D1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D6C1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m */; };
 		9F2B3D7D1DC2794D00B6A33A /* UIColor+ProkrutPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */; };
+		9F2B3D821DC27BF600B6A33A /* ProkrutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */; };
 		9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */; };
 		9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */; };
 		9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */; };
@@ -118,6 +119,8 @@
 		9F2B3D6C1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsSeparatorCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/StatisticsSeparatorCellObject.m; sourceTree = SOURCE_ROOT; };
 		9F2B3D7B1DC2794D00B6A33A /* UIColor+ProkrutPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ProkrutPalette.h"; path = "Helpers/Categories/UIColor+ProkrutPalette/UIColor+ProkrutPalette.h"; sourceTree = "<group>"; };
 		9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ProkrutPalette.m"; path = "Helpers/Categories/UIColor+ProkrutPalette/UIColor+ProkrutPalette.m"; sourceTree = "<group>"; };
+		9F2B3D801DC27BF600B6A33A /* ProkrutNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProkrutNavigationController.h; path = Classes/PresentationLayer/Common/ProkrutNavigationController/ProkrutNavigationController.h; sourceTree = "<group>"; };
+		9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProkrutNavigationController.m; path = Classes/PresentationLayer/Common/ProkrutNavigationController/ProkrutNavigationController.m; sourceTree = "<group>"; };
 		9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Statistics.storyboard; path = Classes/PresentationLayer/UserStories/StatisticsUserStory/Storyboard/Statistics.storyboard; sourceTree = "<group>"; };
 		9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.m; sourceTree = SOURCE_ROOT; };
@@ -294,6 +297,7 @@
 		66B352FA1D79C348006620FA /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9F2B3D7E1DC27BCD00B6A33A /* Common */,
 				66B352FF1D79C384006620FA /* UserStories */,
 			);
 			name = PresentationLayer;
@@ -440,6 +444,23 @@
 				9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */,
 			);
 			name = "UIColor+ProkrutPalette";
+			sourceTree = "<group>";
+		};
+		9F2B3D7E1DC27BCD00B6A33A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D7F1DC27BD400B6A33A /* ProkrutNavigationController */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		9F2B3D7F1DC27BD400B6A33A /* ProkrutNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D801DC27BF600B6A33A /* ProkrutNavigationController.h */,
+				9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */,
+			);
+			name = ProkrutNavigationController;
 			sourceTree = "<group>";
 		};
 		A4C62622EA01B2F252007D47 /* Router */ = {
@@ -780,6 +801,7 @@
 				11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */,
 				FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */,
 				11D332141D4AA45800CE1434 /* RootSegue.m in Sources */,
+				9F2B3D821DC27BF600B6A33A /* ProkrutNavigationController.m in Sources */,
 				B1251905E2ABD602B974704F /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
