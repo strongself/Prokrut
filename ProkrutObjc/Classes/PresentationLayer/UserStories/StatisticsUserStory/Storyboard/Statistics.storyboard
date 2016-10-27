@@ -49,7 +49,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рейтинг" id="gL3-m5-26k">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="psh-2i-YRA"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus-icon" id="psh-2i-YRA"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qbp-2g-mg7" id="8Sf-qV-57A"/>
@@ -62,5 +62,6 @@
     </scenes>
     <resources>
         <image name="Statistics Icon" width="24" height="24"/>
+        <image name="plus-icon" width="12" height="11"/>
     </resources>
 </document>
