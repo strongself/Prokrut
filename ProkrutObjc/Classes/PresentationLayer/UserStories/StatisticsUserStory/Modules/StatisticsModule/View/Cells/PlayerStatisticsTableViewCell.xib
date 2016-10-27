@@ -45,6 +45,7 @@
                             <constraint firstAttribute="width" constant="120" id="RBK-fO-ciW"/>
                             <constraint firstAttribute="height" constant="3" id="nyJ-eb-hsw"/>
                         </constraints>
+                        <color key="trackTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Винрейт" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlB-Sh-gNb">
                         <constraints>
