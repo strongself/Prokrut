@@ -22,17 +22,21 @@
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
 		5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */; };
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
-		662A2D411D7D72D900B1FABF /* AllStatsCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A2D401D7D72D900B1FABF /* AllStatsCellObject.m */; };
-		662A2D451D7D72E600B1FABF /* AllStatsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A2D431D7D72E600B1FABF /* AllStatsCell.m */; };
-		662A2D461D7D72E600B1FABF /* AllStatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A2D441D7D72E600B1FABF /* AllStatsCell.xib */; };
 		66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */; };
 		66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */; };
 		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
 		66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */; };
 		66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */; };
 		66B353201D79CB94006620FA /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */; };
-		66EE7BB01D7D691E00F8F724 /* UserStatiscticsCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */; };
-		66EE7BB41D7D692900F8F724 /* UserStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */; };
+		9F2B3D641DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */; };
+		9F2B3D691DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */; };
+		9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */; };
+		9F2B3D6D1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D6C1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m */; };
+		9F2B3D7D1DC2794D00B6A33A /* UIColor+ProkrutPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */; };
+		9F2B3D821DC27BF600B6A33A /* ProkrutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */; };
+		9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */; };
+		9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */; };
+		9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
 		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
@@ -84,11 +88,6 @@
 		5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertBuilder.m; path = Helpers/AlertBuilder.m; sourceTree = "<group>"; };
 		5D4B1C441C5A11C50022CA42 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateFormatter.h; path = Helpers/DateFormatter.h; sourceTree = "<group>"; };
 		5D4B1C451C5A11C50022CA42 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateFormatter.m; path = Helpers/DateFormatter.m; sourceTree = "<group>"; };
-		662A2D3F1D7D72D900B1FABF /* AllStatsCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllStatsCellObject.h; path = ProkrutObjc/CellObjects/AllStatsCellObject.h; sourceTree = SOURCE_ROOT; };
-		662A2D401D7D72D900B1FABF /* AllStatsCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllStatsCellObject.m; path = ProkrutObjc/CellObjects/AllStatsCellObject.m; sourceTree = SOURCE_ROOT; };
-		662A2D421D7D72E600B1FABF /* AllStatsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllStatsCell.h; path = ProkrutObjc/Cells/AllStatsCell.h; sourceTree = SOURCE_ROOT; };
-		662A2D431D7D72E600B1FABF /* AllStatsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllStatsCell.m; path = ProkrutObjc/Cells/AllStatsCell.m; sourceTree = SOURCE_ROOT; };
-		662A2D441D7D72E600B1FABF /* AllStatsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AllStatsCell.xib; path = ProkrutObjc/Cells/AllStatsCell.xib; sourceTree = SOURCE_ROOT; };
 		66B353061D79C57E006620FA /* StatisticsModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleAssembly.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.h; sourceTree = SOURCE_ROOT; };
 		66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleAssembly.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.m; sourceTree = SOURCE_ROOT; };
 		66B353091D79C586006620FA /* StatisticsModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewController.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewController.h; sourceTree = SOURCE_ROOT; };
@@ -109,12 +108,23 @@
 		66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsDataDisplayManager.m; path = StatisticsDataDisplayManager/StatisticsDataDisplayManager.m; sourceTree = SOURCE_ROOT; };
 		66B353231D79D28D006620FA /* DataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataDisplayManager.h; path = Classes/Helpers/Protocols/DataDisplayManager.h; sourceTree = "<group>"; };
 		66B8AB4E1D7D92A80047767F /* StatisticsDataDisplayManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StatisticsDataDisplayManagerDelegate.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/DataDisplayManager/StatisticsDataDisplayManagerDelegate.h; sourceTree = SOURCE_ROOT; };
-		66EE7BAE1D7D691E00F8F724 /* UserStatiscticsCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatiscticsCellObject.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/UserStatiscticsCellObject.h; sourceTree = SOURCE_ROOT; };
-		66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatiscticsCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/UserStatiscticsCellObject.m; sourceTree = SOURCE_ROOT; };
-		66EE7BB11D7D692900F8F724 /* UserStatisticsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatisticsCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/UserStatisticsCell.h; sourceTree = SOURCE_ROOT; };
-		66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatisticsCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/UserStatisticsCell.m; sourceTree = SOURCE_ROOT; };
 		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9F2B3D621DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCellObject.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/PlayerStatisticsTableViewCellObject.h; sourceTree = SOURCE_ROOT; };
+		9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/PlayerStatisticsTableViewCellObject.m; sourceTree = SOURCE_ROOT; };
+		9F2B3D661DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSeparatorTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSeparatorTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsSeparatorTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSeparatorTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatisticsSeparatorTableViewCell.xib; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSeparatorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		9F2B3D6B1DC20FC800B6A33A /* StatisticsSeparatorCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSeparatorCellObject.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/StatisticsSeparatorCellObject.h; sourceTree = SOURCE_ROOT; };
+		9F2B3D6C1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsSeparatorCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/StatisticsSeparatorCellObject.m; sourceTree = SOURCE_ROOT; };
+		9F2B3D7B1DC2794D00B6A33A /* UIColor+ProkrutPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ProkrutPalette.h"; path = "Helpers/Categories/UIColor+ProkrutPalette/UIColor+ProkrutPalette.h"; sourceTree = "<group>"; };
+		9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ProkrutPalette.m"; path = "Helpers/Categories/UIColor+ProkrutPalette/UIColor+ProkrutPalette.m"; sourceTree = "<group>"; };
+		9F2B3D801DC27BF600B6A33A /* ProkrutNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProkrutNavigationController.h; path = Classes/PresentationLayer/Common/ProkrutNavigationController/ProkrutNavigationController.h; sourceTree = "<group>"; };
+		9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProkrutNavigationController.m; path = Classes/PresentationLayer/Common/ProkrutNavigationController/ProkrutNavigationController.m; sourceTree = "<group>"; };
+		9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Statistics.storyboard; path = Classes/PresentationLayer/UserStories/StatisticsUserStory/Storyboard/Statistics.storyboard; sourceTree = "<group>"; };
+		9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerStatisticsTableViewCell.xib; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 		66B352FA1D79C348006620FA /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9F2B3D7E1DC27BCD00B6A33A /* Common */,
 				66B352FF1D79C384006620FA /* UserStories */,
 			);
 			name = PresentationLayer;
@@ -348,6 +359,7 @@
 		66B353021D79C3AC006620FA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 		66B353211D79D27D006620FA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9F2B3D791DC2792200B6A33A /* Categories */,
 				66B353221D79D282006620FA /* Protocols */,
 			);
 			name = Helpers;
@@ -381,11 +394,12 @@
 		66EE7BAC1D7D684B00F8F724 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				662A2D421D7D72E600B1FABF /* AllStatsCell.h */,
-				662A2D431D7D72E600B1FABF /* AllStatsCell.m */,
-				662A2D441D7D72E600B1FABF /* AllStatsCell.xib */,
-				66EE7BB11D7D692900F8F724 /* UserStatisticsCell.h */,
-				66EE7BB21D7D692900F8F724 /* UserStatisticsCell.m */,
+				9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */,
+				9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */,
+				9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */,
+				9F2B3D661DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.h */,
+				9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */,
+				9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -393,10 +407,10 @@
 		66EE7BAD1D7D685000F8F724 /* CellObjects */ = {
 			isa = PBXGroup;
 			children = (
-				662A2D3F1D7D72D900B1FABF /* AllStatsCellObject.h */,
-				662A2D401D7D72D900B1FABF /* AllStatsCellObject.m */,
-				66EE7BAE1D7D691E00F8F724 /* UserStatiscticsCellObject.h */,
-				66EE7BAF1D7D691E00F8F724 /* UserStatiscticsCellObject.m */,
+				9F2B3D621DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.h */,
+				9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */,
+				9F2B3D6B1DC20FC800B6A33A /* StatisticsSeparatorCellObject.h */,
+				9F2B3D6C1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m */,
 			);
 			name = CellObjects;
 			sourceTree = "<group>";
@@ -413,6 +427,40 @@
 				66B3530C1D79C586006620FA /* StatisticsModuleViewOutput.h */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9F2B3D791DC2792200B6A33A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D7A1DC2792600B6A33A /* UIColor+ProkrutPalette */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9F2B3D7A1DC2792600B6A33A /* UIColor+ProkrutPalette */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D7B1DC2794D00B6A33A /* UIColor+ProkrutPalette.h */,
+				9F2B3D7C1DC2794D00B6A33A /* UIColor+ProkrutPalette.m */,
+			);
+			name = "UIColor+ProkrutPalette";
+			sourceTree = "<group>";
+		};
+		9F2B3D7E1DC27BCD00B6A33A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D7F1DC27BD400B6A33A /* ProkrutNavigationController */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		9F2B3D7F1DC27BD400B6A33A /* ProkrutNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B3D801DC27BF600B6A33A /* ProkrutNavigationController.h */,
+				9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */,
+			);
+			name = ProkrutNavigationController;
 			sourceTree = "<group>";
 		};
 		A4C62622EA01B2F252007D47 /* Router */ = {
@@ -649,11 +697,13 @@
 			files = (
 				B1251BD139C22217A4BEF44D /* Assets.xcassets in Resources */,
 				FD7C8A1B1C4C276500A6B424 /* MatchTableViewCell.xib in Resources */,
-				662A2D461D7D72E600B1FABF /* AllStatsCell.xib in Resources */,
 				B125163B3024887E7D9841A5 /* LaunchScreen.storyboard in Resources */,
 				FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */,
 				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
 				B12510E9DD410333CEB4891D /* Main.storyboard in Resources */,
+				9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */,
+				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
+				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,14 +763,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD7C8A1E1C4C29AF00A6B424 /* MatchCellObject.m in Sources */,
-				66EE7BB01D7D691E00F8F724 /* UserStatiscticsCellObject.m in Sources */,
 				B125182A86887BABB5C14498 /* main.m in Sources */,
 				B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */,
 				66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */,
+				9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */,
 				9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */,
 				FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */,
 				FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */,
-				66EE7BB41D7D692900F8F724 /* UserStatisticsCell.m in Sources */,
+				9F2B3D691DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m in Sources */,
+				9F2B3D7D1DC2794D00B6A33A /* UIColor+ProkrutPalette.m in Sources */,
 				FD7C8A161C4C239000A6B424 /* HistoryViewController.m in Sources */,
 				5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */,
 				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
@@ -729,6 +780,7 @@
 				FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */,
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
+				9F2B3D6D1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m in Sources */,
 				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
 				66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
@@ -741,15 +793,15 @@
 				5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */,
 				B1251273DE3CC8715F59665C /* AddMatchDataDisplayManager.m in Sources */,
 				11D332121D4AA45800CE1434 /* UITextField+Inspectable.m in Sources */,
-				662A2D411D7D72D900B1FABF /* AllStatsCellObject.m in Sources */,
 				11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */,
+				9F2B3D641DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m in Sources */,
 				B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */,
-				662A2D451D7D72E600B1FABF /* AllStatsCell.m in Sources */,
 				66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */,
 				11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */,
 				11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */,
 				FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */,
 				11D332141D4AA45800CE1434 /* RootSegue.m in Sources */,
+				9F2B3D821DC27BF600B6A33A /* ProkrutNavigationController.m in Sources */,
 				B1251905E2ABD602B974704F /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

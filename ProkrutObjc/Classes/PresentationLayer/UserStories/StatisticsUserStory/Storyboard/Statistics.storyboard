@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d2z-hF-X6J">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Статистика-->
+        <scene sceneID="NeO-h6-1y4">
+            <objects>
+                <navigationController storyboardIdentifier="StatisticsNavigationController" id="d2z-hF-X6J" customClass="ProkrutNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Статистика" image="Statistics Icon" id="h4i-Ac-u7M"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="u85-bO-Z2y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="itr-zV-t0h" kind="relationship" relationship="rootViewController" id="zY5-84-dRY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvY-cF-UCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="110"/>
+        </scene>
+        <!--Рейтинг-->
+        <scene sceneID="wv2-gs-8AA">
+            <objects>
+                <viewController id="itr-zV-t0h" customClass="StatisticsModuleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nuh-jv-UDe"/>
+                        <viewControllerLayoutGuide type="bottom" id="oyk-V7-DUg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VG1-GV-pcJ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-2g-mg7">
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qbp-2g-mg7" secondAttribute="bottom" id="1r8-6G-Xqd"/>
+                            <constraint firstItem="qbp-2g-mg7" firstAttribute="leading" secondItem="VG1-GV-pcJ" secondAttribute="leading" id="BAQ-Lf-cEs"/>
+                            <constraint firstItem="qbp-2g-mg7" firstAttribute="top" secondItem="VG1-GV-pcJ" secondAttribute="top" id="Rnv-yQ-a2D"/>
+                            <constraint firstAttribute="trailing" secondItem="qbp-2g-mg7" secondAttribute="trailing" id="udq-NI-I3S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рейтинг" id="gL3-m5-26k">
+                        <barButtonItem key="rightBarButtonItem" image="plus-icon" id="psh-2i-YRA">
+                            <connections>
+                                <segue destination="HxZ-1e-fR3" kind="show" id="mMF-me-6hJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="qbp-2g-mg7" id="8Sf-qV-57A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPL-qY-fe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="110"/>
+        </scene>
+        <!--AddMatchViewController-->
+        <scene sceneID="dES-bM-Z1K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="AddMatchViewController" id="HxZ-1e-fR3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABy-vh-Qbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Statistics Icon" width="24" height="24"/>
+        <image name="plus-icon" width="12" height="11"/>
+    </resources>
+</document>

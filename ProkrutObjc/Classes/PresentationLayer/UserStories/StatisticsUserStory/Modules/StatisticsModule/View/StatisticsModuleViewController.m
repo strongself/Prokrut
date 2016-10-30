@@ -38,7 +38,6 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
-    
 }
 
 - (void)showErrorStateWithError:(NSError *)error {
