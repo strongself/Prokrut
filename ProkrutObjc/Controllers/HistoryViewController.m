@@ -71,7 +71,21 @@
             [self recieveMathcesDataFromLocalStorage:NO];
         } else {
             if (objects.count > 0) {
-                [self createCellObjectsWithMatches:objects];
+                dispatch_group_t group = dispatch_group_create();
+                for (PFObject *match in objects) {
+                    dispatch_group_enter(group);
+                    PFUser *firstRedPlayer = match[@"firstRedPlayer"];
+                    PFUser *firstBluePlayer = match[@"firstBluePlayer"];
+                    PFUser *secondRedPlayer = match[@"firstRedPlayer"];
+                    PFUser *secondBluePlayer = match[@"secondRedPlayer"];
+                    NSArray *players = @[firstRedPlayer, firstBluePlayer, secondRedPlayer, secondBluePlayer];
+                    [PFObject fetchAllIfNeededInBackground:players block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+                        dispatch_group_leave(group);
+                    }];
+                }
+                dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+                    [self createCellObjectsWithMatches:objects];
+                });
             } else {
                 [self createCellObjectsWithMatches:@[]];
             }
@@ -92,10 +106,15 @@
         [self addDateWithMatch:match forModel:mutableModel];
         
         MatchCellObject *cellObject = [MatchCellObject new];
-        cellObject.firstRedPlayer = ((PFUser *)match[@"firstRedPlayer"]).username;
-        cellObject.secondRedPlayer = ((PFUser *)match[@"secondRedPlayer"]).username;
-        cellObject.firstBluePlayer = ((PFUser *)match[@"firstBluePlayer"]).username;
-        cellObject.secondBluePlayer = ((PFUser *)match[@"secondBluePlayer"]).username;
+        
+        PFUser *firstRedPlayer = match[@"firstRedPlayer"];
+        PFUser *firstBluePlayer = match[@"firstBluePlayer"];
+        PFUser *secondRedPlayer = match[@"firstRedPlayer"];
+        PFUser *secondBluePlayer = match[@"secondRedPlayer"];
+        cellObject.firstRedPlayer = firstRedPlayer.username;
+        cellObject.secondRedPlayer = secondRedPlayer.username;
+        cellObject.firstBluePlayer = firstBluePlayer.username;
+        cellObject.secondBluePlayer = secondBluePlayer.username;
         cellObject.redScore = [match[@"redTeamScore"] stringValue];
         cellObject.blueScore = [match[@"blueTeamScore"] stringValue];
         
