@@ -44,16 +44,16 @@ static NSString *const kArrowDownImageName = @"arrow-down";
                     arrowImageView:self.scoreArrowImageView
                       currentValue:object.score
                          diffValue:object.scoreDiff];
-    [self setupNumericDataForLabel:self.winsLabel
-                         diffLabel:self.winsDiffLabel
-                    arrowImageView:self.winsArrowImageView
-                      currentValue:object.wins
-                         diffValue:object.winsDiff];
-    [self setupNumericDataForLabel:self.lossesLabel
-                         diffLabel:self.lossesDiffLabel
-                    arrowImageView:self.lossesArrowImageView
-                      currentValue:object.losses
-                         diffValue:object.lossesDiff];
+    [self setupNumericDataForLabel:self.starLabel
+                         diffLabel:self.starDiffLabel
+                    arrowImageView:self.starArrowImageView
+                      currentValue:object.stars
+                         diffValue:object.starsDiff];
+    [self setupNumericDataForLabel:self.antistarLabel
+                         diffLabel:self.antistarDiffLabel
+                    arrowImageView:self.antistarArrowImageView
+                      currentValue:object.antistars
+                         diffValue:object.antistarsDiff];
     
     return YES;
 }

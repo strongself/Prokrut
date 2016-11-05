@@ -20,11 +20,11 @@
 @property (nonatomic, strong, readwrite) NSURL *photoUrl;
 @property (nonatomic, assign, readwrite) CGFloat winrate;
 @property (nonatomic, assign, readwrite) NSUInteger score;
-@property (nonatomic, assign, readwrite) NSUInteger wins;
-@property (nonatomic, assign, readwrite) NSUInteger losses;
+@property (nonatomic, assign, readwrite) NSUInteger stars;
+@property (nonatomic, assign, readwrite) NSUInteger antistars;
 @property (nonatomic, assign, readwrite) NSUInteger scoreDiff;
-@property (nonatomic, assign, readwrite) NSUInteger winsDiff;
-@property (nonatomic, assign, readwrite) NSUInteger lossesDiff;
+@property (nonatomic, assign, readwrite) NSUInteger starsDiff;
+@property (nonatomic, assign, readwrite) NSUInteger antistarsDiff;
 
 @end
 
@@ -41,11 +41,11 @@
         _email = statistics.user.email;
         _winrate = statistics.winrate;
         _score = statistics.points;
-        _wins = statistics.wins;
-        _losses = statistics.looses;
+        _stars = statistics.stars;
+        _antistars = statistics.antiStars;
         _scoreDiff = statistics.lastDateStats.points;
-        _winsDiff = statistics.lastDateStats.wins;
-        _lossesDiff = statistics.lastDateStats.looses;
+        _starsDiff = statistics.lastDateStats.stars;
+        _antistarsDiff = statistics.lastDateStats.antiStars;
     }
     return self;
 }

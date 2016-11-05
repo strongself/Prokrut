@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="225"/>
+                <frame key="frameInset" width="320" height="225.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ao6-qy-yrR">
@@ -128,9 +128,9 @@
                             <constraint firstAttribute="bottom" secondItem="SLu-Hx-lbn" secondAttribute="bottom" constant="11" id="xdR-p5-8zm"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-hO-VSV" userLabel="Победы">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-hO-VSV" userLabel="Звёзды">
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Победы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLI-YX-Gjp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звёзды" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLI-YX-Gjp">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="KY1-Rh-0pA"/>
                                     <constraint firstAttribute="height" constant="14" id="ddM-sS-9fo"/>
@@ -173,9 +173,9 @@
                             <constraint firstItem="aIL-aD-Lj1" firstAttribute="centerY" secondItem="RFr-jt-I7Q" secondAttribute="centerY" constant="-2" id="xio-Ln-v4r"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uB-9r-KJn" userLabel="Поражения">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uB-9r-KJn" userLabel="Антизвёзды">
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поражения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-cN-T0s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Антизвёзды" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-cN-T0s">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="X6t-yu-Y1j"/>
                                     <constraint firstAttribute="width" constant="76" id="cFv-E4-oPD"/>
@@ -259,20 +259,20 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="antistarArrowImageView" destination="mJ7-4o-ZHN" id="W3W-n4-Hvi"/>
+                <outlet property="antistarDiffLabel" destination="Msw-vo-HvL" id="yz6-3q-vwG"/>
+                <outlet property="antistarLabel" destination="ooc-Ok-rDu" id="XeH-3d-qZv"/>
                 <outlet property="emailLabel" destination="Vcu-Hc-TEr" id="SSp-CN-SWu"/>
-                <outlet property="lossesArrowImageView" destination="mJ7-4o-ZHN" id="2Vv-lF-KNB"/>
-                <outlet property="lossesDiffLabel" destination="Msw-vo-HvL" id="YkB-2u-5Lp"/>
-                <outlet property="lossesLabel" destination="ooc-Ok-rDu" id="ebc-Au-FVg"/>
                 <outlet property="nameLabel" destination="rrW-vF-5h5" id="XXo-V5-x88"/>
                 <outlet property="photoImageView" destination="ao6-qy-yrR" id="Llu-vF-jIa"/>
                 <outlet property="scoreArrowImageView" destination="e32-sU-OAG" id="ZyI-Uj-dcP"/>
                 <outlet property="scoreDiffLabel" destination="NfD-i7-ee1" id="W0k-Vi-34d"/>
                 <outlet property="scoreLabel" destination="Gu7-cL-CN8" id="rNf-u8-4Vw"/>
+                <outlet property="starArrowImageView" destination="RFr-jt-I7Q" id="8ge-JZ-3LG"/>
+                <outlet property="starDiffLabel" destination="aIL-aD-Lj1" id="Gi8-Pe-JkY"/>
+                <outlet property="starLabel" destination="EWQ-O4-Lng" id="ob0-kv-E4W"/>
                 <outlet property="winratePercent" destination="Y1K-fb-NBw" id="S7k-P3-Jtc"/>
                 <outlet property="winrateProgress" destination="hCZ-ZK-Mln" id="KhF-bG-nLV"/>
-                <outlet property="winsArrowImageView" destination="RFr-jt-I7Q" id="m6n-Cm-QRe"/>
-                <outlet property="winsDiffLabel" destination="aIL-aD-Lj1" id="mkz-45-2S1"/>
-                <outlet property="winsLabel" destination="EWQ-O4-Lng" id="qDi-Kk-aVG"/>
             </connections>
         </tableViewCell>
     </objects>
