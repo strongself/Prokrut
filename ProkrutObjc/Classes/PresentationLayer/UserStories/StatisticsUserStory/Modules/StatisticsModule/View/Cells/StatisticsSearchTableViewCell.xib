@@ -45,6 +45,9 @@
                     <constraint firstAttribute="bottom" secondItem="fdS-xj-tZN" secondAttribute="bottom" constant="0.5" id="xgo-7y-gBQ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="searchBar" destination="BNj-pq-RDa" id="H4W-Re-Ubn"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

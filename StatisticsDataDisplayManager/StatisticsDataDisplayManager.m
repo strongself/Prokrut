@@ -28,8 +28,10 @@ static NSUInteger const kStartRow = 2;
 
 #pragma mark - Public methods
 
-- (void)updateTableViewModelWithObjects:(NSArray *)objects {
-    [self createAllUserStatsCellObjectsWithStats:objects];
+- (void)updateTableViewModelWithObjects:(NSArray *)objects
+                         searchDelegate:(id<StatisticsSearchTableViewCellDelegate>)searchDelegate {
+    [self createAllUserStatsCellObjectsWithStats:objects
+                                  searchDelegate:searchDelegate];
 }
 
 - (NSIndexPath *)obtainStartIndexPath {
@@ -41,7 +43,8 @@ static NSUInteger const kStartRow = 2;
 
 - (id<UITableViewDataSource>)dataSourceForTableView:(UITableView *)tableView {
     if (!self.tableViewModel) {
-        [self updateTableViewModelWithObjects:nil];
+        [self updateTableViewModelWithObjects:nil
+                               searchDelegate:nil];
     }
     return self.tableViewModel;
 }
@@ -65,13 +68,16 @@ static NSUInteger const kStartRow = 2;
     self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
 }
 
-- (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
+- (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats
+                                searchDelegate:(id<StatisticsSearchTableViewCellDelegate>)searchDelegate {
     if (stats.count == 0) {
         return;
     }
     NSMutableArray *mutableModel = [NSMutableArray array];
     
-    [mutableModel addObject:[StatisticsSearchCellObject new]];
+    StatisticsSearchCellObject *searchCellObject = [StatisticsSearchCellObject new];
+    searchCellObject.delegate = searchDelegate;
+    [mutableModel addObject:searchCellObject];
     [mutableModel addObject:[StatisticsSeparatorCellObject new]];
     
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {

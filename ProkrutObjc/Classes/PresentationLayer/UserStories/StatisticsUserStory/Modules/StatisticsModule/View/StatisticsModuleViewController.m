@@ -9,8 +9,9 @@
 #import "StatisticsModuleViewController.h"
 
 #import "StatisticsModuleViewOutput.h"
+#import "StatisticsSearchTableViewCellDelegate.h"
 
-@interface StatisticsModuleViewController ()
+@interface StatisticsModuleViewController () <StatisticsSearchTableViewCellDelegate>
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -26,7 +27,7 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы StatisticsModuleViewInput
+#pragma mark - <StatisticsModuleViewInput>
 
 - (void)setupInitialState {
     [self setupPullToRefresh];
@@ -34,7 +35,8 @@
 }
 
 - (void)updateViewWithStatisticsData:(NSArray *)statisticsData {
-    [self.dataDisplayManager updateTableViewModelWithObjects:statisticsData];
+    [self.dataDisplayManager updateTableViewModelWithObjects:statisticsData
+                                              searchDelegate:self];
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
@@ -48,7 +50,14 @@
 - (void)showErrorStateWithError:(NSError *)error {
 }
 
-#pragma mark - private
+#pragma mark - <StatisticsSearchTableViewCellDelegate>
+
+- (void)didUpdateSearchBarWithTerm:(NSString *)term {
+    NSArray *data = [self.output obtainStatisticsFilteredWithTerm:term];
+    [self updateViewWithStatisticsData:data];
+}
+
+#pragma mark - Private
 
 - (void)setupPullToRefresh {
     self.refreshControl = [UIRefreshControl new];

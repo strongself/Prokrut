@@ -146,6 +146,7 @@
 		9FD233731DCE6BE80076030E /* StatisticsSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSearchTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSearchTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		9FD233741DCE6BE80076030E /* StatisticsSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsSearchTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSearchTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		9FD233751DCE6BE80076030E /* StatisticsSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatisticsSearchTableViewCell.xib; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSearchTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		9FD233781DCE6E780076030E /* StatisticsSearchTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSearchTableViewCellDelegate.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSearchTableViewCellDelegate.h; sourceTree = SOURCE_ROOT; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		9FD2BE191C53D493002EA024 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		B12512EFA4AE32E96587CBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -427,6 +428,7 @@
 				9FD233731DCE6BE80076030E /* StatisticsSearchTableViewCell.h */,
 				9FD233741DCE6BE80076030E /* StatisticsSearchTableViewCell.m */,
 				9FD233751DCE6BE80076030E /* StatisticsSearchTableViewCell.xib */,
+				9FD233781DCE6E780076030E /* StatisticsSearchTableViewCellDelegate.h */,
 			);
 			name = Cells;
 			sourceTree = "<group>";

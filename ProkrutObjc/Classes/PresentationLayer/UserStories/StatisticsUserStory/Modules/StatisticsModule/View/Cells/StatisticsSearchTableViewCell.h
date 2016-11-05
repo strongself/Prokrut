@@ -11,4 +11,6 @@
 
 @interface StatisticsSearchTableViewCell : UITableViewCell <NICell>
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end

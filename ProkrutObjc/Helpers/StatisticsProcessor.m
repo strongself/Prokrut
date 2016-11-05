@@ -22,6 +22,14 @@ static NSUInteger const kMinimumGamesCount = 12;
     return sortedStatistics;
 }
 
+- (NSArray *)processStatistics:(NSArray<AllUserStats *> *)statistics
+                  withUsername:(NSString *)username {
+    NSArray *filteredStatistics = [self filterPlayerStatistics:statistics
+                                                  withUsername:username];
+    NSArray *sortedStatistics = [self sortPlayerStatistics:filteredStatistics];
+    return sortedStatistics;
+}
+
 #pragma mark - Private methods
 
 - (NSArray *)filterPlayerStatistics:(NSArray<AllUserStats *> *)statistics {
@@ -29,6 +37,18 @@ static NSUInteger const kMinimumGamesCount = 12;
     for (AllUserStats *model in statistics) {
         NSUInteger games = model.wins + model.looses;
         if (games >= kMinimumGamesCount) {
+            [mutableStatistics addObject:model];
+        }
+    }
+    return [mutableStatistics copy];
+}
+
+- (NSArray *)filterPlayerStatistics:(NSArray<AllUserStats *> *)statistics
+                       withUsername:(NSString *)username {
+    NSMutableArray *mutableStatistics = [NSMutableArray new];
+    for (AllUserStats *model in statistics) {
+        NSString *fullUsername = model.user.username;
+        if ([[fullUsername lowercaseString] containsString:[username lowercaseString]]) {
             [mutableStatistics addObject:model];
         }
     }

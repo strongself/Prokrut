@@ -11,4 +11,6 @@
 
 @interface StatisticsSearchCellObject : NSObject <NINibCellObject>
 
+@property (nonatomic, weak) id delegate;
+
 @end

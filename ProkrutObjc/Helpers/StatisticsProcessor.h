@@ -18,5 +18,7 @@
 @interface StatisticsProcessor : NSObject
 
 - (NSArray *)processStatistics:(NSArray <AllUserStats *> *)statistics;
+- (NSArray *)processStatistics:(NSArray <AllUserStats *> *)statistics
+                  withUsername:(NSString *)username;
 
 @end
