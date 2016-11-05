@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEz-xC-Eh6">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEz-xC-Eh6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -144,12 +144,20 @@
                     <tabBarItem key="tabBarItem" title="История" image="History Icon" id="3cX-U7-Ehv"/>
                     <navigationItem key="navigationItem" title="История" id="j12-iM-MOR"/>
                     <connections>
-                        <segue destination="6aK-Te-b2y" kind="show" identifier="editMatch" id="Mdw-db-0Pm"/>
+                        <segue destination="VwS-bM-Edf" kind="show" identifier="editMatch" id="S50-0w-Vxk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGM-YB-O5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="307" y="-648"/>
+        </scene>
+        <!--AddMatchViewController-->
+        <scene sceneID="E3F-TF-UV4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewGame" referencedIdentifier="AddMatchViewController" id="VwS-bM-Edf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0j-yy-el4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="-649"/>
         </scene>
         <!--StatisticsNavigationController-->
         <scene sceneID="AQw-dd-Slv">
@@ -160,110 +168,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROT-j5-8iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1252" y="-144"/>
-        </scene>
-        <!--Добавить матч-->
-        <scene sceneID="CA8-Oj-dJQ">
-            <objects>
-                <tableViewController storyboardIdentifier="AddMatchViewController" id="6aK-Te-b2y" customClass="AddMatchViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EKW-Eu-3bk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="w9a-xW-AaB">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w9a-xW-AaB" id="TFk-ec-ehM">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6aK-Te-b2y" id="OrS-Us-sft"/>
-                            <outlet property="delegate" destination="6aK-Te-b2y" id="isW-jo-CwH"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Добавить матч" id="YjG-Ll-CGv">
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="kY8-Kp-UfP">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="6aK-Te-b2y" id="R7B-bg-zUC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="Y0U-yG-QOl" kind="show" identifier="choosePlayer" id="Cux-8T-gYU"/>
-                        <segue destination="14j-sc-hBw" kind="show" identifier="chooseScore" id="VjN-Ub-DDF"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pOP-dx-LKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1812" y="100"/>
-        </scene>
-        <!--Choose User View Controller-->
-        <scene sceneID="d9t-dB-01q">
-            <objects>
-                <tableViewController id="Y0U-yG-QOl" customClass="ChooseUserViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eQQ-ZG-TjP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CdO-Ss-bHg">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CdO-Ss-bHg" id="Hed-cg-3eB">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Y0U-yG-QOl" id="Oor-Co-WOa"/>
-                            <outlet property="delegate" destination="Y0U-yG-QOl" id="9dl-mK-U4T"/>
-                        </connections>
-                    </tableView>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RK3-6H-4gh">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <action selector="refreshDidPull:" destination="Y0U-yG-QOl" eventType="valueChanged" id="KLD-6E-eAg"/>
-                        </connections>
-                    </refreshControl>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZV8-9j-iYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2596" y="100"/>
-        </scene>
-        <!--Choose Score View Controller-->
-        <scene sceneID="2Sz-UL-pQP">
-            <objects>
-                <tableViewController id="14j-sc-hBw" customClass="ChooseScoreViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6PR-fp-QYw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EQU-PZ-bN6">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EQU-PZ-bN6" id="X8Y-tX-uBZ">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="14j-sc-hBw" id="cS0-G4-J6b"/>
-                            <outlet property="delegate" destination="14j-sc-hBw" id="NrK-MY-GY5"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JnM-0f-Sfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2596" y="875"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="Pqh-nl-IN8">
