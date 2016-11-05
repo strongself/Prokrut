@@ -14,6 +14,8 @@
 #import "StatisticsSeparatorCellObject.h"
 #import "StatisticsSearchCellObject.h"
 
+static NSUInteger const kStartRow = 2;
+
 @interface StatisticsDataDisplayManager ()
 
 @property (strong, nonatomic) NITableViewModel *tableViewModel;
@@ -23,6 +25,17 @@
 @end
 
 @implementation StatisticsDataDisplayManager
+
+#pragma mark - Public methods
+
+- (void)updateTableViewModelWithObjects:(NSArray *)objects {
+    [self createAllUserStatsCellObjectsWithStats:objects];
+}
+
+- (NSIndexPath *)obtainStartIndexPath {
+    return [NSIndexPath indexPathForRow:kStartRow
+                              inSection:0];
+}
 
 #pragma mark - Методы DataDisplayManager
 
@@ -52,11 +65,10 @@
     self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
 }
 
-- (void)updateTableViewModelWithObjects:(NSArray *)objects {
-    [self createAllUserStatsCellObjectsWithStats:objects];
-}
-
 - (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
+    if (stats.count == 0) {
+        return;
+    }
     NSMutableArray *mutableModel = [NSMutableArray array];
     
     [mutableModel addObject:[StatisticsSearchCellObject new]];

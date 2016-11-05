@@ -38,6 +38,11 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
+    
+    NSIndexPath *startIndexPath = [self.dataDisplayManager obtainStartIndexPath];
+    [self.tableView scrollToRowAtIndexPath:startIndexPath
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:NO];
 }
 
 - (void)showErrorStateWithError:(NSError *)error {

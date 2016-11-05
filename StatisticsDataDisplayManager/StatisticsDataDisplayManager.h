@@ -17,5 +17,6 @@
 @property (nonatomic, weak) id<StatisticsDataDisplayManagerDelegate> delegate;
 
 - (void)updateTableViewModelWithObjects:(NSArray *)statistics;
+- (NSIndexPath *)obtainStartIndexPath;
 
 @end
