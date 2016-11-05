@@ -45,7 +45,7 @@
         _antistars = statistics.antiStars;
         _scoreDiff = statistics.lastDateStats.points;
         _starsDiff = statistics.lastDateStats.stars;
-        _antistarsDiff = statistics.lastDateStats.antiStars;
+        _antistarsDiff = 1;
     }
     return self;
 }
