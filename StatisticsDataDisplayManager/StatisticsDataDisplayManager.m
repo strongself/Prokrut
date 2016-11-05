@@ -12,6 +12,7 @@
 #import "AllUserStats.h"
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "StatisticsSeparatorCellObject.h"
+#import "StatisticsSearchCellObject.h"
 
 @interface StatisticsDataDisplayManager ()
 
@@ -57,6 +58,9 @@
 
 - (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
     NSMutableArray *mutableModel = [NSMutableArray array];
+    
+    [mutableModel addObject:[StatisticsSearchCellObject new]];
+    [mutableModel addObject:[StatisticsSeparatorCellObject new]];
     
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {
         PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics ratingPosition:idx + 1];
