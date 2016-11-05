@@ -41,9 +41,10 @@
 		9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79661DCDFADE009871F7 /* NewGame.storyboard */; };
 		9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796A1DCE078F009871F7 /* Graph.storyboard */; };
 		9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796E1DCE082C009871F7 /* Settings.storyboard */; };
+		9F9B79731DCE093B009871F7 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79721DCE093B009871F7 /* Authorization.storyboard */; };
+		9F9B79771DCE096C009871F7 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79761DCE096C009871F7 /* Launch.storyboard */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
-		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
 		B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251F7E331666D909D1E257 /* AppDelegate.m */; };
 		B1251273DE3CC8715F59665C /* AddMatchDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251D2886C5F6084CF96A2B /* AddMatchDataDisplayManager.m */; };
 		B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251AF82427D6A7E6908F39 /* PlayerCellObject.m */; };
@@ -133,6 +134,8 @@
 		9F9B79661DCDFADE009871F7 /* NewGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewGame.storyboard; path = Classes/PresentationLayer/UserStories/NewGameUserStory/Storyboard/NewGame.storyboard; sourceTree = "<group>"; };
 		9F9B796A1DCE078F009871F7 /* Graph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Graph.storyboard; path = Classes/PresentationLayer/UserStories/GraphUserStory/Graph.storyboard; sourceTree = "<group>"; };
 		9F9B796E1DCE082C009871F7 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = Classes/PresentationLayer/UserStories/SettingsUserStory/Storyboard/Settings.storyboard; sourceTree = "<group>"; };
+		9F9B79721DCE093B009871F7 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Authorization.storyboard; path = Classes/PresentationLayer/UserStories/AuthorizationUserStory/Storyboard/Authorization.storyboard; sourceTree = "<group>"; };
+		9F9B79761DCE096C009871F7 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Launch.storyboard; path = Classes/PresentationLayer/UserStories/LaunchUserStory/Storyboard/Launch.storyboard; sourceTree = "<group>"; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
@@ -140,7 +143,6 @@
 		B12512EFA4AE32E96587CBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1251351B06A82EB12930414 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		B125151C307CF05E1A6A41B1 /* ProkrutObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProkrutObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1251562FF57DC1AE65EB485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B12516420EFF3DF495B45E96 /* PlayerCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCellObject.h; sourceTree = "<group>"; };
 		B125189FBBB732BBEC436779 /* AddMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMatchViewController.h; sourceTree = "<group>"; };
 		B12519C1B4F6209364DE821C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -342,6 +344,8 @@
 		66B352FF1D79C384006620FA /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				9F9B79741DCE0947009871F7 /* LaunchUserStory */,
+				9F9B79701DCE091E009871F7 /* AuthorizationUserStory */,
 				9F9B796C1DCE0809009871F7 /* SettingsUserStory */,
 				9F9B79681DCE0774009871F7 /* GraphUserStory */,
 				9F9B79641DCDFAB7009871F7 /* NewGameUserStory */,
@@ -539,6 +543,38 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		9F9B79701DCE091E009871F7 /* AuthorizationUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B79711DCE0926009871F7 /* Storyboard */,
+			);
+			name = AuthorizationUserStory;
+			sourceTree = "<group>";
+		};
+		9F9B79711DCE0926009871F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B79721DCE093B009871F7 /* Authorization.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		9F9B79741DCE0947009871F7 /* LaunchUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B79751DCE0958009871F7 /* Storyboard */,
+			);
+			name = LaunchUserStory;
+			sourceTree = "<group>";
+		};
+		9F9B79751DCE0958009871F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B79761DCE096C009871F7 /* Launch.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		A4C62622EA01B2F252007D47 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,7 +604,6 @@
 				B1251F2DBE167C1407FE1086 /* Supporting Files */,
 				B1251C3B1DE154471414324B /* AppDelegate.h */,
 				B1251F7E331666D909D1E257 /* AppDelegate.m */,
-				B1251FB70CDCCE955D611281 /* Main.storyboard */,
 				11D332151D4AA45F00CE1434 /* Constants */,
 				5D4B1C401C5A11730022CA42 /* Helpers */,
 				B1251576C5219D4518F323F0 /* Controllers */,
@@ -775,12 +810,13 @@
 				FD7C8A1B1C4C276500A6B424 /* MatchTableViewCell.xib in Resources */,
 				B125163B3024887E7D9841A5 /* LaunchScreen.storyboard in Resources */,
 				9F9B79631DCDFA9E009871F7 /* History.storyboard in Resources */,
+				9F9B79731DCE093B009871F7 /* Authorization.storyboard in Resources */,
 				FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */,
 				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
-				B12510E9DD410333CEB4891D /* Main.storyboard in Resources */,
 				9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */,
 				9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */,
 				9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */,
+				9F9B79771DCE096C009871F7 /* Launch.storyboard in Resources */,
 				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
 				9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */,
 				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
@@ -903,14 +939,6 @@
 				B1251C6BB8B1F0E9EF851B96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		B1251FB70CDCCE955D611281 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1251562FF57DC1AE65EB485 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
