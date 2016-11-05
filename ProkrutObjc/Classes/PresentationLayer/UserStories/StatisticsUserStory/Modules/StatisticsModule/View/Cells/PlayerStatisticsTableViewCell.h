@@ -14,7 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *winratePercent;
+@property (weak, nonatomic) IBOutlet UIImageView *winrateArrowImageView;
+@property (weak, nonatomic) IBOutlet UILabel *winrateDiffLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *winrateProgress;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;

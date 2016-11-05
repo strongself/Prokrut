@@ -21,6 +21,7 @@
 @property (nonatomic, strong, readonly) NSString *email;
 @property (nonatomic, strong, readonly) NSURL *photoUrl;
 @property (nonatomic, assign, readonly) CGFloat winrate;
+@property (nonatomic, assign, readonly) CGFloat winrateDiff;
 
 @property (nonatomic, assign, readonly) NSUInteger score;
 @property (nonatomic, assign, readonly) NSUInteger stars;

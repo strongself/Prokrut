@@ -46,23 +46,31 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];
     self.winrateProgress.progress = object.winrate;
     
+    NSNumber *winrateDiff = @(ceilf(object.winrateDiff * 100) / 100);
+    
+    [self setupNumericDataForLabel:nil
+                         diffLabel:self.winrateDiffLabel
+                    arrowImageView:self.winrateArrowImageView
+                      currentValue:@(object.winrate)
+                         diffValue:winrateDiff
+                         diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.scoreLabel
                          diffLabel:self.scoreDiffLabel
                     arrowImageView:self.scoreArrowImageView
-                      currentValue:object.score
-                         diffValue:object.scoreDiff
+                      currentValue:@(object.score)
+                         diffValue:@(object.scoreDiff)
                          diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.starLabel
                          diffLabel:self.starDiffLabel
                     arrowImageView:self.starArrowImageView
-                      currentValue:object.stars
-                         diffValue:object.starsDiff
+                      currentValue:@(object.stars)
+                         diffValue:@(object.starsDiff)
                          diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.antistarLabel
                          diffLabel:self.antistarDiffLabel
                     arrowImageView:self.antistarArrowImageView
-                      currentValue:object.antistars
-                         diffValue:object.antistarsDiff
+                      currentValue:@(object.antistars)
+                         diffValue:@(object.antistarsDiff)
                          diffStyle:StatisticsDiffRevertStyle];
     
     return YES;
@@ -71,22 +79,22 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
 - (void)setupNumericDataForLabel:(UILabel *)dataLabel
                        diffLabel:(UILabel *)diffLabel
                   arrowImageView:(UIImageView *)arrowImageView
-                    currentValue:(NSUInteger)currentValue
-                       diffValue:(NSUInteger)diffValue
+                    currentValue:(NSNumber *)currentValue
+                       diffValue:(NSNumber *)diffValue
                        diffStyle:(StatisticsDiffStyle)diffStyle {
     UIColor *upColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
     UIColor *downColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutRedColor] : [UIColor prokrutGreenColor];
     
     NSString *upArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowGreenUpImageName : kArrowRedUpImageName;
-    NSString *downArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowGreenDownImageName : kArrowRedDownImageName;
+    NSString *downArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowRedDownImageName : kArrowGreenDownImageName;
     
-    dataLabel.text = [NSString stringWithFormat:@"%tu", currentValue];
-    diffLabel.text = [NSString stringWithFormat:@"%tu", diffValue];
-    diffLabel.textColor = diffValue > 0 ? upColor : downColor;
-    NSString *arrowImageName = diffValue > 0 ? upArrowImageName : downArrowImageName;
+    dataLabel.text = [NSString stringWithFormat:@"%@", currentValue];
+    diffLabel.text = [NSString stringWithFormat:@"%@", diffValue];
+    diffLabel.textColor = [diffValue floatValue] > 0 ? upColor : downColor;
+    NSString *arrowImageName = [diffValue floatValue] > 0 ? upArrowImageName : downArrowImageName;
     arrowImageView.image = [UIImage imageNamed:arrowImageName];
     
-    if (diffValue == 0) {
+    if ([diffValue floatValue] == 0) {
         arrowImageView.hidden = YES;
         diffLabel.hidden = YES;
     } else {
