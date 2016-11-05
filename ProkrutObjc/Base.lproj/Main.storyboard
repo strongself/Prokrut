@@ -17,7 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="4Lh-Nn-bF2" kind="relationship" relationship="viewControllers" id="MSB-dM-rVe"/>
-                        <segue destination="duR-hk-5ji" kind="relationship" relationship="viewControllers" id="FjG-bJ-cUP"/>
+                        <segue destination="2Kn-NN-lLk" kind="relationship" relationship="viewControllers" id="MV4-aS-Gk0"/>
                         <segue destination="fbz-29-CdX" kind="relationship" relationship="viewControllers" id="oUn-kX-6w9"/>
                         <segue destination="A9j-Tb-Dbt" kind="relationship" relationship="viewControllers" id="Ps3-Ke-FX7"/>
                     </connections>
@@ -101,63 +101,15 @@
             </objects>
             <point key="canvasLocation" x="1133" y="883"/>
         </scene>
-        <!--История-->
-        <scene sceneID="FAU-j0-sQV">
+        <!--HistoryNavigationController-->
+        <scene sceneID="v2U-9C-4eZ">
             <objects>
-                <navigationController id="duR-hk-5ji" customClass="ProkrutNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="История" id="fsa-wm-spg"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7NS-2n-YpE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="XNy-xt-Ssa" kind="relationship" relationship="rootViewController" id="PC0-ey-XUW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3B-6P-N8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="History" referencedIdentifier="HistoryNavigationController" id="2Kn-NN-lLk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FNb-A0-J5t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hui-ue-eBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="-648"/>
-        </scene>
-        <!--История-->
-        <scene sceneID="U3J-x8-5MK">
-            <objects>
-                <tableViewController id="XNy-xt-Ssa" customClass="HistoryViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sI8-4B-Onz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X0d-8E-WEk">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X0d-8E-WEk" id="m7t-TK-vPX">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="XNy-xt-Ssa" id="62a-8f-QW3"/>
-                            <outlet property="delegate" destination="XNy-xt-Ssa" id="fTg-Dt-lNz"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="История" image="History Icon" id="3cX-U7-Ehv"/>
-                    <navigationItem key="navigationItem" title="История" id="j12-iM-MOR"/>
-                    <connections>
-                        <segue destination="VwS-bM-Edf" kind="show" identifier="editMatch" id="S50-0w-Vxk"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FGM-YB-O5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="307" y="-648"/>
-        </scene>
-        <!--AddMatchViewController-->
-        <scene sceneID="E3F-TF-UV4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="NewGame" referencedIdentifier="AddMatchViewController" id="VwS-bM-Edf" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l0j-yy-el4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1024" y="-649"/>
+            <point key="canvasLocation" x="-878" y="-727"/>
         </scene>
         <!--StatisticsNavigationController-->
         <scene sceneID="AQw-dd-Slv">
@@ -167,7 +119,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROT-j5-8iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1252" y="-144"/>
+            <point key="canvasLocation" x="-866" y="-663"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="Pqh-nl-IN8">
@@ -350,7 +302,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="History Icon" width="24" height="24"/>
         <image name="Settings" width="28" height="28"/>
         <image name="Stat icon" width="25" height="25"/>
         <image name="signInBG" width="304" height="210"/>
