@@ -14,10 +14,8 @@
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
 static NSString *const kNoPhotoImageName = @"no-avatar";
-static NSString *const kArrowGreenUpImageName = @"arrow-green-up";
-static NSString *const kArrowGreenDownImageName = @"arrow-green-down";
-static NSString *const kArrowRedUpImageName = @"arrow-red-up";
-static NSString *const kArrowRedDownImageName = @"arrow-red-down";
+static NSString *const kArrowUpImageName = @"arrow-up";
+static NSString *const kArrowDownImageName = @"arrow-down";
 
 typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     StatisticsDiffDefaultStyle = 0,
@@ -85,14 +83,13 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     UIColor *upColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
     UIColor *downColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutRedColor] : [UIColor prokrutGreenColor];
     
-    NSString *upArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowGreenUpImageName : kArrowRedUpImageName;
-    NSString *downArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowRedDownImageName : kArrowGreenDownImageName;
-    
     dataLabel.text = [NSString stringWithFormat:@"%@", currentValue];
     diffLabel.text = [NSString stringWithFormat:@"%@", diffValue];
     diffLabel.textColor = [diffValue floatValue] > 0 ? upColor : downColor;
-    NSString *arrowImageName = [diffValue floatValue] > 0 ? upArrowImageName : downArrowImageName;
-    arrowImageView.image = [UIImage imageNamed:arrowImageName];
+    NSString *arrowImageName = [diffValue floatValue] > 0 ? kArrowUpImageName : kArrowDownImageName;
+    UIImage *arrowImage = [UIImage imageNamed:arrowImageName];
+    arrowImageView.image = [arrowImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    arrowImageView.tintColor = [diffValue floatValue] > 0 ? upColor : downColor;
     
     if ([diffValue floatValue] == 0) {
         arrowImageView.hidden = YES;
