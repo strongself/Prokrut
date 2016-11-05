@@ -14,19 +14,22 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *winratePercent;
+@property (weak, nonatomic) IBOutlet UIImageView *winrateArrowImageView;
+@property (weak, nonatomic) IBOutlet UILabel *winrateDiffLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *winrateProgress;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *scoreArrowImageView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreDiffLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *winsLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *winsArrowImageView;
-@property (weak, nonatomic) IBOutlet UILabel *winsDiffLabel;
+@property (weak, nonatomic) IBOutlet UILabel *starLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *starArrowImageView;
+@property (weak, nonatomic) IBOutlet UILabel *starDiffLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *lossesLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *lossesArrowImageView;
-@property (weak, nonatomic) IBOutlet UILabel *lossesDiffLabel;
+@property (weak, nonatomic) IBOutlet UILabel *antistarLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *antistarArrowImageView;
+@property (weak, nonatomic) IBOutlet UILabel *antistarDiffLabel;
 
 @end

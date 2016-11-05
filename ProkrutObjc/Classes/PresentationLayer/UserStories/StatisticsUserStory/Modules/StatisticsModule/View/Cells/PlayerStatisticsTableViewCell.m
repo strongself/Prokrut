@@ -14,8 +14,15 @@
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
 static NSString *const kNoPhotoImageName = @"no-avatar";
-static NSString *const kArrowUpImageName = @"arrow-up";
-static NSString *const kArrowDownImageName = @"arrow-down";
+static NSString *const kArrowGreenUpImageName = @"arrow-green-up";
+static NSString *const kArrowGreenDownImageName = @"arrow-green-down";
+static NSString *const kArrowRedUpImageName = @"arrow-red-up";
+static NSString *const kArrowRedDownImageName = @"arrow-red-down";
+
+typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
+    StatisticsDiffDefaultStyle = 0,
+    StatisticsDiffRevertStyle = 1
+};
 
 @implementation PlayerStatisticsTableViewCell
 
@@ -39,21 +46,32 @@ static NSString *const kArrowDownImageName = @"arrow-down";
     self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];
     self.winrateProgress.progress = object.winrate;
     
+    NSNumber *winrateDiff = @(ceilf(object.winrateDiff * 100) / 100);
+    
+    [self setupNumericDataForLabel:nil
+                         diffLabel:self.winrateDiffLabel
+                    arrowImageView:self.winrateArrowImageView
+                      currentValue:@(object.winrate)
+                         diffValue:winrateDiff
+                         diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.scoreLabel
                          diffLabel:self.scoreDiffLabel
                     arrowImageView:self.scoreArrowImageView
-                      currentValue:object.score
-                         diffValue:object.scoreDiff];
-    [self setupNumericDataForLabel:self.winsLabel
-                         diffLabel:self.winsDiffLabel
-                    arrowImageView:self.winsArrowImageView
-                      currentValue:object.wins
-                         diffValue:object.winsDiff];
-    [self setupNumericDataForLabel:self.lossesLabel
-                         diffLabel:self.lossesDiffLabel
-                    arrowImageView:self.lossesArrowImageView
-                      currentValue:object.losses
-                         diffValue:object.lossesDiff];
+                      currentValue:@(object.score)
+                         diffValue:@(object.scoreDiff)
+                         diffStyle:StatisticsDiffDefaultStyle];
+    [self setupNumericDataForLabel:self.starLabel
+                         diffLabel:self.starDiffLabel
+                    arrowImageView:self.starArrowImageView
+                      currentValue:@(object.stars)
+                         diffValue:@(object.starsDiff)
+                         diffStyle:StatisticsDiffDefaultStyle];
+    [self setupNumericDataForLabel:self.antistarLabel
+                         diffLabel:self.antistarDiffLabel
+                    arrowImageView:self.antistarArrowImageView
+                      currentValue:@(object.antistars)
+                         diffValue:@(object.antistarsDiff)
+                         diffStyle:StatisticsDiffRevertStyle];
     
     return YES;
 }
@@ -61,17 +79,27 @@ static NSString *const kArrowDownImageName = @"arrow-down";
 - (void)setupNumericDataForLabel:(UILabel *)dataLabel
                        diffLabel:(UILabel *)diffLabel
                   arrowImageView:(UIImageView *)arrowImageView
-                    currentValue:(NSUInteger)currentValue
-                       diffValue:(NSUInteger)diffValue {
-    dataLabel.text = [NSString stringWithFormat:@"%tu", currentValue];
-    diffLabel.text = [NSString stringWithFormat:@"%tu", diffValue];
-    diffLabel.textColor = diffValue > 0 ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
-    NSString *arrowImageName = diffValue > 0 ? kArrowUpImageName : kArrowDownImageName;
+                    currentValue:(NSNumber *)currentValue
+                       diffValue:(NSNumber *)diffValue
+                       diffStyle:(StatisticsDiffStyle)diffStyle {
+    UIColor *upColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
+    UIColor *downColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutRedColor] : [UIColor prokrutGreenColor];
+    
+    NSString *upArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowGreenUpImageName : kArrowRedUpImageName;
+    NSString *downArrowImageName = diffStyle == StatisticsDiffDefaultStyle ? kArrowRedDownImageName : kArrowGreenDownImageName;
+    
+    dataLabel.text = [NSString stringWithFormat:@"%@", currentValue];
+    diffLabel.text = [NSString stringWithFormat:@"%@", diffValue];
+    diffLabel.textColor = [diffValue floatValue] > 0 ? upColor : downColor;
+    NSString *arrowImageName = [diffValue floatValue] > 0 ? upArrowImageName : downArrowImageName;
     arrowImageView.image = [UIImage imageNamed:arrowImageName];
     
-    if (diffValue == 0) {
+    if ([diffValue floatValue] == 0) {
         arrowImageView.hidden = YES;
         diffLabel.hidden = YES;
+    } else {
+        arrowImageView.hidden = NO;
+        diffLabel.hidden = NO;
     }
 }
 
