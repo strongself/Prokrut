@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Выберите сезон-->
+        <scene sceneID="Dac-PM-wvj">
+            <objects>
+                <tableViewController title="Выберите сезон" id="YJf-J4-BVm" customClass="SeasonViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sDM-L4-sl5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="YJf-J4-BVm" id="rB7-vM-OgI"/>
+                            <outlet property="delegate" destination="YJf-J4-BVm" id="eQJ-eB-EJs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Выберите сезон" id="vzU-xy-34m"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xjt-t8-xbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-811" y="865"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="P0w-wi-KHN">
+            <objects>
+                <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="OBB-IL-vpH" customClass="ProkrutNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="Settings" id="STs-ih-66X"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XMS-HR-KvK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YJf-J4-BVm" kind="relationship" relationship="rootViewController" id="xoe-Ps-FGY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5U-xy-4rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1529" y="865"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Settings" width="28" height="28"/>
+    </resources>
+</document>

@@ -40,6 +40,7 @@
 		9F9B79631DCDFA9E009871F7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79621DCDFA9E009871F7 /* History.storyboard */; };
 		9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79661DCDFADE009871F7 /* NewGame.storyboard */; };
 		9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796A1DCE078F009871F7 /* Graph.storyboard */; };
+		9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796E1DCE082C009871F7 /* Settings.storyboard */; };
 		9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */; };
 		9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2BE191C53D493002EA024 /* GraphViewController.m */; };
 		B12510E9DD410333CEB4891D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251FB70CDCCE955D611281 /* Main.storyboard */; };
@@ -131,6 +132,7 @@
 		9F9B79621DCDFA9E009871F7 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Classes/PresentationLayer/UserStories/HistoryUserStory/Storyboard/History.storyboard; sourceTree = "<group>"; };
 		9F9B79661DCDFADE009871F7 /* NewGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewGame.storyboard; path = Classes/PresentationLayer/UserStories/NewGameUserStory/Storyboard/NewGame.storyboard; sourceTree = "<group>"; };
 		9F9B796A1DCE078F009871F7 /* Graph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Graph.storyboard; path = Classes/PresentationLayer/UserStories/GraphUserStory/Graph.storyboard; sourceTree = "<group>"; };
+		9F9B796E1DCE082C009871F7 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = Classes/PresentationLayer/UserStories/SettingsUserStory/Storyboard/Settings.storyboard; sourceTree = "<group>"; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		66B352FF1D79C384006620FA /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				9F9B796C1DCE0809009871F7 /* SettingsUserStory */,
 				9F9B79681DCE0774009871F7 /* GraphUserStory */,
 				9F9B79641DCDFAB7009871F7 /* NewGameUserStory */,
 				9F9B79601DCDFA6E009871F7 /* HistoryUserStory */,
@@ -516,6 +519,22 @@
 			isa = PBXGroup;
 			children = (
 				9F9B796A1DCE078F009871F7 /* Graph.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		9F9B796C1DCE0809009871F7 /* SettingsUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B796D1DCE0817009871F7 /* Storyboard */,
+			);
+			name = SettingsUserStory;
+			sourceTree = "<group>";
+		};
+		9F9B796D1DCE0817009871F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B796E1DCE082C009871F7 /* Settings.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -763,6 +782,7 @@
 				9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */,
 				9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */,
 				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
+				9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */,
 				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
