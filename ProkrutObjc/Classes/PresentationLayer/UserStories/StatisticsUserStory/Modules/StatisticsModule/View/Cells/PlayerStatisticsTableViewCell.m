@@ -83,15 +83,15 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     UIColor *upColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
     UIColor *downColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutRedColor] : [UIColor prokrutGreenColor];
     
-    dataLabel.text = [NSString stringWithFormat:@"%@", currentValue];
-    diffLabel.text = [NSString stringWithFormat:@"%@", diffValue];
-    diffLabel.textColor = [diffValue floatValue] > 0 ? upColor : downColor;
-    NSString *arrowImageName = [diffValue floatValue] > 0 ? kArrowUpImageName : kArrowDownImageName;
+    dataLabel.text = currentValue.stringValue;
+    diffLabel.text = diffValue.stringValue;
+    diffLabel.textColor = diffValue.floatValue > 0 ? upColor : downColor;
+    NSString *arrowImageName = diffValue.floatValue > 0 ? kArrowUpImageName : kArrowDownImageName;
     UIImage *arrowImage = [UIImage imageNamed:arrowImageName];
     arrowImageView.image = [arrowImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    arrowImageView.tintColor = [diffValue floatValue] > 0 ? upColor : downColor;
+    arrowImageView.tintColor = diffValue.floatValue > 0 ? upColor : downColor;
     
-    if ([diffValue floatValue] == 0) {
+    if (diffValue.floatValue == 0) {
         arrowImageView.hidden = YES;
         diffLabel.hidden = YES;
     } else {
