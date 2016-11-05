@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Графики-->
+        <scene sceneID="IaP-Hz-dD7">
+            <objects>
+                <navigationController storyboardIdentifier="GraphNavigationController" id="cIw-N9-Lvz" customClass="ProkrutNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Графики" image="Stat icon" id="3VJ-tE-sGh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ave-EF-Wow">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I9Z-uj-uz4" kind="relationship" relationship="rootViewController" id="tdV-1K-EVE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byg-Bf-75d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="897"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="zuc-iO-1BH">
+            <objects>
+                <viewController id="I9Z-uj-uz4" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u24-Wg-7qK"/>
+                        <viewControllerLayoutGuide type="bottom" id="RLq-Bf-N3y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8wU-ai-yXp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gi9-DQ-34C" customClass="CPTGraphHostingView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gi9-DQ-34C" firstAttribute="leading" secondItem="8wU-ai-yXp" secondAttribute="leading" id="Fej-Qb-M95"/>
+                            <constraint firstAttribute="bottom" secondItem="gi9-DQ-34C" secondAttribute="bottom" constant="44" id="N2g-YB-nhB"/>
+                            <constraint firstAttribute="trailing" secondItem="gi9-DQ-34C" secondAttribute="trailing" id="fJ3-gY-ipg"/>
+                            <constraint firstItem="gi9-DQ-34C" firstAttribute="top" secondItem="8wU-ai-yXp" secondAttribute="top" constant="64" id="sZC-gL-k0f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nnd-0X-3kE">
+                        <barButtonItem key="rightBarButtonItem" title="Типы" id="Gha-Xb-2yu">
+                            <connections>
+                                <action selector="didTapTypeButton:" destination="I9Z-uj-uz4" id="MUK-d0-Ozy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hostView" destination="gi9-DQ-34C" id="GTq-s4-QqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pek-nc-EQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="883"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stat icon" width="25" height="25"/>
+    </resources>
+</document>
