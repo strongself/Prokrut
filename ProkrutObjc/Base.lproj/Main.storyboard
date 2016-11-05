@@ -18,7 +18,7 @@
                     <connections>
                         <segue destination="4Lh-Nn-bF2" kind="relationship" relationship="viewControllers" id="MSB-dM-rVe"/>
                         <segue destination="2Kn-NN-lLk" kind="relationship" relationship="viewControllers" id="MV4-aS-Gk0"/>
-                        <segue destination="fbz-29-CdX" kind="relationship" relationship="viewControllers" id="oUn-kX-6w9"/>
+                        <segue destination="vxG-oF-tg2" kind="relationship" relationship="viewControllers" id="IbY-1w-eQw"/>
                         <segue destination="A9j-Tb-Dbt" kind="relationship" relationship="viewControllers" id="Ps3-Ke-FX7"/>
                     </connections>
                 </tabBarController>
@@ -45,62 +45,6 @@
             </objects>
             <point key="canvasLocation" x="-811" y="865"/>
         </scene>
-        <!--Графики-->
-        <scene sceneID="IwW-Km-KeU">
-            <objects>
-                <navigationController id="fbz-29-CdX" customClass="ProkrutNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Графики" image="Stat icon" id="3u7-1Z-g3O"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tzA-Pt-QVk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="SnT-A3-Fx4" kind="relationship" relationship="rootViewController" id="xza-g6-lMQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-t7-B5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="238" y="897"/>
-        </scene>
-        <!--Graph View Controller-->
-        <scene sceneID="bjI-dp-EDv">
-            <objects>
-                <viewController id="SnT-A3-Fx4" customClass="GraphViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cai-Hu-b0y"/>
-                        <viewControllerLayoutGuide type="bottom" id="vZJ-ZI-bp0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iot-gm-DY7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-II-FHp" customClass="CPTGraphHostingView">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Zgu-II-FHp" secondAttribute="trailing" id="9O0-WX-XBC"/>
-                            <constraint firstItem="Zgu-II-FHp" firstAttribute="leading" secondItem="iot-gm-DY7" secondAttribute="leading" id="VUd-3o-Dug"/>
-                            <constraint firstItem="Zgu-II-FHp" firstAttribute="top" secondItem="iot-gm-DY7" secondAttribute="top" constant="64" id="nTK-TI-5iN"/>
-                            <constraint firstAttribute="bottom" secondItem="Zgu-II-FHp" secondAttribute="bottom" constant="44" id="rnZ-Wl-JTi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="EM6-ls-0EU">
-                        <barButtonItem key="rightBarButtonItem" title="Типы" id="ei1-a8-8tI">
-                            <connections>
-                                <action selector="didTapTypeButton:" destination="SnT-A3-Fx4" id="OBG-UR-Sab"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="hostView" destination="Zgu-II-FHp" id="OwH-wH-U2Q"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jXT-Ta-gUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1133" y="883"/>
-        </scene>
         <!--HistoryNavigationController-->
         <scene sceneID="v2U-9C-4eZ">
             <objects>
@@ -120,6 +64,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROT-j5-8iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-866" y="-663"/>
+        </scene>
+        <!--GraphNavigationController-->
+        <scene sceneID="7tq-bs-Brz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Graph" referencedIdentifier="GraphNavigationController" id="vxG-oF-tg2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="biS-mv-rPG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFJ-At-4XS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-884" y="-600"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="Pqh-nl-IN8">
@@ -303,7 +257,6 @@
     </scenes>
     <resources>
         <image name="Settings" width="28" height="28"/>
-        <image name="Stat icon" width="25" height="25"/>
         <image name="signInBG" width="304" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
