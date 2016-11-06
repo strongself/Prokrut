@@ -26,8 +26,7 @@ static NSUInteger const kMinimumGamesCount = 12;
                   withUsername:(NSString *)username {
     NSArray *filteredStatistics = [self filterPlayerStatistics:statistics
                                                   withUsername:username];
-    NSArray *sortedStatistics = [self sortPlayerStatistics:filteredStatistics];
-    return sortedStatistics;
+    return filteredStatistics;
 }
 
 #pragma mark - Private methods
@@ -60,6 +59,9 @@ static NSUInteger const kMinimumGamesCount = 12;
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:sortKey
                                                                      ascending:NO];
     NSArray *orderedStatistics = [statistics sortedArrayUsingDescriptors:@[sortDescriptor]];
+    for (AllUserStats *stat in orderedStatistics) {
+        stat.placeInTop = [orderedStatistics indexOfObject:stat] + 1;
+    }
     return orderedStatistics;
 }
 

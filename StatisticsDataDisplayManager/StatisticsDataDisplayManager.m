@@ -71,7 +71,7 @@ static NSUInteger const kStartRow = 1;
     NSMutableArray *mutableModel = [NSMutableArray array];
     [mutableModel addObject:[StatisticsSeparatorCellObject new]];
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {
-        PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics ratingPosition:idx + 1];
+        PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics];
         [mutableModel addObject:cellObject];
         if (idx < stats.count - 1) {
             StatisticsSeparatorCellObject *separatorObject = [StatisticsSeparatorCellObject new];

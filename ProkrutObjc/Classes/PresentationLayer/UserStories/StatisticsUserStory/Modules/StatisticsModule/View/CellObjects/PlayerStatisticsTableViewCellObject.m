@@ -33,11 +33,10 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithStatistics:(AllUserStats *)statistics
-                    ratingPosition:(NSUInteger)ratingPosition {
+- (instancetype)initWithStatistics:(AllUserStats *)statistics {
     self = [super init];
     if (self) {
-        _ratingPosition = ratingPosition;
+        _ratingPosition = statistics.placeInTop;
         _name = statistics.user.username;
         _email = statistics.user.email;
         _winrate = statistics.winrate;
@@ -52,10 +51,8 @@
     return self;
 }
 
-+ (instancetype)objectWithStatistics:(AllUserStats *)statistics
-                      ratingPosition:(NSUInteger)ratingPosition {
-    return [[self alloc] initWithStatistics:statistics
-                             ratingPosition:ratingPosition];
++ (instancetype)objectWithStatistics:(AllUserStats *)statistics {
+    return [[self alloc] initWithStatistics:statistics];
 }
 
 #pragma mark - NINibCellObject
