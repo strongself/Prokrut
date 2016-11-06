@@ -21,6 +21,7 @@
 @property (nonatomic, strong) StatisticsDataDisplayManager *dataDisplayManager;
 @property (nonatomic, strong) id<StatisticsModuleViewOutput> output;
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
 @end

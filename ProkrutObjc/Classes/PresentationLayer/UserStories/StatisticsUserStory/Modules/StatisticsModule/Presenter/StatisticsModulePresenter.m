@@ -12,6 +12,12 @@
 #import "StatisticsModuleInteractorInput.h"
 #import "StatisticsModuleRouterInput.h"
 
+@interface StatisticsModulePresenter ()
+
+@property (nonatomic, strong) NSArray *fullStatistics;
+
+@end
+
 @implementation StatisticsModulePresenter
 
 #pragma mark - Методы StatisticsModuleModuleInput
@@ -31,12 +37,22 @@
     [self.interactor obtainStatisticsFromNetwork];
 }
 
+- (NSArray *)obtainStatisticsFilteredWithTerm:(NSString *)term {
+    if (term.length == 0) {
+        return self.fullStatistics;
+    }
+    NSArray *filteredStatistics = [self.interactor obtainFilteredStatisticsWithFullStatistics:self.fullStatistics
+                                                                                         term:term];
+    return filteredStatistics;
+}
+
 #pragma mark - Методы StatisticsModuleInteractorOutput
 
 - (void)didObtainStatisticsFromNetworkWithData:(NSArray *)statistics
                                          error:(NSError *)error{
     if (statistics) {
-        [self.view updateViewWithStatisticsData:statistics];
+        self.fullStatistics = statistics;
+        [self.view updateViewWithStatisticsData:self.fullStatistics];
     } else {
         [self.view showErrorStateWithError:error];
     }

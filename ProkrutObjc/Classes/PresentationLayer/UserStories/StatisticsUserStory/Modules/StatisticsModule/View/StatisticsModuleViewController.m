@@ -10,7 +10,7 @@
 
 #import "StatisticsModuleViewOutput.h"
 
-@interface StatisticsModuleViewController ()
+@interface StatisticsModuleViewController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -26,7 +26,7 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы StatisticsModuleViewInput
+#pragma mark - <StatisticsModuleViewInput>
 
 - (void)setupInitialState {
     [self setupPullToRefresh];
@@ -38,12 +38,36 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
+    
+    NSIndexPath *startIndexPath = [self.dataDisplayManager obtainStartIndexPath];
+    [self.tableView scrollToRowAtIndexPath:startIndexPath
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:NO];
+    self.searchBar.hidden = NO;
 }
 
 - (void)showErrorStateWithError:(NSError *)error {
 }
 
-#pragma mark - private
+#pragma mark - <UISearchBarDelegate>
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self updateStatisticsWithText:searchText];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self updateStatisticsWithText:searchBar.text];
+}
+
+#pragma mark - Private
+
+- (void)updateStatisticsWithText:(NSString *)searchText {
+    NSArray *data = [self.output obtainStatisticsFilteredWithTerm:searchText];
+    [self.dataDisplayManager updateTableViewModelWithObjects:data];
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 
 - (void)setupPullToRefresh {
     self.refreshControl = [UIRefreshControl new];
@@ -56,6 +80,7 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:nil];
+    self.searchBar.delegate = self;
 }
 
 #pragma mark 

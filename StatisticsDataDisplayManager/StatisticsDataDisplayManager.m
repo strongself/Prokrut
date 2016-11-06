@@ -13,6 +13,8 @@
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "StatisticsSeparatorCellObject.h"
 
+static NSUInteger const kStartRow = 1;
+
 @interface StatisticsDataDisplayManager ()
 
 @property (strong, nonatomic) NITableViewModel *tableViewModel;
@@ -22,6 +24,17 @@
 @end
 
 @implementation StatisticsDataDisplayManager
+
+#pragma mark - Public methods
+
+- (void)updateTableViewModelWithObjects:(NSArray *)objects {
+    [self createAllUserStatsCellObjectsWithStats:objects];
+}
+
+- (NSIndexPath *)obtainStartIndexPath {
+    return [NSIndexPath indexPathForRow:kStartRow
+                              inSection:0];
+}
 
 #pragma mark - Методы DataDisplayManager
 
@@ -51,23 +64,22 @@
     self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
 }
 
-- (void)updateTableViewModelWithObjects:(NSArray *)objects {
-    [self createAllUserStatsCellObjectsWithStats:objects];
-}
-
 - (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
+    if (stats.count == 0) {
+        return;
+    }
     NSMutableArray *mutableModel = [NSMutableArray array];
-    
+    [mutableModel addObject:[StatisticsSeparatorCellObject new]];
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {
-        PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics ratingPosition:idx + 1];
+        PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics];
         [mutableModel addObject:cellObject];
         if (idx < stats.count - 1) {
             StatisticsSeparatorCellObject *separatorObject = [StatisticsSeparatorCellObject new];
             [mutableModel addObject:separatorObject];
         }
     }];
-    self.tableViewModel = [[NITableViewModel alloc] initWithListArray:[mutableModel copy]
-                                                    delegate:(id)[NICellFactory class]];
+    self.tableViewModel = [[NITableViewModel alloc] initWithSectionedArray:[mutableModel copy]
+                                                                  delegate:(id)[NICellFactory class]];
 }
 
 

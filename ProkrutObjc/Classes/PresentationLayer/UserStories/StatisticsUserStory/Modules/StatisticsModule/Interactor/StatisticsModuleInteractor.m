@@ -38,4 +38,11 @@
      }];
 }
 
+- (NSArray *)obtainFilteredStatisticsWithFullStatistics:(NSArray *)fullStatistics
+                                                   term:(NSString *)term {
+    NSArray *filteredStatistics = [self.statisticsProcessor processStatistics:fullStatistics
+                                                                 withUsername:term];
+    return filteredStatistics;
+}
+
 @end

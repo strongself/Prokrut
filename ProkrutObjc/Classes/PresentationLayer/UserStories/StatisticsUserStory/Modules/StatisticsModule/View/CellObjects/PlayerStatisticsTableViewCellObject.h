@@ -13,8 +13,7 @@
 
 @interface PlayerStatisticsTableViewCellObject : NSObject <NINibCellObject>
 
-+ (instancetype)objectWithStatistics:(AllUserStats *)statistics
-                      ratingPosition:(NSUInteger)ratingPosition;
++ (instancetype)objectWithStatistics:(AllUserStats *)statistics;
 
 @property (nonatomic, assign, readonly) NSUInteger ratingPosition;
 @property (nonatomic, strong, readonly) NSString *name;

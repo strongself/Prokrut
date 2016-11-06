@@ -11,5 +11,7 @@
 @protocol StatisticsModuleInteractorInput <NSObject>
 
 - (void)obtainStatisticsFromNetwork;
+- (NSArray *)obtainFilteredStatisticsWithFullStatistics:(NSArray *)fullStatistics
+                                                   term:(NSString *)term;
 
 @end

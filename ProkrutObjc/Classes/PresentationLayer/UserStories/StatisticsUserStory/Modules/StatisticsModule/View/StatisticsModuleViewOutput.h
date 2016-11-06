@@ -17,5 +17,6 @@
  */
 - (void)didTriggerViewReadyEvent;
 - (void)didTriggerPullToRefreshEvent;
+- (NSArray *)obtainStatisticsFilteredWithTerm:(NSString *)term;
 
 @end

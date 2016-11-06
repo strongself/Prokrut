@@ -138,6 +138,7 @@
 		9F9B79761DCE096C009871F7 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Launch.storyboard; path = Classes/PresentationLayer/UserStories/LaunchUserStory/Storyboard/Launch.storyboard; sourceTree = "<group>"; };
 		9FCC27481D3E7E3C00577805 /* StatisticsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsProcessor.h; path = Helpers/StatisticsProcessor.h; sourceTree = "<group>"; };
 		9FCC27491D3E7E3C00577805 /* StatisticsProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsProcessor.m; path = Helpers/StatisticsProcessor.m; sourceTree = "<group>"; };
+		9FD233731DCE6BE80076030E /* StatisticsSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSearchTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSearchTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		9FD2BE181C53D493002EA024 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		9FD2BE191C53D493002EA024 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		B12512EFA4AE32E96587CBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -416,6 +417,7 @@
 				9F2B3D661DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.h */,
 				9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */,
 				9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */,
+				9FD233731DCE6BE80076030E /* StatisticsSearchTableViewCell.h */,
 			);
 			name = Cells;
 			sourceTree = "<group>";

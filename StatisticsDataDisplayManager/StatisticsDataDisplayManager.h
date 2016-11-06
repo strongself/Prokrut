@@ -13,9 +13,10 @@
 
 @interface StatisticsDataDisplayManager : NSObject <DataDisplayManager, UITableViewDelegate>
 
-
 @property (nonatomic, weak) id<StatisticsDataDisplayManagerDelegate> delegate;
 
 - (void)updateTableViewModelWithObjects:(NSArray *)statistics;
+
+- (NSIndexPath *)obtainStartIndexPath;
 
 @end
