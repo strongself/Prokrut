@@ -11,14 +11,11 @@
 #import "DataDisplayManager.h"
 #import "StatisticsDataDisplayManagerDelegate.h"
 
-@protocol StatisticsSearchTableViewCellDelegate;
-
 @interface StatisticsDataDisplayManager : NSObject <DataDisplayManager, UITableViewDelegate>
 
 @property (nonatomic, weak) id<StatisticsDataDisplayManagerDelegate> delegate;
 
-- (void)updateTableViewModelWithObjects:(NSArray *)statistics
-                         searchDelegate:(id<StatisticsSearchTableViewCellDelegate>)searchDelegate;
+- (void)updateTableViewModelWithObjects:(NSArray *)statistics;
 
 - (NSIndexPath *)obtainStartIndexPath;
 

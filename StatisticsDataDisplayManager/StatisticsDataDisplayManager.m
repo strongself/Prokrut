@@ -12,9 +12,8 @@
 #import "AllUserStats.h"
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "StatisticsSeparatorCellObject.h"
-#import "StatisticsSearchCellObject.h"
 
-static NSUInteger const kStartRow = 2;
+static NSUInteger const kStartRow = 1;
 
 @interface StatisticsDataDisplayManager ()
 
@@ -28,10 +27,8 @@ static NSUInteger const kStartRow = 2;
 
 #pragma mark - Public methods
 
-- (void)updateTableViewModelWithObjects:(NSArray *)objects
-                         searchDelegate:(id<StatisticsSearchTableViewCellDelegate>)searchDelegate {
-    [self createAllUserStatsCellObjectsWithStats:objects
-                                  searchDelegate:searchDelegate];
+- (void)updateTableViewModelWithObjects:(NSArray *)objects {
+    [self createAllUserStatsCellObjectsWithStats:objects];
 }
 
 - (NSIndexPath *)obtainStartIndexPath {
@@ -43,8 +40,7 @@ static NSUInteger const kStartRow = 2;
 
 - (id<UITableViewDataSource>)dataSourceForTableView:(UITableView *)tableView {
     if (!self.tableViewModel) {
-        [self updateTableViewModelWithObjects:nil
-                               searchDelegate:nil];
+        [self updateTableViewModelWithObjects:nil];
     }
     return self.tableViewModel;
 }
@@ -68,18 +64,12 @@ static NSUInteger const kStartRow = 2;
     self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
 }
 
-- (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats
-                                searchDelegate:(id<StatisticsSearchTableViewCellDelegate>)searchDelegate {
+- (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {
     if (stats.count == 0) {
         return;
     }
     NSMutableArray *mutableModel = [NSMutableArray array];
-    
-    StatisticsSearchCellObject *searchCellObject = [StatisticsSearchCellObject new];
-    searchCellObject.delegate = searchDelegate;
-    [mutableModel addObject:searchCellObject];
     [mutableModel addObject:[StatisticsSeparatorCellObject new]];
-    
     [stats enumerateObjectsUsingBlock:^(AllUserStats *statistics, NSUInteger idx, BOOL * _Nonnull stop) {
         PlayerStatisticsTableViewCellObject *cellObject = [PlayerStatisticsTableViewCellObject objectWithStatistics:statistics ratingPosition:idx + 1];
         [mutableModel addObject:cellObject];
@@ -88,8 +78,8 @@ static NSUInteger const kStartRow = 2;
             [mutableModel addObject:separatorObject];
         }
     }];
-    self.tableViewModel = [[NITableViewModel alloc] initWithListArray:[mutableModel copy]
-                                                    delegate:(id)[NICellFactory class]];
+    self.tableViewModel = [[NITableViewModel alloc] initWithSectionedArray:[mutableModel copy]
+                                                                  delegate:(id)[NICellFactory class]];
 }
 
 

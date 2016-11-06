@@ -38,6 +38,9 @@
 }
 
 - (NSArray *)obtainStatisticsFilteredWithTerm:(NSString *)term {
+    if (term.length == 0) {
+        return self.fullStatistics;
+    }
     NSArray *filteredStatistics = [self.interactor obtainFilteredStatisticsWithFullStatistics:self.fullStatistics
                                                                                          term:term];
     return filteredStatistics;

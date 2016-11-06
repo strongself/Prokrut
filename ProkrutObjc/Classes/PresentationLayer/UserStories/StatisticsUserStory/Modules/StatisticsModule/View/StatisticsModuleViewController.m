@@ -9,9 +9,8 @@
 #import "StatisticsModuleViewController.h"
 
 #import "StatisticsModuleViewOutput.h"
-#import "StatisticsSearchTableViewCellDelegate.h"
 
-@interface StatisticsModuleViewController () <StatisticsSearchTableViewCellDelegate>
+@interface StatisticsModuleViewController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -35,8 +34,7 @@
 }
 
 - (void)updateViewWithStatisticsData:(NSArray *)statisticsData {
-    [self.dataDisplayManager updateTableViewModelWithObjects:statisticsData
-                                              searchDelegate:self];
+    [self.dataDisplayManager updateTableViewModelWithObjects:statisticsData];
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
@@ -45,19 +43,31 @@
     [self.tableView scrollToRowAtIndexPath:startIndexPath
                           atScrollPosition:UITableViewScrollPositionTop
                                   animated:NO];
+    self.searchBar.hidden = NO;
 }
 
 - (void)showErrorStateWithError:(NSError *)error {
 }
 
-#pragma mark - <StatisticsSearchTableViewCellDelegate>
+#pragma mark - <UISearchBarDelegate>
 
-- (void)didUpdateSearchBarWithTerm:(NSString *)term {
-    NSArray *data = [self.output obtainStatisticsFilteredWithTerm:term];
-    [self updateViewWithStatisticsData:data];
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self updateStatisticsWithText:searchText];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self updateStatisticsWithText:searchBar.text];
 }
 
 #pragma mark - Private
+
+- (void)updateStatisticsWithText:(NSString *)searchText {
+    NSArray *data = [self.output obtainStatisticsFilteredWithTerm:searchText];
+    [self.dataDisplayManager updateTableViewModelWithObjects:data];
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 
 - (void)setupPullToRefresh {
     self.refreshControl = [UIRefreshControl new];
@@ -70,6 +80,7 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:nil];
+    self.searchBar.delegate = self;
 }
 
 #pragma mark 
