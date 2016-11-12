@@ -9,7 +9,7 @@
         <!--Player Profile View Controller-->
         <scene sceneID="9ju-T3-edv">
             <objects>
-                <viewController storyboardIdentifier="PlayerProfileViewController" id="6EZ-6T-U7R" customClass="ROSPlayerProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerProfileViewController" id="6EZ-6T-U7R" customClass="PlayerProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KT3-5U-pM2"/>
                         <viewControllerLayoutGuide type="bottom" id="es5-WB-buS"/>

@@ -11,6 +11,7 @@
 #import "PlayerProfileViewInput.h"
 #import "PlayerProfileInteractorInput.h"
 #import "PlayerProfileRouterInput.h"
+#import "PlayerProfileModuleConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Методы протокола <ROSPlayerProfileModuleInput>
 
-- (void)configureModule {
+- (void)configureModuleWithConfig:(PlayerProfileModuleConfiguration *)config {
     // Стартовая конфигурация модуля, не привязанная к состоянию view
 }
 

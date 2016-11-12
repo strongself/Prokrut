@@ -7,6 +7,7 @@
 //
 
 #import "StatisticsModuleRouterInput.h"
+#import <ViperMcFlurry/ViperMcFlurry.h>
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 

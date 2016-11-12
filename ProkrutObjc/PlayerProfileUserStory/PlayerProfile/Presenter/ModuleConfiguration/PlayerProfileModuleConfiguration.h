@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class AllUserStats;
+
 /**
  @author Artem Karpushin
  
  Cодержит данные необходимые для конфигурации модуля "Профиль игрока"
  */
 @interface PlayerProfileModuleConfiguration : NSObject
+
+@property (nonatomic, strong) AllUserStats *stats;
 
 @end

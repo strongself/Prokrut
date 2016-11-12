@@ -10,6 +10,8 @@
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
+@class PlayerProfileModuleConfiguration;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol PlayerProfileModuleInput <RamblerViperModuleInput>
@@ -21,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  Метод инициирует стартовую конфигурацию текущего модуля
  */
-- (void)configureModule;
+- (void)configureModuleWithConfig:(PlayerProfileModuleConfiguration *)config;
 
 @end
 

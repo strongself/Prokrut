@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class PlayerProfileModuleConfiguration;
+
 @protocol StatisticsModuleRouterInput <NSObject>
+
+/**
+ @author Artem Karpushin
+ 
+ Открывает модуль "Профиль игрока"
+ */
+- (void)openPlayerProfileModuleWithConfig:(PlayerProfileModuleConfiguration *)config;
 
 @end

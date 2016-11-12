@@ -11,6 +11,7 @@
 #import "StatisticsModuleViewInput.h"
 #import "StatisticsModuleInteractorInput.h"
 #import "StatisticsModuleRouterInput.h"
+#import "PlayerProfileModuleConfiguration.h"
 
 @interface StatisticsModulePresenter ()
 
@@ -47,7 +48,10 @@
 }
 
 - (void)didSelectPlayerWithStats:(AllUserStats *)stats {
+    PlayerProfileModuleConfiguration *playerProfileModuleConfiguration = [PlayerProfileModuleConfiguration new];
+    playerProfileModuleConfiguration.stats = stats;
     
+    [self.router openPlayerProfileModuleWithConfig:playerProfileModuleConfiguration];
 }
 
 #pragma mark - Методы StatisticsModuleInteractorOutput

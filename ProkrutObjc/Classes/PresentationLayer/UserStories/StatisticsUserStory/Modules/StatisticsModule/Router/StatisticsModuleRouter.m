@@ -7,11 +7,19 @@
 //
 
 #import "StatisticsModuleRouter.h"
+#import "PlayerProfileModuleInput.h"
 
 static NSString * const StatisticsToPlayerProfileSegueId = @"StatisticsToPlayerProfileSegueId";
 
 @implementation StatisticsModuleRouter
 
 #pragma mark - Методы StatisticsModuleRouterInput
+
+- (void)openPlayerProfileModuleWithConfig:(PlayerProfileModuleConfiguration *)config {
+    [[self.transitionHandler openModuleUsingSegue:StatisticsToPlayerProfileSegueId] thenChainUsingBlock:^id<RamblerViperModuleOutput>(id<PlayerProfileModuleInput> moduleInput) {
+        [moduleInput configureModuleWithConfig:config];
+        return nil;
+    }];
+}
 
 @end
