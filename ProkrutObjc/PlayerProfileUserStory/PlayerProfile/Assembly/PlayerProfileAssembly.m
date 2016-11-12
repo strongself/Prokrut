@@ -13,6 +13,7 @@
 #import "PlayerProfilePresenter.h"
 #import "PlayerProfileRouter.h"
 #import "PlayerProfileDataDisplayManager.h"
+#import "PlayerProfileModuleStateStorage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -49,6 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
                                                     with:[self interactorPlayerProfileModule]];
                               [definition injectProperty:@selector(router)
                                                     with:[self routerPlayerProfileModule]];
+                              [definition injectProperty:@selector(moduleStateStorage)
+                                                    with:[self moduleStateStoragePlayerProfile]];
                           }];
 }
 
@@ -64,6 +67,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (PlayerProfileDataDisplayManager *)dataDisplayManagerPlayerProfile {
     return [TyphoonDefinition withClass:[PlayerProfileDataDisplayManager class]];
+}
+
+- (PlayerProfileModuleStateStorage *)moduleStateStoragePlayerProfile {
+    return [TyphoonDefinition withClass:[PlayerProfileModuleStateStorage class]];
 }
 
 @end

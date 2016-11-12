@@ -24,6 +24,7 @@
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
 		630AE5711DD7396D004B1827 /* PlayerProfileModuleConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE5701DD7396D004B1827 /* PlayerProfileModuleConfiguration.m */; };
 		630AE5751DD74743004B1827 /* PlayerProfileDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE5741DD74743004B1827 /* PlayerProfileDataDisplayManager.m */; };
+		630AE5791DD74FB8004B1827 /* PlayerProfileModuleStateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE5781DD74FB8004B1827 /* PlayerProfileModuleStateStorage.m */; };
 		635820F71DD719C700650C6E /* PlayerProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E31DD719C700650C6E /* PlayerProfileAssembly.m */; };
 		635820F81DD719C700650C6E /* PlayerProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E61DD719C700650C6E /* PlayerProfileInteractor.m */; };
 		635820F91DD719C700650C6E /* PlayerProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820ED1DD719C700650C6E /* PlayerProfilePresenter.m */; };
@@ -105,6 +106,8 @@
 		630AE5701DD7396D004B1827 /* PlayerProfileModuleConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileModuleConfiguration.m; sourceTree = "<group>"; };
 		630AE5731DD74743004B1827 /* PlayerProfileDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileDataDisplayManager.h; sourceTree = "<group>"; };
 		630AE5741DD74743004B1827 /* PlayerProfileDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileDataDisplayManager.m; sourceTree = "<group>"; };
+		630AE5771DD74FB8004B1827 /* PlayerProfileModuleStateStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileModuleStateStorage.h; sourceTree = "<group>"; };
+		630AE5781DD74FB8004B1827 /* PlayerProfileModuleStateStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileModuleStateStorage.m; sourceTree = "<group>"; };
 		635820E21DD719C700650C6E /* PlayerProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileAssembly.h; sourceTree = "<group>"; };
 		635820E31DD719C700650C6E /* PlayerProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileAssembly.m; sourceTree = "<group>"; };
 		635820E51DD719C700650C6E /* PlayerProfileInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileInteractor.h; sourceTree = "<group>"; };
@@ -340,6 +343,15 @@
 			path = DataDisplayManager;
 			sourceTree = "<group>";
 		};
+		630AE5761DD74F94004B1827 /* ModuleStateStorage */ = {
+			isa = PBXGroup;
+			children = (
+				630AE5771DD74FB8004B1827 /* PlayerProfileModuleStateStorage.h */,
+				630AE5781DD74FB8004B1827 /* PlayerProfileModuleStateStorage.m */,
+			);
+			path = ModuleStateStorage;
+			sourceTree = "<group>";
+		};
 		635820DF1DD719C700650C6E /* PlayerProfileUserStory */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +396,7 @@
 		635820E91DD719C700650C6E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				630AE5761DD74F94004B1827 /* ModuleStateStorage */,
 				630AE56E1DD73947004B1827 /* ModuleConfiguration */,
 				635820EA1DD719C700650C6E /* PlayerProfileModuleInput.h */,
 				635820EB1DD719C700650C6E /* PlayerProfileModuleOutput.h */,
@@ -1043,6 +1056,7 @@
 				66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */,
 				635820F81DD719C700650C6E /* PlayerProfileInteractor.m in Sources */,
 				66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */,
+				630AE5791DD74FB8004B1827 /* PlayerProfileModuleStateStorage.m in Sources */,
 				11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */,
 				630AE5751DD74743004B1827 /* PlayerProfileDataDisplayManager.m in Sources */,
 				B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */,

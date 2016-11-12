@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol PlayerProfileInteractorInput;
 @protocol PlayerProfileRouterInput;
 
+@class PlayerProfileModuleStateStorage;
+
 @interface PlayerProfilePresenter :
     NSObject <PlayerProfileModuleInput, PlayerProfileViewOutput, PlayerProfileInteractorOutput>
 
@@ -26,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<PlayerProfileViewInput> view;
 @property (nonatomic, strong) id<PlayerProfileInteractorInput> interactor;
 @property (nonatomic, strong) id<PlayerProfileRouterInput> router;
+
+@property (nonatomic, strong) PlayerProfileModuleStateStorage *moduleStateStorage;
 
 @end
 
