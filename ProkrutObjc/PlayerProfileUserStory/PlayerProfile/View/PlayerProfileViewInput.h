@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class AllUserStats;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol PlayerProfileViewInput <NSObject>
@@ -17,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @author Karpushin Artem
 
- Метод настраивает начальное состояние view
+ Метод настраивает view
  */
-- (void)setupInitialState;
+- (void)setupWithPlayerStats:(AllUserStats *)stats;
 
 @end
 

@@ -12,6 +12,7 @@
 #import "PlayerProfileInteractorInput.h"
 #import "PlayerProfileRouterInput.h"
 #import "PlayerProfileModuleConfiguration.h"
+#import "PlayerProfileModuleStateStorage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,13 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Методы протокола <ROSPlayerProfileModuleInput>
 
 - (void)configureModuleWithConfig:(PlayerProfileModuleConfiguration *)config {
-    // Стартовая конфигурация модуля, не привязанная к состоянию view
+    self.moduleStateStorage.stats = config.stats;
 }
 
 #pragma mark - Методы протокола <ROSPlayerProfileViewOutput>
 
 - (void)didLoadView {
-    [self.view setupInitialState];
+    [self.view setupWithPlayerStats:self.moduleStateStorage.stats];
 }
 
 #pragma mark - Методы протокола <ROSPlayerProfileInteractorOutput>

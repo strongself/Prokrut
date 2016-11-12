@@ -10,6 +10,8 @@
 
 @class AllUserStats;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  @author Artem Karpushin
  
@@ -20,3 +22,5 @@
 @property (nonatomic, strong) AllUserStats *stats;
 
 @end
+
+NS_ASSUME_NONNULL_END

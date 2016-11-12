@@ -25,14 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self.output didLoadView];
 }
 
 #pragma mark - Методы протокола <ROSPlayerProfileViewInput>
 
-- (void)setupInitialState {
-    // В этом методе происходит настройка параметров view, зависящих от ее жизненного цикла (создание элементов, анимации и пр.)
+- (void)setupWithPlayerStats:(AllUserStats *)stats {
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView
+                                                                    playerStats:stats];
+    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView withBaseDelegate:nil];
 }
 
 @end

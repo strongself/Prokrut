@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  Отдает делегата таблицы
  */
 - (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView
-                               withBaseDelegate:(id<UITableViewDelegate>)baseTableViewDelegate;
+                               withBaseDelegate:(nullable id<UITableViewDelegate>)baseTableViewDelegate;
 
 @end
 
