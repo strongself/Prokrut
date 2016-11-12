@@ -22,6 +22,11 @@
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
 		5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */; };
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
+		635820F71DD719C700650C6E /* ROSPlayerProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E31DD719C700650C6E /* ROSPlayerProfileAssembly.m */; };
+		635820F81DD719C700650C6E /* ROSPlayerProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E61DD719C700650C6E /* ROSPlayerProfileInteractor.m */; };
+		635820F91DD719C700650C6E /* ROSPlayerProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820ED1DD719C700650C6E /* ROSPlayerProfilePresenter.m */; };
+		635820FA1DD719C700650C6E /* ROSPlayerProfileRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820F01DD719C700650C6E /* ROSPlayerProfileRouter.m */; };
+		635820FB1DD719C700650C6E /* ROSPlayerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820F41DD719C700650C6E /* ROSPlayerProfileViewController.m */; };
 		66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */; };
 		66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */; };
 		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
@@ -93,6 +98,23 @@
 		5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertBuilder.m; path = Helpers/AlertBuilder.m; sourceTree = "<group>"; };
 		5D4B1C441C5A11C50022CA42 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateFormatter.h; path = Helpers/DateFormatter.h; sourceTree = "<group>"; };
 		5D4B1C451C5A11C50022CA42 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateFormatter.m; path = Helpers/DateFormatter.m; sourceTree = "<group>"; };
+		635820E21DD719C700650C6E /* ROSPlayerProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileAssembly.h; sourceTree = "<group>"; };
+		635820E31DD719C700650C6E /* ROSPlayerProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSPlayerProfileAssembly.m; sourceTree = "<group>"; };
+		635820E51DD719C700650C6E /* ROSPlayerProfileInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileInteractor.h; sourceTree = "<group>"; };
+		635820E61DD719C700650C6E /* ROSPlayerProfileInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSPlayerProfileInteractor.m; sourceTree = "<group>"; };
+		635820E71DD719C700650C6E /* ROSPlayerProfileInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileInteractorInput.h; sourceTree = "<group>"; };
+		635820E81DD719C700650C6E /* ROSPlayerProfileInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileInteractorOutput.h; sourceTree = "<group>"; };
+		635820EA1DD719C700650C6E /* ROSPlayerProfileModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileModuleInput.h; sourceTree = "<group>"; };
+		635820EB1DD719C700650C6E /* ROSPlayerProfileModuleOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileModuleOutput.h; sourceTree = "<group>"; };
+		635820EC1DD719C700650C6E /* ROSPlayerProfilePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfilePresenter.h; sourceTree = "<group>"; };
+		635820ED1DD719C700650C6E /* ROSPlayerProfilePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSPlayerProfilePresenter.m; sourceTree = "<group>"; };
+		635820EF1DD719C700650C6E /* ROSPlayerProfileRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileRouter.h; sourceTree = "<group>"; };
+		635820F01DD719C700650C6E /* ROSPlayerProfileRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSPlayerProfileRouter.m; sourceTree = "<group>"; };
+		635820F11DD719C700650C6E /* ROSPlayerProfileRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileRouterInput.h; sourceTree = "<group>"; };
+		635820F31DD719C700650C6E /* ROSPlayerProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileViewController.h; sourceTree = "<group>"; };
+		635820F41DD719C700650C6E /* ROSPlayerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSPlayerProfileViewController.m; sourceTree = "<group>"; };
+		635820F51DD719C700650C6E /* ROSPlayerProfileViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileViewInput.h; sourceTree = "<group>"; };
+		635820F61DD719C700650C6E /* ROSPlayerProfileViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSPlayerProfileViewOutput.h; sourceTree = "<group>"; };
 		66B353061D79C57E006620FA /* StatisticsModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleAssembly.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.h; sourceTree = SOURCE_ROOT; };
 		66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleAssembly.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.m; sourceTree = SOURCE_ROOT; };
 		66B353091D79C586006620FA /* StatisticsModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewController.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewController.h; sourceTree = SOURCE_ROOT; };
@@ -292,6 +314,78 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		635820DF1DD719C700650C6E /* PlayerProfileUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				635820E01DD719C700650C6E /* PlayerProfile */,
+			);
+			path = PlayerProfileUserStory;
+			sourceTree = "<group>";
+		};
+		635820E01DD719C700650C6E /* PlayerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				635820E11DD719C700650C6E /* Assembly */,
+				635820E41DD719C700650C6E /* Interactor */,
+				635820E91DD719C700650C6E /* Presenter */,
+				635820EE1DD719C700650C6E /* Router */,
+				635820F21DD719C700650C6E /* View */,
+			);
+			path = PlayerProfile;
+			sourceTree = "<group>";
+		};
+		635820E11DD719C700650C6E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				635820E21DD719C700650C6E /* ROSPlayerProfileAssembly.h */,
+				635820E31DD719C700650C6E /* ROSPlayerProfileAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		635820E41DD719C700650C6E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				635820E51DD719C700650C6E /* ROSPlayerProfileInteractor.h */,
+				635820E61DD719C700650C6E /* ROSPlayerProfileInteractor.m */,
+				635820E71DD719C700650C6E /* ROSPlayerProfileInteractorInput.h */,
+				635820E81DD719C700650C6E /* ROSPlayerProfileInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		635820E91DD719C700650C6E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				635820EA1DD719C700650C6E /* ROSPlayerProfileModuleInput.h */,
+				635820EB1DD719C700650C6E /* ROSPlayerProfileModuleOutput.h */,
+				635820EC1DD719C700650C6E /* ROSPlayerProfilePresenter.h */,
+				635820ED1DD719C700650C6E /* ROSPlayerProfilePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		635820EE1DD719C700650C6E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				635820EF1DD719C700650C6E /* ROSPlayerProfileRouter.h */,
+				635820F01DD719C700650C6E /* ROSPlayerProfileRouter.m */,
+				635820F11DD719C700650C6E /* ROSPlayerProfileRouterInput.h */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		635820F21DD719C700650C6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				635820F31DD719C700650C6E /* ROSPlayerProfileViewController.h */,
+				635820F41DD719C700650C6E /* ROSPlayerProfileViewController.m */,
+				635820F51DD719C700650C6E /* ROSPlayerProfileViewInput.h */,
+				635820F61DD719C700650C6E /* ROSPlayerProfileViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		66B352F91D79C344006620FA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +439,7 @@
 		66B352FF1D79C384006620FA /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				635820DF1DD719C700650C6E /* PlayerProfileUserStory */,
 				9F9B79741DCE0947009871F7 /* LaunchUserStory */,
 				9F9B79701DCE091E009871F7 /* AuthorizationUserStory */,
 				9F9B796C1DCE0809009871F7 /* SettingsUserStory */,
@@ -900,11 +995,14 @@
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
 				9F2B3D6D1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m in Sources */,
 				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
+				635820FB1DD719C700650C6E /* ROSPlayerProfileViewController.m in Sources */,
 				66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
 				66B353201D79CB94006620FA /* StatisticsDataDisplayManager.m in Sources */,
 				FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */,
+				635820F91DD719C700650C6E /* ROSPlayerProfilePresenter.m in Sources */,
 				66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */,
+				635820F81DD719C700650C6E /* ROSPlayerProfileInteractor.m in Sources */,
 				66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */,
 				11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */,
 				B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */,
@@ -913,6 +1011,7 @@
 				11D332121D4AA45800CE1434 /* UITextField+Inspectable.m in Sources */,
 				11704F6C1D45560D00B753C5 /* SplashViewController.m in Sources */,
 				9F2B3D641DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m in Sources */,
+				635820F71DD719C700650C6E /* ROSPlayerProfileAssembly.m in Sources */,
 				B12513A96D62BAEE90FDCC6B /* PlayerCellObject.m in Sources */,
 				66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */,
 				11D332181D4AA45F00CE1434 /* SegueIdentifiers.m in Sources */,
@@ -921,6 +1020,7 @@
 				11D332141D4AA45800CE1434 /* RootSegue.m in Sources */,
 				9F2B3D821DC27BF600B6A33A /* ProkrutNavigationController.m in Sources */,
 				B1251905E2ABD602B974704F /* PlayerCell.m in Sources */,
+				635820FA1DD719C700650C6E /* ROSPlayerProfileRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
