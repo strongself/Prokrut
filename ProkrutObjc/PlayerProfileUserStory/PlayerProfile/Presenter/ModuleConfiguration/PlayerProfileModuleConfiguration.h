@@ -11,7 +11,7 @@
 /**
  @author Artem Karpushin
  
- Объект содержит данные необходимые для конфигурации модуля "Профиль игркока"
+ Cодержит данные необходимые для конфигурации модуля "Профиль игрока"
  */
 @interface PlayerProfileModuleConfiguration : NSObject
 
