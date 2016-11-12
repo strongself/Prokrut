@@ -12,6 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface PlayerProfileViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@end
+
 @implementation PlayerProfileViewController
 
 #pragma mark - Методы жизненного цикла

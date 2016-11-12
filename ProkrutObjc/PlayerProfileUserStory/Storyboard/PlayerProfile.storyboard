@@ -17,12 +17,26 @@
                     <view key="view" contentMode="scaleToFill" id="GMk-EU-eq9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qFm-td-m21">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qFm-td-m21" secondAttribute="trailing" id="Bef-XA-Zuv"/>
+                            <constraint firstItem="qFm-td-m21" firstAttribute="top" secondItem="GMk-EU-eq9" secondAttribute="top" id="JfS-Az-M20"/>
+                            <constraint firstItem="es5-WB-buS" firstAttribute="top" secondItem="qFm-td-m21" secondAttribute="bottom" id="fRy-ux-c9M"/>
+                            <constraint firstItem="qFm-td-m21" firstAttribute="leading" secondItem="GMk-EU-eq9" secondAttribute="leading" id="urw-Xj-kud"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qFm-td-m21" id="bvd-t6-Aqy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTC-6p-uaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="73"/>
+            <point key="canvasLocation" x="-247.19999999999999" y="72.413793103448285"/>
         </scene>
     </scenes>
 </document>
