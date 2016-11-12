@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d2z-hF-X6J">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d2z-hF-X6J">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -39,7 +39,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-2g-mg7">
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" hidden="YES" contentMode="redraw" searchBarStyle="minimal" id="g89-dg-bPL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,11 +65,20 @@
                     <connections>
                         <outlet property="searchBar" destination="g89-dg-bPL" id="7uY-s4-gPx"/>
                         <outlet property="tableView" destination="qbp-2g-mg7" id="8Sf-qV-57A"/>
+                        <segue destination="UOj-Q0-TFH" kind="show" identifier="StatisticsToPlayerProfileSegueId" id="1z5-mB-IMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPL-qY-fe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083" y="110"/>
+        </scene>
+        <!--PlayerProfileViewController-->
+        <scene sceneID="fRi-j3-nJG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerProfile" referencedIdentifier="PlayerProfileViewController" id="UOj-Q0-TFH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaV-4e-1L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="86"/>
         </scene>
         <!--AddMatchViewController-->
         <scene sceneID="dES-bM-Z1K">
@@ -77,7 +86,7 @@
                 <viewControllerPlaceholder storyboardName="NewGame" referencedIdentifier="AddMatchViewController" id="HxZ-1e-fR3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABy-vh-Qbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928" y="127"/>
+            <point key="canvasLocation" x="1928" y="130"/>
         </scene>
     </scenes>
     <resources>

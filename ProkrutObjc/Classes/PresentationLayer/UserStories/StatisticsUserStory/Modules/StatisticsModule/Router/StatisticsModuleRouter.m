@@ -8,6 +8,7 @@
 
 #import "StatisticsModuleRouter.h"
 
+static NSString * const StatisticsToPlayerProfileSegueId = @"StatisticsToPlayerProfileSegueId";
 
 @implementation StatisticsModuleRouter
 

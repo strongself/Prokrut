@@ -27,6 +27,7 @@
 		635820F91DD719C700650C6E /* PlayerProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820ED1DD719C700650C6E /* PlayerProfilePresenter.m */; };
 		635820FA1DD719C700650C6E /* PlayerProfileRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820F01DD719C700650C6E /* PlayerProfileRouter.m */; };
 		635820FB1DD719C700650C6E /* PlayerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820F41DD719C700650C6E /* PlayerProfileViewController.m */; };
+		635820FE1DD725CB00650C6E /* PlayerProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635820FD1DD725CB00650C6E /* PlayerProfile.storyboard */; };
 		66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */; };
 		66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */; };
 		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
@@ -115,6 +116,7 @@
 		635820F41DD719C700650C6E /* PlayerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileViewController.m; sourceTree = "<group>"; };
 		635820F51DD719C700650C6E /* PlayerProfileViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileViewInput.h; sourceTree = "<group>"; };
 		635820F61DD719C700650C6E /* PlayerProfileViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileViewOutput.h; sourceTree = "<group>"; };
+		635820FD1DD725CB00650C6E /* PlayerProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerProfile.storyboard; sourceTree = "<group>"; };
 		66B353061D79C57E006620FA /* StatisticsModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleAssembly.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.h; sourceTree = SOURCE_ROOT; };
 		66B353071D79C57E006620FA /* StatisticsModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleAssembly.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Assembly/StatisticsModuleAssembly.m; sourceTree = SOURCE_ROOT; };
 		66B353091D79C586006620FA /* StatisticsModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleViewController.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/StatisticsModuleViewController.h; sourceTree = SOURCE_ROOT; };
@@ -317,6 +319,7 @@
 		635820DF1DD719C700650C6E /* PlayerProfileUserStory */ = {
 			isa = PBXGroup;
 			children = (
+				635820FC1DD725A900650C6E /* Storyboard */,
 				635820E01DD719C700650C6E /* PlayerProfile */,
 			);
 			path = PlayerProfileUserStory;
@@ -384,6 +387,14 @@
 				635820F61DD719C700650C6E /* PlayerProfileViewOutput.h */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		635820FC1DD725A900650C6E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				635820FD1DD725CB00650C6E /* PlayerProfile.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		66B352F91D79C344006620FA /* Classes */ = {
@@ -917,6 +928,7 @@
 				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
 				9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */,
 				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
+				635820FE1DD725CB00650C6E /* PlayerProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
