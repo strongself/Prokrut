@@ -12,6 +12,7 @@
 #import "PlayerProfileInteractor.h"
 #import "PlayerProfilePresenter.h"
 #import "PlayerProfileRouter.h"
+#import "PlayerProfileDataDisplayManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
                                                     with:[self presenterPlayerProfileModule]];
                               [definition injectProperty:@selector(moduleInput)
                                                     with:[self presenterPlayerProfileModule]];
+                              [definition injectProperty:@selector(dataDisplayManager)
+                                                    with:[self dataDisplayManagerPlayerProfile]];
                           }];
 }
 
@@ -55,6 +58,12 @@ NS_ASSUME_NONNULL_BEGIN
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewPlayerProfileModule]];
                           }];
+}
+
+#pragma mark - Вспомогательные объекты
+
+- (PlayerProfileDataDisplayManager *)dataDisplayManagerPlayerProfile {
+    return [TyphoonDefinition withClass:[PlayerProfileDataDisplayManager class]];
 }
 
 @end
