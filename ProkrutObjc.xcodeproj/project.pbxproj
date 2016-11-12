@@ -22,6 +22,7 @@
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
 		5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */; };
 		5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C451C5A11C50022CA42 /* DateFormatter.m */; };
+		630AE5711DD7396D004B1827 /* PlayerProfileModuleConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE5701DD7396D004B1827 /* PlayerProfileModuleConfiguration.m */; };
 		635820F71DD719C700650C6E /* PlayerProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E31DD719C700650C6E /* PlayerProfileAssembly.m */; };
 		635820F81DD719C700650C6E /* PlayerProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820E61DD719C700650C6E /* PlayerProfileInteractor.m */; };
 		635820F91DD719C700650C6E /* PlayerProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635820ED1DD719C700650C6E /* PlayerProfilePresenter.m */; };
@@ -99,6 +100,8 @@
 		5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertBuilder.m; path = Helpers/AlertBuilder.m; sourceTree = "<group>"; };
 		5D4B1C441C5A11C50022CA42 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateFormatter.h; path = Helpers/DateFormatter.h; sourceTree = "<group>"; };
 		5D4B1C451C5A11C50022CA42 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateFormatter.m; path = Helpers/DateFormatter.m; sourceTree = "<group>"; };
+		630AE56F1DD7396D004B1827 /* PlayerProfileModuleConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileModuleConfiguration.h; sourceTree = "<group>"; };
+		630AE5701DD7396D004B1827 /* PlayerProfileModuleConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileModuleConfiguration.m; sourceTree = "<group>"; };
 		635820E21DD719C700650C6E /* PlayerProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileAssembly.h; sourceTree = "<group>"; };
 		635820E31DD719C700650C6E /* PlayerProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileAssembly.m; sourceTree = "<group>"; };
 		635820E51DD719C700650C6E /* PlayerProfileInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileInteractor.h; sourceTree = "<group>"; };
@@ -316,6 +319,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		630AE56E1DD73947004B1827 /* ModuleConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				630AE56F1DD7396D004B1827 /* PlayerProfileModuleConfiguration.h */,
+				630AE5701DD7396D004B1827 /* PlayerProfileModuleConfiguration.m */,
+			);
+			path = ModuleConfiguration;
+			sourceTree = "<group>";
+		};
 		635820DF1DD719C700650C6E /* PlayerProfileUserStory */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +372,7 @@
 		635820E91DD719C700650C6E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				630AE56E1DD73947004B1827 /* ModuleConfiguration */,
 				635820EA1DD719C700650C6E /* PlayerProfileModuleInput.h */,
 				635820EB1DD719C700650C6E /* PlayerProfileModuleOutput.h */,
 				635820EC1DD719C700650C6E /* PlayerProfilePresenter.h */,
@@ -990,6 +1003,7 @@
 				FD7C8A1E1C4C29AF00A6B424 /* MatchCellObject.m in Sources */,
 				B125182A86887BABB5C14498 /* main.m in Sources */,
 				B1251229C0D9A65C1A08062F /* AppDelegate.m in Sources */,
+				630AE5711DD7396D004B1827 /* PlayerProfileModuleConfiguration.m in Sources */,
 				66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */,
 				9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */,
 				9FCC274A1D3E7E3C00577805 /* StatisticsProcessor.m in Sources */,
