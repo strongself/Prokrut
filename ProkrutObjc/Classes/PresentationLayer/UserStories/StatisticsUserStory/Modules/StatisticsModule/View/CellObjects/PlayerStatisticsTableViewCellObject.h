@@ -29,5 +29,6 @@
 @property (nonatomic, assign, readonly) NSUInteger scoreDiff;
 @property (nonatomic, assign, readonly) NSUInteger starsDiff;
 @property (nonatomic, assign, readonly) NSUInteger antistarsDiff;
+@property (nonatomic, strong, readonly) AllUserStats *userStats;
 
 @end

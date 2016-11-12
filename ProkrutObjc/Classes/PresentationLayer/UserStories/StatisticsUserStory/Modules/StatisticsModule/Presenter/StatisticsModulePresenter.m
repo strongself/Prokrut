@@ -46,6 +46,10 @@
     return filteredStatistics;
 }
 
+- (void)didSelectPlayerWithStats:(AllUserStats *)stats {
+    
+}
+
 #pragma mark - Методы StatisticsModuleInteractorOutput
 
 - (void)didObtainStatisticsFromNetworkWithData:(NSArray *)statistics

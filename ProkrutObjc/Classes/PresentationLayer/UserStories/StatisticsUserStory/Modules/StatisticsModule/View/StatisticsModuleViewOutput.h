@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class AllUserStats;
+
 @protocol StatisticsModuleViewOutput <NSObject>
 
 /**
@@ -18,5 +20,12 @@
 - (void)didTriggerViewReadyEvent;
 - (void)didTriggerPullToRefreshEvent;
 - (NSArray *)obtainStatisticsFilteredWithTerm:(NSString *)term;
+
+/**
+ @author Artem Karpushin
+ 
+ Оповещает презентер о том, что был выбран игрок 
+ */
+- (void)didSelectPlayerWithStats:(AllUserStats *)stats;
 
 @end

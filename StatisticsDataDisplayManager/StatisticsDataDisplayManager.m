@@ -62,6 +62,15 @@ static NSUInteger const kStartRow = 1;
 
 - (void)setupActionBlocks {
     self.tableViewActions = [[NITableViewActions alloc] initWithTarget:self];
+    
+    __weak typeof(self)weakSelf = self;
+    NIActionBlock playerStatsTapActionBlock = ^BOOL(PlayerStatisticsTableViewCellObject *object, id target, NSIndexPath *indexPath) {
+        __strong typeof(self)self = weakSelf;
+        [self.delegate didSelectCellWithPlayerStats:object.userStats];
+        return YES;
+    };
+    [self.tableViewActions attachToClass:[PlayerStatisticsTableViewCellObject class]
+                                tapBlock:playerStatsTapActionBlock];
 }
 
 - (void)createAllUserStatsCellObjectsWithStats:(NSArray *)stats {

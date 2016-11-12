@@ -26,6 +26,7 @@
 @property (nonatomic, assign, readwrite) NSUInteger scoreDiff;
 @property (nonatomic, assign, readwrite) NSUInteger starsDiff;
 @property (nonatomic, assign, readwrite) NSUInteger antistarsDiff;
+@property (nonatomic, strong, readwrite) AllUserStats *userStats;
 
 @end
 
@@ -47,6 +48,7 @@
         _scoreDiff = statistics.lastDateStats.points;
         _starsDiff = statistics.lastDateStats.stars;
         _antistarsDiff = statistics.lastDateStats.antiStars;
+        _userStats = statistics;
     }
     return self;
 }

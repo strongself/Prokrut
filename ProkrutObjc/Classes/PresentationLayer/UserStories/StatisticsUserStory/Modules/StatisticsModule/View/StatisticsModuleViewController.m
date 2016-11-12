@@ -59,6 +59,12 @@
     [self updateStatisticsWithText:searchBar.text];
 }
 
+#pragma mark - StatisticsDataDisplayManagerDelegate
+
+- (void)didSelectCellWithPlayerStats:(AllUserStats *)stats {
+    [self.output didSelectPlayerWithStats:stats];
+}
+
 #pragma mark - Private
 
 - (void)updateStatisticsWithText:(NSString *)searchText {
