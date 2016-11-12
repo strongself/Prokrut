@@ -6,13 +6,13 @@
 //  Copyright © 2016 RAMBLER&Co. All rights reserved.
 //
 
-#import "ROSPlayerProfileInteractor.h"
+#import "PlayerProfileInteractor.h"
 
-#import "ROSPlayerProfileInteractorOutput.h"
+#import "PlayerProfileInteractorOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation ROSPlayerProfileInteractor
+@implementation PlayerProfileInteractor
 
 #pragma mark - Методы протокола <ROSPlayerProfileInteractorInput>
 

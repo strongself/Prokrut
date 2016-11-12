@@ -1,20 +1,20 @@
 //
-//  ROSPlayerProfileROSPlayerProfileRouter.m
+//  ROSPlayerProfileROSPlayerProfileModuleOutput.h
 //  Prokrut
 //
 //  Created by Karpushin Artem on 12/11/2016.
 //  Copyright © 2016 RAMBLER&Co. All rights reserved.
 //
 
-#import "ROSPlayerProfileRouter.h"
+#import <Foundation/Foundation.h>
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation ROSPlayerProfileRouter
+@protocol PlayerProfileModuleOutput <RamblerViperModuleOutput>
 
-#pragma mark - Методы протокола <ROSPlayerProfileRouterInput>
+@required
 
 @end
 

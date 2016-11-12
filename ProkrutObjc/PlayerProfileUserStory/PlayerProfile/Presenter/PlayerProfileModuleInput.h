@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ROSPlayerProfileModuleInput <RamblerViperModuleInput>
+@protocol PlayerProfileModuleInput <RamblerViperModuleInput>
 
 @required
 

@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ROSPlayerProfileViewInput.h"
+#import "PlayerProfileViewInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ROSPlayerProfileViewOutput;
+@protocol PlayerProfileViewOutput;
 
-@interface ROSPlayerProfileViewController : UIViewController <ROSPlayerProfileViewInput>
+@interface PlayerProfileViewController : UIViewController <PlayerProfileViewInput>
 
-@property (nonatomic, strong) id<ROSPlayerProfileViewOutput> output;
+@property (nonatomic, strong) id<PlayerProfileViewOutput> output;
 
 @end
 

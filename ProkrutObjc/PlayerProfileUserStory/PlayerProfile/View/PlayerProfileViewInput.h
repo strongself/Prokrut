@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ROSPlayerProfileViewInput <NSObject>
+@protocol PlayerProfileViewInput <NSObject>
 
 @required
 

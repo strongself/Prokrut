@@ -1,5 +1,5 @@
 //
-//  ROSPlayerProfileROSPlayerProfileRouterInput.h
+//  ROSPlayerProfileROSPlayerProfileInteractorOutput.h
 //  Prokrut
 //
 //  Created by Karpushin Artem on 12/11/2016.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ROSPlayerProfileRouterInput <NSObject>
+@protocol PlayerProfileInteractorOutput <NSObject>
 
 @required
 

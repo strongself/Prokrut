@@ -6,13 +6,13 @@
 //  Copyright © 2016 RAMBLER&Co. All rights reserved.
 //
 
-#import "ROSPlayerProfileRouterInput.h"
+#import "PlayerProfileRouterInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
-@interface ROSPlayerProfileRouter : NSObject <ROSPlayerProfileRouterInput>
+@interface PlayerProfileRouter : NSObject <PlayerProfileRouterInput>
 
 @property (nonatomic, weak, nullable) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
 

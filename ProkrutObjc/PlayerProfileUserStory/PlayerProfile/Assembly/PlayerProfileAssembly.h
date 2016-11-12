@@ -12,21 +12,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ROSPlayerProfileViewController;
+@class PlayerProfileViewController;
 
 /**
 @author Karpushin Artem
 
 Профиль игрока
 */
-@interface ROSPlayerProfileAssembly : TyphoonAssembly <RamblerInitialAssembly>
+@interface PlayerProfileAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
 /**
  @author Karpushin Artem
 
  Создает view модуля "Профиль игрока"
 */
-- (ROSPlayerProfileViewController *)viewPlayerProfileModule;
+- (PlayerProfileViewController *)viewPlayerProfileModule;
 
 @end
 

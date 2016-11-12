@@ -6,21 +6,21 @@
 //  Copyright © 2016 RAMBLER&Co. All rights reserved.
 //
 
-#import "ROSPlayerProfileAssembly.h"
+#import "PlayerProfileAssembly.h"
 
-#import "ROSPlayerProfileViewController.h"
-#import "ROSPlayerProfileInteractor.h"
-#import "ROSPlayerProfilePresenter.h"
-#import "ROSPlayerProfileRouter.h"
+#import "PlayerProfileViewController.h"
+#import "PlayerProfileInteractor.h"
+#import "PlayerProfilePresenter.h"
+#import "PlayerProfileRouter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation ROSPlayerProfileAssembly
+@implementation PlayerProfileAssembly
 
 #pragma mark - VIPER
 
-- (ROSPlayerProfileViewController *)viewPlayerProfileModule {
-    return [TyphoonDefinition withClass:[ROSPlayerProfileViewController class]
+- (PlayerProfileViewController *)viewPlayerProfileModule {
+    return [TyphoonDefinition withClass:[PlayerProfileViewController class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterPlayerProfileModule]];
@@ -29,16 +29,16 @@ NS_ASSUME_NONNULL_BEGIN
                           }];
 }
 
-- (ROSPlayerProfileInteractor *)interactorPlayerProfileModule {
-    return [TyphoonDefinition withClass:[ROSPlayerProfileInteractor class]
+- (PlayerProfileInteractor *)interactorPlayerProfileModule {
+    return [TyphoonDefinition withClass:[PlayerProfileInteractor class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterPlayerProfileModule]];
                           }];
 }
 
-- (ROSPlayerProfilePresenter *)presenterPlayerProfileModule {
-    return [TyphoonDefinition withClass:[ROSPlayerProfilePresenter class]
+- (PlayerProfilePresenter *)presenterPlayerProfileModule {
+    return [TyphoonDefinition withClass:[PlayerProfilePresenter class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(view)
                                                     with:[self viewPlayerProfileModule]];
@@ -49,8 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
                           }];
 }
 
-- (ROSPlayerProfileRouter *)routerPlayerProfileModule {
-    return [TyphoonDefinition withClass:[ROSPlayerProfileRouter class]
+- (PlayerProfileRouter *)routerPlayerProfileModule {
+    return [TyphoonDefinition withClass:[PlayerProfileRouter class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewPlayerProfileModule]];

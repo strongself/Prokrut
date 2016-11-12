@@ -6,13 +6,13 @@
 //  Copyright © 2016 RAMBLER&Co. All rights reserved.
 //
 
-#import "ROSPlayerProfileViewController.h"
+#import "PlayerProfileViewController.h"
 
-#import "ROSPlayerProfileViewOutput.h"
+#import "PlayerProfileViewOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation ROSPlayerProfileViewController
+@implementation PlayerProfileViewController
 
 #pragma mark - Методы жизненного цикла
 
