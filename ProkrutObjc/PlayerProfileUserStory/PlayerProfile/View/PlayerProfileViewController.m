@@ -9,6 +9,7 @@
 #import "PlayerProfileViewController.h"
 
 #import "PlayerProfileViewOutput.h"
+#import "PlayerProfileDataDisplayManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -10,6 +10,8 @@
 
 #import "PlayerProfileViewInput.h"
 
+@class PlayerProfileDataDisplayManager;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol PlayerProfileViewOutput;
@@ -17,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PlayerProfileViewController : UIViewController <PlayerProfileViewInput>
 
 @property (nonatomic, strong) id<PlayerProfileViewOutput> output;
+@property (nonatomic, strong) PlayerProfileDataDisplayManager *dataDisplayManager;
 
 @end
 
