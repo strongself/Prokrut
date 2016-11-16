@@ -43,32 +43,37 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     self.emailLabel.text = object.email;
     self.winratePercent.text = [NSString stringWithFormat:@"%1.2f%%", object.winrate * 100];
     self.winrateProgress.progress = object.winrate;
-    
-    NSNumber *winrateDiff = @(ceilf(object.winrateDiff * 100) / 100);
+
+    NSNumber *winrateDiff = @(object.winrateDiff);
+    NSString *winrateDiffString = [NSString stringWithFormat:@"%1.2f%%", fabs(object.winrateDiff) * 100];
     
     [self setupNumericDataForLabel:nil
                          diffLabel:self.winrateDiffLabel
                     arrowImageView:self.winrateArrowImageView
                       currentValue:@(object.winrate)
                          diffValue:winrateDiff
+                        diffString:winrateDiffString
                          diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.scoreLabel
                          diffLabel:self.scoreDiffLabel
                     arrowImageView:self.scoreArrowImageView
                       currentValue:@(object.score)
                          diffValue:@(object.scoreDiff)
+                        diffString:@(object.scoreDiff).stringValue
                          diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.starLabel
                          diffLabel:self.starDiffLabel
                     arrowImageView:self.starArrowImageView
                       currentValue:@(object.stars)
                          diffValue:@(object.starsDiff)
+                        diffString:@(object.starsDiff).stringValue
                          diffStyle:StatisticsDiffDefaultStyle];
     [self setupNumericDataForLabel:self.antistarLabel
                          diffLabel:self.antistarDiffLabel
                     arrowImageView:self.antistarArrowImageView
                       currentValue:@(object.antistars)
                          diffValue:@(object.antistarsDiff)
+                        diffString:@(object.antistarsDiff).stringValue
                          diffStyle:StatisticsDiffRevertStyle];
     
     return YES;
@@ -79,12 +84,13 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
                   arrowImageView:(UIImageView *)arrowImageView
                     currentValue:(NSNumber *)currentValue
                        diffValue:(NSNumber *)diffValue
+                      diffString:(NSString *)diffString
                        diffStyle:(StatisticsDiffStyle)diffStyle {
     UIColor *upColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutGreenColor] : [UIColor prokrutRedColor];
     UIColor *downColor = diffStyle == StatisticsDiffDefaultStyle ? [UIColor prokrutRedColor] : [UIColor prokrutGreenColor];
     
     dataLabel.text = currentValue.stringValue;
-    diffLabel.text = diffValue.stringValue;
+    diffLabel.text = diffString;
     diffLabel.textColor = diffValue.floatValue > 0 ? upColor : downColor;
     NSString *arrowImageName = diffValue.floatValue > 0 ? kArrowUpImageName : kArrowDownImageName;
     UIImage *arrowImage = [UIImage imageNamed:arrowImageName];
