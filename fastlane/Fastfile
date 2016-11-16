@@ -45,12 +45,13 @@ lane :beta do |options|
   # Uploading
   ipa_path = lane_context[SharedValues::IPA_OUTPUT_PATH]
   branch_name = git_branch
-  upload_path = "#{ENV['DROPBOX_UPLOAD_PATH']}/#{branch_name}"
-  dropbox_token = ENV['DROPBOX_KEY']
-  dropbox_upload(
-    dropbox_access_token: dropbox_token,
-    ipa_path: ipa_path,
-    upload_path: upload_path
+
+  hockey(
+    api_token: ENV["HOCKEY_API_TOKEN"],
+    public_identifier: ENV["HOCKEY_APP_ID"],
+    notify: '0',
+    status: '2',
+    notes: last_git_commit[:message] + "n(Uploaded automatically via fastlane)"
   )
 
   # Delete keychain
