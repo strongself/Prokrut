@@ -12,7 +12,7 @@ lane :beta do |options|
 
   # Import distribution certificate
   import_certificate(
-    certificate_path: 'fastlane/Certificates/distribution.p12',
+    certificate_path: 'fastlane/certificates/distribution.p12',
     certificate_password: ENV['KEY_PASSWORD'],
     keychain_name: keychain_name
   )
