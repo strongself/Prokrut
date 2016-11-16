@@ -43,17 +43,38 @@ lane :beta do |options|
   )
 
   # Uploading
-  ipa_path = lane_context[SharedValues::IPA_OUTPUT_PATH]
-  branch_name = git_branch
-
   hockey(
     api_token: ENV["HOCKEY_API_TOKEN"],
     public_identifier: ENV["HOCKEY_APP_ID"],
     notify: '0',
     status: '2',
-    notes: last_git_commit[:message] + "n(Uploaded automatically via fastlane)"
+    notes: last_git_commit[:message]
   )
 
   # Delete keychain
   delete_keychain(name: keychain_name)
+
+  if is_ci?
+    download_link = Actions.lane_context[Actions::SharedValues::HOCKEY_DOWNLOAD_LINK]
+    # Posting to Slack
+    slack(
+      message: "#{ENV['APP_NAME']} successfully released to Hockey! #{download_link}",
+      success: true
+    )
+  end
+
+end
+
+lane :test do
+  scan
+end
+
+error do |lane, exception|
+  if is_ci?
+    # Posting to Slack
+    slack(
+        message: "#{ENV['APP_NAME']} : fail\nexception: #{exception.to_s}",
+        success: false
+    )
+  end
 end
