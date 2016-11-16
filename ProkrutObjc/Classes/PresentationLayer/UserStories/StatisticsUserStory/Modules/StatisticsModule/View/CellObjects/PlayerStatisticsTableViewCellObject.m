@@ -40,13 +40,13 @@
         _name = statistics.user.username;
         _email = statistics.user.email;
         _winrate = statistics.winrate;
-        _winrateDiff = statistics.lastDateStats.winrate;
+        _winrateDiff = statistics.winrate - statistics.lastDateStats.winrate;
         _score = statistics.points;
         _stars = statistics.stars;
         _antistars = statistics.antiStars;
-        _scoreDiff = statistics.lastDateStats.points;
-        _starsDiff = statistics.lastDateStats.stars;
-        _antistarsDiff = statistics.lastDateStats.antiStars;
+        _scoreDiff = statistics.points - statistics.lastDateStats.points;
+        _starsDiff = statistics.stars - statistics.lastDateStats.stars;
+        _antistarsDiff = statistics.antiStars - statistics.lastDateStats.antiStars;
     }
     return self;
 }
