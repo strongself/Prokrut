@@ -54,6 +54,7 @@
 		B1251BD139C22217A4BEF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12512EFA4AE32E96587CBE5 /* Assets.xcassets */; };
 		B1251C1D33FA12D7853C6323 /* AddMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251AF5034D93A97F3F3C45 /* AddMatchViewController.m */; };
 		CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */ = {isa = PBXBuildFile; fileRef = CD80FE251C5CF5630000AE22 /* AllUserStats.m */; };
+		DDAF91611DDEE6D200C7F243 /* ProkrutObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF91601DDEE6D200C7F243 /* ProkrutObjcTests.m */; };
 		FD6B348D1C45966100B44AE9 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6B348C1C45966100B44AE9 /* PlayerCell.xib */; };
 		FD7C8A161C4C239000A6B424 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A151C4C239000A6B424 /* HistoryViewController.m */; };
 		FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A181C4C276500A6B424 /* MatchTableViewCell.m */; };
@@ -64,6 +65,16 @@
 		FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C41C4849C5008C720B /* ChooseScoreViewController.m */; };
 		FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C71C485807008C720B /* OnDateUserStatisctics.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDAF91631DDEE6D200C7F243 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12515D945CC7A8D61639BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12510ECB4AFD3A6E2DEDCF2;
+			remoteInfo = ProkrutObjc;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		11704F6A1D45560D00B753C5 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
@@ -159,6 +170,9 @@
 		C1E147EAE57EA703A53559B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CD80FE241C5CF5630000AE22 /* AllUserStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUserStats.h; sourceTree = "<group>"; };
 		CD80FE251C5CF5630000AE22 /* AllUserStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUserStats.m; sourceTree = "<group>"; };
+		DDAF915E1DDEE6D200C7F243 /* ProkrutObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProkrutObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAF91601DDEE6D200C7F243 /* ProkrutObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProkrutObjcTests.m; sourceTree = "<group>"; };
+		DDAF91621DDEE6D200C7F243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6B348C1C45966100B44AE9 /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
 		FD7C8A141C4C239000A6B424 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		FD7C8A151C4C239000A6B424 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
@@ -183,6 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB0A4E49511A9075AA39571 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAF915B1DDEE6D200C7F243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				B125151C307CF05E1A6A41B1 /* ProkrutObjc.app */,
+				DDAF915E1DDEE6D200C7F243 /* ProkrutObjcTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -689,8 +711,9 @@
 		B1251E9BC3897B161B5B31A8 = {
 			isa = PBXGroup;
 			children = (
-				B12514C21BE170754A98350E /* Products */,
 				B12511B35192D81B8971D0CA /* ProkrutObjc */,
+				DDAF915F1DDEE6D200C7F243 /* ProkrutObjcTests */,
+				B12514C21BE170754A98350E /* Products */,
 				C0EC97562CCB20CC63D21262 /* Pods */,
 				EAB19CFCB70FB486EEF5D98D /* Frameworks */,
 			);
@@ -746,6 +769,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		DDAF915F1DDEE6D200C7F243 /* ProkrutObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF91601DDEE6D200C7F243 /* ProkrutObjcTests.m */,
+				DDAF91621DDEE6D200C7F243 /* Info.plist */,
+			);
+			path = ProkrutObjcTests;
+			sourceTree = "<group>";
+		};
 		EAB19CFCB70FB486EEF5D98D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +809,24 @@
 			productReference = B125151C307CF05E1A6A41B1 /* ProkrutObjc.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DDAF915D1DDEE6D200C7F243 /* ProkrutObjcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAF91671DDEE6D200C7F243 /* Build configuration list for PBXNativeTarget "ProkrutObjcTests" */;
+			buildPhases = (
+				DDAF915A1DDEE6D200C7F243 /* Sources */,
+				DDAF915B1DDEE6D200C7F243 /* Frameworks */,
+				DDAF915C1DDEE6D200C7F243 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDAF91641DDEE6D200C7F243 /* PBXTargetDependency */,
+			);
+			name = ProkrutObjcTests;
+			productName = ProkrutObjcTests;
+			productReference = DDAF915E1DDEE6D200C7F243 /* ProkrutObjcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -785,6 +835,13 @@
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = DevAlloy;
+				TargetAttributes = {
+					DDAF915D1DDEE6D200C7F243 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+						TestTargetID = B12510ECB4AFD3A6E2DEDCF2;
+					};
+				};
 			};
 			buildConfigurationList = B1251A8EABDDDDF9E1E7B894 /* Build configuration list for PBXProject "ProkrutObjc" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -799,6 +856,7 @@
 			projectRoot = "";
 			targets = (
 				B12510ECB4AFD3A6E2DEDCF2 /* ProkrutObjc */,
+				DDAF915D1DDEE6D200C7F243 /* ProkrutObjcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -822,6 +880,13 @@
 				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
 				9F9B796F1DCE082C009871F7 /* Settings.storyboard in Resources */,
 				9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAF915C1DDEE6D200C7F243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,7 +989,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDAF915A1DDEE6D200C7F243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAF91611DDEE6D200C7F243 /* ProkrutObjcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDAF91641DDEE6D200C7F243 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B12510ECB4AFD3A6E2DEDCF2 /* ProkrutObjc */;
+			targetProxy = DDAF91631DDEE6D200C7F243 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		11D3323C1D4AB9D500CE1434 /* Localizable.strings */ = {
@@ -1060,6 +1141,40 @@
 			};
 			name = Debug;
 		};
+		DDAF91651DDEE6D200C7F243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ProkrutObjcTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cognitivedisson.ProkrutObjcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProkrutObjc.app/ProkrutObjc";
+			};
+			name = Debug;
+		};
+		DDAF91661DDEE6D200C7F243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ProkrutObjcTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cognitivedisson.ProkrutObjcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProkrutObjc.app/ProkrutObjc";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1080,6 +1195,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DDAF91671DDEE6D200C7F243 /* Build configuration list for PBXNativeTarget "ProkrutObjcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAF91651DDEE6D200C7F243 /* Debug */,
+				DDAF91661DDEE6D200C7F243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
