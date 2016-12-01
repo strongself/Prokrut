@@ -37,6 +37,9 @@
 		9F4067101DC0ECB8001CBD94 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F40670F1DC0ECB8001CBD94 /* Statistics.storyboard */; };
 		9F4067141DC13958001CBD94 /* PlayerStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */; };
 		9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */; };
+		9F8A356C1DF083F900F50001 /* LetterAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A356B1DF083F900F50001 /* LetterAvatar.m */; };
+		9F8A356E1DF0840E00F50001 /* LetterAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8A356D1DF0840E00F50001 /* LetterAvatar.xib */; };
+		9F8A35721DF0857F00F50001 /* LetterAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */; };
 		9F9B79631DCDFA9E009871F7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79621DCDFA9E009871F7 /* History.storyboard */; };
 		9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79661DCDFADE009871F7 /* NewGame.storyboard */; };
 		9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796A1DCE078F009871F7 /* Graph.storyboard */; };
@@ -141,6 +144,11 @@
 		9F4067111DC13958001CBD94 /* PlayerStatisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		9F4067121DC13958001CBD94 /* PlayerStatisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCell.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		9F4067131DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerStatisticsTableViewCell.xib; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/PlayerStatisticsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		9F8A356A1DF083F900F50001 /* LetterAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetterAvatar.h; path = Classes/PresentationLayer/Common/LetterAvatar/View/LetterAvatar.h; sourceTree = "<group>"; };
+		9F8A356B1DF083F900F50001 /* LetterAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetterAvatar.m; path = Classes/PresentationLayer/Common/LetterAvatar/View/LetterAvatar.m; sourceTree = "<group>"; };
+		9F8A356D1DF0840E00F50001 /* LetterAvatar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LetterAvatar.xib; path = Classes/PresentationLayer/Common/LetterAvatar/View/LetterAvatar.xib; sourceTree = "<group>"; };
+		9F8A35701DF0857F00F50001 /* LetterAvatarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetterAvatarViewModel.h; path = Classes/PresentationLayer/Common/LetterAvatar/ViewModel/LetterAvatarViewModel.h; sourceTree = "<group>"; };
+		9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetterAvatarViewModel.m; path = Classes/PresentationLayer/Common/LetterAvatar/ViewModel/LetterAvatarViewModel.m; sourceTree = "<group>"; };
 		9F9B79621DCDFA9E009871F7 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Classes/PresentationLayer/UserStories/HistoryUserStory/Storyboard/History.storyboard; sourceTree = "<group>"; };
 		9F9B79661DCDFADE009871F7 /* NewGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewGame.storyboard; path = Classes/PresentationLayer/UserStories/NewGameUserStory/Storyboard/NewGame.storyboard; sourceTree = "<group>"; };
 		9F9B796A1DCE078F009871F7 /* Graph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Graph.storyboard; path = Classes/PresentationLayer/UserStories/GraphUserStory/Graph.storyboard; sourceTree = "<group>"; };
@@ -488,6 +496,7 @@
 		9F2B3D7E1DC27BCD00B6A33A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9F8A35681DF083CA00F50001 /* LetterAvatar */,
 				9F2B3D7F1DC27BD400B6A33A /* ProkrutNavigationController */,
 			);
 			name = Common;
@@ -500,6 +509,34 @@
 				9F2B3D811DC27BF600B6A33A /* ProkrutNavigationController.m */,
 			);
 			name = ProkrutNavigationController;
+			sourceTree = "<group>";
+		};
+		9F8A35681DF083CA00F50001 /* LetterAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A356F1DF0856900F50001 /* ViewModel */,
+				9F8A35691DF083DA00F50001 /* View */,
+			);
+			name = LetterAvatar;
+			sourceTree = "<group>";
+		};
+		9F8A35691DF083DA00F50001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A356A1DF083F900F50001 /* LetterAvatar.h */,
+				9F8A356B1DF083F900F50001 /* LetterAvatar.m */,
+				9F8A356D1DF0840E00F50001 /* LetterAvatar.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9F8A356F1DF0856900F50001 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A35701DF0857F00F50001 /* LetterAvatarViewModel.h */,
+				9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		9F9B79601DCDFA6E009871F7 /* HistoryUserStory */ = {
@@ -875,6 +912,7 @@
 				11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */,
 				9F4067151DC13958001CBD94 /* PlayerStatisticsTableViewCell.xib in Resources */,
 				9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */,
+				9F8A356E1DF0840E00F50001 /* LetterAvatar.xib in Resources */,
 				9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */,
 				9F9B79771DCE096C009871F7 /* Launch.storyboard in Resources */,
 				9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */,
@@ -963,6 +1001,8 @@
 				FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */,
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
+				9F8A356C1DF083F900F50001 /* LetterAvatar.m in Sources */,
+				9F8A35721DF0857F00F50001 /* LetterAvatarViewModel.m in Sources */,
 				9F2B3D6D1DC20FC800B6A33A /* StatisticsSeparatorCellObject.m in Sources */,
 				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
 				66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */,

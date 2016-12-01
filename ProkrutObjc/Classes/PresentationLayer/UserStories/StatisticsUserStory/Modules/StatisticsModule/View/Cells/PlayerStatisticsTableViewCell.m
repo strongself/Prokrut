@@ -11,6 +11,8 @@
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "OnDateUserStatisctics.h"
 #import "UIColor+ProkrutPalette.h"
+#import "LetterAvatar.h"
+#import "LetterAvatarViewModel.h"
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
 static NSString *const kNoPhotoImageName = @"no-avatar";
@@ -30,13 +32,13 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     [self setNeedsLayout];
     [self layoutIfNeeded];
     
-    self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2;
-    self.photoImageView.clipsToBounds = YES;
+//    self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2;
+//    self.photoImageView.clipsToBounds = YES;
 }
 
 - (BOOL)shouldUpdateCellWithObject:(PlayerStatisticsTableViewCellObject *)object {
     if (!object.photoUrl) {
-        self.photoImageView.image = [UIImage imageNamed:kNoPhotoImageName];
+//        self.photoImageView.image = [UIImage imageNamed:kNoPhotoImageName];
     }
     
     self.nameLabel.text = [NSString stringWithFormat:@"%tu. %@", object.ratingPosition, object.name];
@@ -75,6 +77,13 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
                          diffValue:@(object.antistarsDiff)
                         diffString:@(object.antistarsDiff).stringValue
                          diffStyle:StatisticsDiffRevertStyle];
+    
+    LetterAvatarViewModel *viewModel = [LetterAvatarViewModel new];
+    viewModel.name = @"ЕТ";
+    viewModel.nameColor = [UIColor greenColor];
+    
+    LetterAvatar *avatar = [LetterAvatar loadFromNib];
+    [self.letterAvatar addSubview:avatar];
     
     return YES;
 }

@@ -11,7 +11,7 @@
 
 @interface PlayerStatisticsTableViewCell : UITableViewCell <NICell>
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIView *letterAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 
