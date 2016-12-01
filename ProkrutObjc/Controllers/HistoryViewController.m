@@ -76,8 +76,8 @@
                     dispatch_group_enter(group);
                     PFUser *firstRedPlayer = match[@"firstRedPlayer"];
                     PFUser *firstBluePlayer = match[@"firstBluePlayer"];
-                    PFUser *secondRedPlayer = match[@"firstRedPlayer"];
-                    PFUser *secondBluePlayer = match[@"secondRedPlayer"];
+                    PFUser *secondRedPlayer = match[@"secondRedPlayer"];
+                    PFUser *secondBluePlayer = match[@"secondBluePlayer"];
                     NSArray *players = @[firstRedPlayer, firstBluePlayer, secondRedPlayer, secondBluePlayer];
                     [PFObject fetchAllIfNeededInBackground:players block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
                         dispatch_group_leave(group);
@@ -109,8 +109,8 @@
         
         PFUser *firstRedPlayer = match[@"firstRedPlayer"];
         PFUser *firstBluePlayer = match[@"firstBluePlayer"];
-        PFUser *secondRedPlayer = match[@"firstRedPlayer"];
-        PFUser *secondBluePlayer = match[@"secondRedPlayer"];
+        PFUser *secondRedPlayer = match[@"secondRedPlayer"];
+        PFUser *secondBluePlayer = match[@"secondBluePlayer"];
         cellObject.firstRedPlayer = firstRedPlayer.username;
         cellObject.secondRedPlayer = secondRedPlayer.username;
         cellObject.firstBluePlayer = firstBluePlayer.username;
