@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class LetterAvatar;
+#import <UIKit/UIKit.h>
 
 @interface LetterAvatarFactory : NSObject
 
-- (LetterAvatar *)generateAvatarForName:(NSString *)name;
+- (UIView *)generateAvatarForName:(NSString *)name;
 
 @end

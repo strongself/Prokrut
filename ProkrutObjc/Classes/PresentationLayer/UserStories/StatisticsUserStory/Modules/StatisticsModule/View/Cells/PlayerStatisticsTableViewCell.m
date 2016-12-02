@@ -30,15 +30,12 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
     
     [self setNeedsLayout];
     [self layoutIfNeeded];
-    
-//    self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2;
-//    self.photoImageView.clipsToBounds = YES;
 }
 
 - (BOOL)shouldUpdateCellWithObject:(PlayerStatisticsTableViewCellObject *)object {
-    if (!object.photoUrl) {
-//        self.photoImageView.image = [UIImage imageNamed:kNoPhotoImageName];
-    }
+    LetterAvatarFactory *factory = [LetterAvatarFactory new];
+    UIView *view = [factory generateAvatarForName:object.name];
+    [self.letterAvatar addSubview:view];
     
     self.nameLabel.text = [NSString stringWithFormat:@"%tu. %@", object.ratingPosition, object.name];
     self.emailLabel.text = object.email;
@@ -76,10 +73,6 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
                          diffValue:@(object.antistarsDiff)
                         diffString:@(object.antistarsDiff).stringValue
                          diffStyle:StatisticsDiffRevertStyle];
-    
-    LetterAvatarFactory *factory = [LetterAvatarFactory new];
-    UIView *view = [factory generateAvatarForName:object.name];
-    [self.letterAvatar addSubview:view];
     
     return YES;
 }
