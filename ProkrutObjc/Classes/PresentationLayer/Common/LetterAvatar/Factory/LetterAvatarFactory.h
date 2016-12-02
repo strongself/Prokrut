@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class LetterAvatar;
+
 @interface LetterAvatarFactory : NSObject
+
+- (LetterAvatar *)generateAvatarForName:(NSString *)name;
 
 @end
