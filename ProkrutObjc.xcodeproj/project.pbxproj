@@ -40,6 +40,7 @@
 		9F8A356C1DF083F900F50001 /* LetterAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A356B1DF083F900F50001 /* LetterAvatar.m */; };
 		9F8A356E1DF0840E00F50001 /* LetterAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8A356D1DF0840E00F50001 /* LetterAvatar.xib */; };
 		9F8A35721DF0857F00F50001 /* LetterAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */; };
+		9F8A35761DF08AAA00F50001 /* LetterAvatarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A35751DF08AAA00F50001 /* LetterAvatarFactory.m */; };
 		9F9B79631DCDFA9E009871F7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79621DCDFA9E009871F7 /* History.storyboard */; };
 		9F9B79671DCDFADE009871F7 /* NewGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B79661DCDFADE009871F7 /* NewGame.storyboard */; };
 		9F9B796B1DCE078F009871F7 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B796A1DCE078F009871F7 /* Graph.storyboard */; };
@@ -149,6 +150,8 @@
 		9F8A356D1DF0840E00F50001 /* LetterAvatar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LetterAvatar.xib; path = Classes/PresentationLayer/Common/LetterAvatar/View/LetterAvatar.xib; sourceTree = "<group>"; };
 		9F8A35701DF0857F00F50001 /* LetterAvatarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetterAvatarViewModel.h; path = Classes/PresentationLayer/Common/LetterAvatar/ViewModel/LetterAvatarViewModel.h; sourceTree = "<group>"; };
 		9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetterAvatarViewModel.m; path = Classes/PresentationLayer/Common/LetterAvatar/ViewModel/LetterAvatarViewModel.m; sourceTree = "<group>"; };
+		9F8A35741DF08AAA00F50001 /* LetterAvatarFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetterAvatarFactory.h; path = Classes/PresentationLayer/Common/LetterAvatar/Factory/LetterAvatarFactory.h; sourceTree = "<group>"; };
+		9F8A35751DF08AAA00F50001 /* LetterAvatarFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetterAvatarFactory.m; path = Classes/PresentationLayer/Common/LetterAvatar/Factory/LetterAvatarFactory.m; sourceTree = "<group>"; };
 		9F9B79621DCDFA9E009871F7 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Classes/PresentationLayer/UserStories/HistoryUserStory/Storyboard/History.storyboard; sourceTree = "<group>"; };
 		9F9B79661DCDFADE009871F7 /* NewGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewGame.storyboard; path = Classes/PresentationLayer/UserStories/NewGameUserStory/Storyboard/NewGame.storyboard; sourceTree = "<group>"; };
 		9F9B796A1DCE078F009871F7 /* Graph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Graph.storyboard; path = Classes/PresentationLayer/UserStories/GraphUserStory/Graph.storyboard; sourceTree = "<group>"; };
@@ -514,6 +517,7 @@
 		9F8A35681DF083CA00F50001 /* LetterAvatar */ = {
 			isa = PBXGroup;
 			children = (
+				9F8A35731DF08A8700F50001 /* Factory */,
 				9F8A356F1DF0856900F50001 /* ViewModel */,
 				9F8A35691DF083DA00F50001 /* View */,
 			);
@@ -537,6 +541,15 @@
 				9F8A35711DF0857F00F50001 /* LetterAvatarViewModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F8A35731DF08A8700F50001 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A35741DF08AAA00F50001 /* LetterAvatarFactory.h */,
+				9F8A35751DF08AAA00F50001 /* LetterAvatarFactory.m */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 		9F9B79601DCDFA6E009871F7 /* HistoryUserStory */ = {
@@ -873,6 +886,9 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = DevAlloy;
 				TargetAttributes = {
+					B12510ECB4AFD3A6E2DEDCF2 = {
+						DevelopmentTeam = 7SMPM83ZV6;
+					};
 					DDAF915D1DDEE6D200C7F243 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Manual;
@@ -998,6 +1014,7 @@
 				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
 				11D332071D4AA34D00CE1434 /* AuthorizationViewController.m in Sources */,
 				5D3781161C74D10C0091269F /* Season.m in Sources */,
+				9F8A35761DF08AAA00F50001 /* LetterAvatarFactory.m in Sources */,
 				FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */,
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
 				9FD2BE1A1C53D493002EA024 /* GraphViewController.m in Sources */,
@@ -1074,6 +1091,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				INFOPLIST_FILE = ProkrutObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rambler.ProkrutObjc;
@@ -1173,6 +1191,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				INFOPLIST_FILE = ProkrutObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rambler.ProkrutObjc;
@@ -1243,6 +1262,7 @@
 				DDAF91661DDEE6D200C7F243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

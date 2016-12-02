@@ -11,8 +11,7 @@
 #import "PlayerStatisticsTableViewCellObject.h"
 #import "OnDateUserStatisctics.h"
 #import "UIColor+ProkrutPalette.h"
-#import "LetterAvatar.h"
-#import "LetterAvatarViewModel.h"
+#import "LetterAvatarFactory.h"
 
 static CGFloat const kPlayerStatisticsTableViewCellHeight = 226.0f;
 static NSString *const kNoPhotoImageName = @"no-avatar";
@@ -78,12 +77,9 @@ typedef NS_ENUM(NSUInteger, StatisticsDiffStyle) {
                         diffString:@(object.antistarsDiff).stringValue
                          diffStyle:StatisticsDiffRevertStyle];
     
-    LetterAvatarViewModel *viewModel = [LetterAvatarViewModel new];
-    viewModel.name = @"ЕТ";
-    viewModel.nameColor = [UIColor greenColor];
-    
-    LetterAvatar *avatar = [LetterAvatar loadFromNib];
-    [self.letterAvatar addSubview:avatar];
+    LetterAvatarFactory *factory = [LetterAvatarFactory new];
+    UIView *view = [factory generateAvatarForName:object.name];
+    [self.letterAvatar addSubview:view];
     
     return YES;
 }
