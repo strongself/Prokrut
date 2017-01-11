@@ -27,7 +27,6 @@
 		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
 		66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */; };
 		66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */; };
-		66B353201D79CB94006620FA /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */; };
 		9F2B3D641DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */; };
 		9F2B3D691DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */; };
 		9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */; };
@@ -65,6 +64,8 @@
 		FD7C8A1B1C4C276500A6B424 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7C8A191C4C276500A6B424 /* MatchTableViewCell.xib */; };
 		FD7C8A1E1C4C29AF00A6B424 /* MatchCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A1D1C4C29AF00A6B424 /* MatchCellObject.m */; };
 		FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A221C51584C00A6B424 /* UserStatistics.m */; };
+		FDDADD921E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */; };
+		FDDADD931E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */; };
 		FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84B71C46F99C008C720B /* ChooseUserViewController.m */; };
 		FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C41C4849C5008C720B /* ChooseScoreViewController.m */; };
 		FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C71C485807008C720B /* OnDateUserStatisctics.m */; };
@@ -124,10 +125,7 @@
 		66B353171D79C5BF006620FA /* StatisticsModuleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleRouter.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouter.h; sourceTree = SOURCE_ROOT; };
 		66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleRouter.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouter.m; sourceTree = SOURCE_ROOT; };
 		66B353191D79C5BF006620FA /* StatisticsModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleRouterInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouterInput.h; sourceTree = SOURCE_ROOT; };
-		66B3531E1D79CB94006620FA /* StatisticsDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsDataDisplayManager.h; path = StatisticsDataDisplayManager/StatisticsDataDisplayManager.h; sourceTree = SOURCE_ROOT; };
-		66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsDataDisplayManager.m; path = StatisticsDataDisplayManager/StatisticsDataDisplayManager.m; sourceTree = SOURCE_ROOT; };
 		66B353231D79D28D006620FA /* DataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataDisplayManager.h; path = Classes/Helpers/Protocols/DataDisplayManager.h; sourceTree = "<group>"; };
-		66B8AB4E1D7D92A80047767F /* StatisticsDataDisplayManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StatisticsDataDisplayManagerDelegate.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/DataDisplayManager/StatisticsDataDisplayManagerDelegate.h; sourceTree = SOURCE_ROOT; };
 		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F2B3D621DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCellObject.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/PlayerStatisticsTableViewCellObject.h; sourceTree = SOURCE_ROOT; };
@@ -194,6 +192,9 @@
 		FD7C8A1D1C4C29AF00A6B424 /* MatchCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchCellObject.m; sourceTree = "<group>"; };
 		FD7C8A211C51584C00A6B424 /* UserStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatistics.h; sourceTree = "<group>"; };
 		FD7C8A221C51584C00A6B424 /* UserStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStatistics.m; sourceTree = "<group>"; };
+		FDDADD8F1E26332D00DDD2DD /* StatisticsDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsDataDisplayManager.h; sourceTree = "<group>"; };
+		FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsDataDisplayManager.m; sourceTree = "<group>"; };
+		FDDADD911E26332D00DDD2DD /* StatisticsDataDisplayManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsDataDisplayManagerDelegate.h; sourceTree = "<group>"; };
 		FDEC84B61C46F99C008C720B /* ChooseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseUserViewController.h; sourceTree = "<group>"; };
 		FDEC84B71C46F99C008C720B /* ChooseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseUserViewController.m; sourceTree = "<group>"; };
 		FDEC84C31C4849C5008C720B /* ChooseScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseScoreViewController.h; sourceTree = "<group>"; };
@@ -413,16 +414,6 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		66B3531D1D79CB63006620FA /* DataDisplayManager */ = {
-			isa = PBXGroup;
-			children = (
-				66B3531E1D79CB94006620FA /* StatisticsDataDisplayManager.h */,
-				66B3531F1D79CB94006620FA /* StatisticsDataDisplayManager.m */,
-				66B8AB4E1D7D92A80047767F /* StatisticsDataDisplayManagerDelegate.h */,
-			);
-			name = DataDisplayManager;
-			sourceTree = "<group>";
-		};
 		66B353211D79D27D006620FA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,7 +461,7 @@
 			children = (
 				66EE7BAD1D7D685000F8F724 /* CellObjects */,
 				66EE7BAC1D7D684B00F8F724 /* Cells */,
-				66B3531D1D79CB63006620FA /* DataDisplayManager */,
+				FDDADD8E1E26332D00DDD2DD /* DataDisplayManager */,
 				66B353091D79C586006620FA /* StatisticsModuleViewController.h */,
 				66B3530A1D79C586006620FA /* StatisticsModuleViewController.m */,
 				66B3530B1D79C586006620FA /* StatisticsModuleViewInput.h */,
@@ -836,6 +827,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FDDADD8E1E26332D00DDD2DD /* DataDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				FDDADD8F1E26332D00DDD2DD /* StatisticsDataDisplayManager.h */,
+				FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */,
+				FDDADD911E26332D00DDD2DD /* StatisticsDataDisplayManagerDelegate.h */,
+			);
+			name = DataDisplayManager;
+			path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/DataDisplayManager;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1014,6 +1016,7 @@
 				11D332131D4AA45800CE1434 /* UIView+Inspectable.m in Sources */,
 				11D332071D4AA34D00CE1434 /* AuthorizationViewController.m in Sources */,
 				5D3781161C74D10C0091269F /* Season.m in Sources */,
+				FDDADD921E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */,
 				9F8A35761DF08AAA00F50001 /* LetterAvatarFactory.m in Sources */,
 				FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */,
 				CD80FE261C5CF5630000AE22 /* AllUserStats.m in Sources */,
@@ -1024,7 +1027,6 @@
 				11D332301D4AAD0D00CE1434 /* AuthorizationService.m in Sources */,
 				66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */,
 				5D4B1C461C5A11C50022CA42 /* DateFormatter.m in Sources */,
-				66B353201D79CB94006620FA /* StatisticsDataDisplayManager.m in Sources */,
 				FD7C8A1A1C4C276500A6B424 /* MatchTableViewCell.m in Sources */,
 				66B3530D1D79C586006620FA /* StatisticsModuleViewController.m in Sources */,
 				66B353081D79C57E006620FA /* StatisticsModuleAssembly.m in Sources */,
@@ -1051,6 +1053,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDAF91611DDEE6D200C7F243 /* ProkrutObjcTests.m in Sources */,
+				FDDADD931E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
