@@ -23,4 +23,4 @@ pod keys set ParseClientKey "PASTE_YOUR_CLIENT_KEY"
 
 ##Лицензия 
 
-[MIT](https://github.com/rambler-ios/Prokrut/blob/develop/LICENSE)
+[MIT](https://github.com/strongself/Prokrut/blob/develop/LICENSE)
