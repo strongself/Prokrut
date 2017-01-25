@@ -22,11 +22,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ProkrutobjcKeys *prokrutKeys = [ProkrutobjcKeys new];
     
-    NSString *applicationId = [prokrutKeys parseApplicationId];
-    NSString *clientKey = [prokrutKeys parseClientKey];
+    ParseClientConfiguration *parseClientConfiguration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
+        configuration.applicationId = [prokrutKeys parseApplicationId];
+        configuration.clientKey = [prokrutKeys parseClientKey];
+        configuration.server = @"https://prokrut-serv.herokuapp.com/parse";
+    }];
     
-    [Parse enableLocalDatastore];
-    [Parse setApplicationId:applicationId clientKey:clientKey];
+    [Parse initializeWithConfiguration:parseClientConfiguration];
+    
     [self registerPushForApplication:application];
     
     return YES;

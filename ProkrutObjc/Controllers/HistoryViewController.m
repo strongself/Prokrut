@@ -38,7 +38,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self recieveMathcesDataFromLocalStorage:YES];
+    [self recieveMathcesDataFromLocalStorage:NO];
 }
 
 - (void)didPullToRefesh:(UIRefreshControl *)refreshControl {

@@ -52,9 +52,9 @@
 
 - (void)receiveUsers:(BOOL)fromLocalStorage {
     PFQuery *query = [PFUser query];
-    if (fromLocalStorage) {
-        [query fromLocalDatastore];
-    }
+//    if (fromLocalStorage) {
+//        [query fromLocalDatastore];
+//    }
     __weak typeof(self)weakSelf = self;
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         __strong typeof(self)self = weakSelf;
