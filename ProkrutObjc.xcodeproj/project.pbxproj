@@ -65,7 +65,6 @@
 		FD7C8A1E1C4C29AF00A6B424 /* MatchCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A1D1C4C29AF00A6B424 /* MatchCellObject.m */; };
 		FD7C8A231C51584C00A6B424 /* UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7C8A221C51584C00A6B424 /* UserStatistics.m */; };
 		FDDADD921E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */; };
-		FDDADD931E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDADD901E26332D00DDD2DD /* StatisticsDataDisplayManager.m */; };
 		FDEC84B81C46F99C008C720B /* ChooseUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84B71C46F99C008C720B /* ChooseUserViewController.m */; };
 		FDEC84C51C4849C5008C720B /* ChooseScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C41C4849C5008C720B /* ChooseScoreViewController.m */; };
 		FDEC84C81C485807008C720B /* OnDateUserStatisctics.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC84C71C485807008C720B /* OnDateUserStatisctics.m */; };
@@ -1053,7 +1052,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDAF91611DDEE6D200C7F243 /* ProkrutObjcTests.m in Sources */,
-				FDDADD931E26332D00DDD2DD /* StatisticsDataDisplayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
