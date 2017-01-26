@@ -9,6 +9,7 @@ before_install:
 - gem update --system
 - gem --version
 - gem install bundler
+- gem install fastlane -NV
 - bundle install --gemfile fastlane/Gemfile
 - brew install imagemagick
 before_script:
