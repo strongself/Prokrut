@@ -8,10 +8,11 @@ script: fastlane test && fastlane beta
 before_install:
 - gem update --system
 - gem --version
-- gem install fastlane --no-ri --no-rdoc --no-document
 - gem install bundler --no-ri --no-rdoc --no-document
 - bundle install --gemfile fastlane/Gemfile
 - brew install imagemagick
+- gem uninstall fastlane
+- gem install fastlane --no-ri --no-rdoc --no-document
 before_script:
 - openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/certificates/distribution.p12.enc
   -d -a -out fastlane/certificates/distribution.p12
