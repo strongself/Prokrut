@@ -12,7 +12,6 @@ before_install:
 - bundle install --gemfile fastlane/Gemfile
 - brew install imagemagick
 - gem cleanup fastlane
-- gem uninstall fastlane
 - gem install fastlane --no-ri --no-rdoc --no-document
 before_script:
 - openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/certificates/distribution.p12.enc
