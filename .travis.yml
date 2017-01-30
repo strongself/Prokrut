@@ -1,4 +1,6 @@
 language: objective-c
+rvm:
+- 2.2.3
 osx_image: xcode7.3
 branches:
   only:
@@ -7,14 +9,7 @@ branches:
 script: fastlane test && fastlane beta
 before_install:
 - gem update --system
-- gem --version
-- rvm install 2.2
-- rvm use 2.2
-- gem install bundler --no-ri --no-rdoc --no-document
-- bundle install --gemfile fastlane/Gemfile
 - brew install imagemagick
-- gem cleanup fastlane
-- gem install fastlane --no-ri --no-rdoc --no-document
 before_script:
 - openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/certificates/distribution.p12.enc
   -d -a -out fastlane/certificates/distribution.p12
