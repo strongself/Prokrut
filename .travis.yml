@@ -11,6 +11,7 @@ before_install:
 - gem install bundler --no-ri --no-rdoc --no-document
 - bundle install --gemfile fastlane/Gemfile
 - brew install imagemagick
+- gem install activesupport -v 4.2.6
 - gem cleanup fastlane
 - gem install fastlane --no-ri --no-rdoc --no-document
 before_script:
