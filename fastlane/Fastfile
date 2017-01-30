@@ -9,6 +9,7 @@ lane :beta do |options|
     lock_when_sleeps: true,
     password: SecureRandom.base64
   )
+  UI.message 'Keychain created'
 
   # Import distribution certificate
   import_certificate(
@@ -16,6 +17,7 @@ lane :beta do |options|
     certificate_password: ENV['KEY_PASSWORD'],
     keychain_name: keychain_name
   )
+  UI.message 'Сertificate has been imported to keychain'
 
   # Prepare project
   update_app_identifier(
@@ -23,16 +25,19 @@ lane :beta do |options|
     app_identifier: ENV['APP_IDENTIFIER'],
     plist_path: ENV['INFO_PLIST_PATH']
   )
+  UI.message 'App identifier has been updated'
   sigh(
     username: ENV['APPLE_ID'],
     app_identifier: ENV['APP_IDENTIFIER'],
     team_id: ENV['TEAM_ID']
   )
+  UI.message 'Sigh completed'
 
   # Setting up the icon badge
   shield_text = options[:shield_text]
   shield_data = "#{shield_text}-blue"
   badge(shield: shield_data, dark: true)
+  UI.message 'Badge changed'
 
   # Building the ipa file of the enterprise build
   gym(
@@ -41,6 +46,7 @@ lane :beta do |options|
     use_legacy_build_api: true,
     export_method: 'enterprise'
   )
+  UI.message 'Successfully Build'
 
   # Uploading
   hockey(
@@ -50,9 +56,11 @@ lane :beta do |options|
     status: '2',
     notes: last_git_commit[:message]
   )
+  UI.message 'Successfully uploaded to hockey'
 
   # Delete keychain
   delete_keychain(name: keychain_name)
+  UI.message 'Keychain was removed'
 
   if is_ci?
     download_link = Actions.lane_context[Actions::SharedValues::HOCKEY_DOWNLOAD_LINK]
