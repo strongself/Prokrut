@@ -1,6 +1,4 @@
 language: objective-c
-rvm:
-- 2.2.3
 osx_image: xcode8.3
 branches:
   only:
@@ -8,6 +6,9 @@ branches:
   - develop
 script: fastlane test && fastlane beta
 before_install:
+- brew update && brew upgrade openssl
+- rvm osx-ssl-certs update all
+- rvm reinstall ruby-2.2.3 --with-openssl-dir=/usr/local
 - gem update --system
 - brew install imagemagick
 - gem install fastlane --no-ri --no-rdoc --no-document
