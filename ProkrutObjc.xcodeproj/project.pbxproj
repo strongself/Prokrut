@@ -17,7 +17,6 @@
 		11D332311D4AAD0D00CE1434 /* StatisticsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3322F1D4AAD0D00CE1434 /* StatisticsService.m */; };
 		11D332371D4AB9BF00CE1434 /* LocalizableConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D332361D4AB9BF00CE1434 /* LocalizableConstants.m */; };
 		11D3323A1D4AB9D500CE1434 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11D3323C1D4AB9D500CE1434 /* Localizable.strings */; };
-		3AB0A4E49511A9075AA39571 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746A5A91C64819A8B5D740E /* libPods.a */; };
 		5D3781131C74D0C30091269F /* SeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781121C74D0C30091269F /* SeasonViewController.m */; };
 		5D3781161C74D10C0091269F /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3781151C74D10C0091269F /* Season.m */; };
 		5D4B1C431C5A11A20022CA42 /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B1C421C5A11A20022CA42 /* AlertBuilder.m */; };
@@ -27,6 +26,7 @@
 		66B353111D79C591006620FA /* StatisticsModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353101D79C591006620FA /* StatisticsModulePresenter.m */; };
 		66B353161D79C59E006620FA /* StatisticsModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353131D79C59E006620FA /* StatisticsModuleInteractor.m */; };
 		66B3531A1D79C5BF006620FA /* StatisticsModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */; };
+		7A8F7DEE3CCEE043F94378C0 /* Pods_ProkrutObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215079F86FFB1D0C47D63462 /* Pods_ProkrutObjc.framework */; };
 		9F2B3D641DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */; };
 		9F2B3D691DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B3D671DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.m */; };
 		9F2B3D6A1DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2B3D681DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.xib */; };
@@ -100,6 +100,8 @@
 		11D332351D4AB9BF00CE1434 /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
 		11D332361D4AB9BF00CE1434 /* LocalizableConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizableConstants.m; sourceTree = "<group>"; };
 		11D3323B1D4AB9D500CE1434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		158AEB97F4C594FC14D0D437 /* Pods-ProkrutObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProkrutObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProkrutObjc/Pods-ProkrutObjc.release.xcconfig"; sourceTree = "<group>"; };
+		215079F86FFB1D0C47D63462 /* Pods_ProkrutObjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProkrutObjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3781111C74D0C30091269F /* SeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonViewController.h; sourceTree = "<group>"; };
 		5D3781121C74D0C30091269F /* SeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonViewController.m; sourceTree = "<group>"; };
 		5D3781141C74D10C0091269F /* Season.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
@@ -125,8 +127,6 @@
 		66B353181D79C5BF006620FA /* StatisticsModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsModuleRouter.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouter.m; sourceTree = SOURCE_ROOT; };
 		66B353191D79C5BF006620FA /* StatisticsModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsModuleRouterInput.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/Router/StatisticsModuleRouterInput.h; sourceTree = SOURCE_ROOT; };
 		66B353231D79D28D006620FA /* DataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataDisplayManager.h; path = Classes/Helpers/Protocols/DataDisplayManager.h; sourceTree = "<group>"; };
-		7746A5A91C64819A8B5D740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F2B3D621DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerStatisticsTableViewCellObject.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/PlayerStatisticsTableViewCellObject.h; sourceTree = SOURCE_ROOT; };
 		9F2B3D631DC1F22E00B6A33A /* PlayerStatisticsTableViewCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerStatisticsTableViewCellObject.m; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/CellObjects/PlayerStatisticsTableViewCellObject.m; sourceTree = SOURCE_ROOT; };
 		9F2B3D661DC20F7900B6A33A /* StatisticsSeparatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsSeparatorTableViewCell.h; path = ProkrutObjc/Classes/PresentationLayer/UserStories/StatisticsUserStory/Modules/StatisticsModule/View/Cells/StatisticsSeparatorTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -175,12 +175,12 @@
 		B1251EB1170E6C5CFA2F6E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B1251F7E331666D909D1E257 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1251F808D1BD2A97EACF4A6 /* AddMatchDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMatchDataDisplayManager.h; sourceTree = "<group>"; };
-		C1E147EAE57EA703A53559B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CD80FE241C5CF5630000AE22 /* AllUserStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUserStats.h; sourceTree = "<group>"; };
 		CD80FE251C5CF5630000AE22 /* AllUserStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUserStats.m; sourceTree = "<group>"; };
 		DDAF915E1DDEE6D200C7F243 /* ProkrutObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProkrutObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAF91601DDEE6D200C7F243 /* ProkrutObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProkrutObjcTests.m; sourceTree = "<group>"; };
 		DDAF91621DDEE6D200C7F243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F93159E70512ECD6900DBA /* Pods-ProkrutObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProkrutObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProkrutObjc/Pods-ProkrutObjc.debug.xcconfig"; sourceTree = "<group>"; };
 		FD6B348C1C45966100B44AE9 /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
 		FD7C8A141C4C239000A6B424 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		FD7C8A151C4C239000A6B424 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB0A4E49511A9075AA39571 /* libPods.a in Frameworks */,
+				7A8F7DEE3CCEE043F94378C0 /* Pods_ProkrutObjc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +307,23 @@
 				11D3322F1D4AAD0D00CE1434 /* StatisticsService.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		485BEF9E097B6094FEDA48D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				215079F86FFB1D0C47D63462 /* Pods_ProkrutObjc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57774AEF283834BD5D2558D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F93159E70512ECD6900DBA /* Pods-ProkrutObjc.debug.xcconfig */,
+				158AEB97F4C594FC14D0D437 /* Pods-ProkrutObjc.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5D4B1C401C5A11730022CA42 /* Helpers */ = {
@@ -754,8 +771,8 @@
 				B12511B35192D81B8971D0CA /* ProkrutObjc */,
 				DDAF915F1DDEE6D200C7F243 /* ProkrutObjcTests */,
 				B12514C21BE170754A98350E /* Products */,
-				C0EC97562CCB20CC63D21262 /* Pods */,
-				EAB19CFCB70FB486EEF5D98D /* Frameworks */,
+				57774AEF283834BD5D2558D3 /* Pods */,
+				485BEF9E097B6094FEDA48D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -789,15 +806,6 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		C0EC97562CCB20CC63D21262 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */,
-				C1E147EAE57EA703A53559B7 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D448CBE1641ED57A8DB9822F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,14 +826,6 @@
 			path = ProkrutObjcTests;
 			sourceTree = "<group>";
 		};
-		EAB19CFCB70FB486EEF5D98D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7746A5A91C64819A8B5D740E /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FDDADD8E1E26332D00DDD2DD /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,12 +844,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1251CDEC5144CFAFCB5EEE3 /* Build configuration list for PBXNativeTarget "ProkrutObjc" */;
 			buildPhases = (
-				9DA62774AE07F460B7758E3C /* Check Pods Manifest.lock */,
+				50207330C0AE34576D3C33F4 /* [CP] Check Pods Manifest.lock */,
 				B12513497E103516747388D8 /* Sources */,
 				B1251F7CBB15083662BEAB61 /* Frameworks */,
 				B1251ECF1460B2959A6308B5 /* Resources */,
-				22BDEE4058DCF0EE9832CD1F /* Embed Pods Frameworks */,
-				FAC3709EB5456E44C2A4D293 /* Copy Pods Resources */,
+				B80771466B96D15A48EE5324 /* [CP] Embed Pods Frameworks */,
+				9DFBDF282A9A156E3E5E6E9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -948,49 +948,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22BDEE4058DCF0EE9832CD1F /* Embed Pods Frameworks */ = {
+		50207330C0AE34576D3C33F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9DA62774AE07F460B7758E3C /* Check Pods Manifest.lock */ = {
+		9DFBDF282A9A156E3E5E6E9E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProkrutObjc/Pods-ProkrutObjc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FAC3709EB5456E44C2A4D293 /* Copy Pods Resources */ = {
+		B80771466B96D15A48EE5324 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProkrutObjc/Pods-ProkrutObjc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1087,7 +1087,7 @@
 /* Begin XCBuildConfiguration section */
 		B12514C68C8C0FD02512AC1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E147EAE57EA703A53559B7 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 158AEB97F4C594FC14D0D437 /* Pods-ProkrutObjc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1187,7 +1187,7 @@
 		};
 		B1251B59155C19C6275F5624 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C8FADBF33019DEA276C9A8F /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E6F93159E70512ECD6900DBA /* Pods-ProkrutObjc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

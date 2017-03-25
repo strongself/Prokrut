@@ -1,24 +1,26 @@
 platform :ios, "9.0"
+use_frameworks!
 
-source 'git@gitlab.rambler.ru:cocoapods/cocoapods.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-plugin 'cocoapods-keys', {
-    :project => "ProkrutObjc",
-    :keys => [
-    "ParseApplicationId",
-    "ParseClientKey"
-    ]}
 
-pod 'Parse', '~> 1.12'
-pod 'Nimbus/Models', :git => 'https://github.com/rambler-ios/nimbus'
-pod 'CorePlot', '2.0'
-pod 'InputValidators', '~> 1.0'
-pod 'MBProgressHUD', '~> 1.0'
+target "ProkrutObjc" do
+    pod 'Parse', '~> 1.12'
+  pod 'CorePlot', '2.0'
+  pod 'InputValidators', '~> 1.0'
+  pod 'MBProgressHUD', '~> 1.0'
+  pod 'Alamofire'
+  pod 'EasyMapping'
+  pod 'RestKit'
+  pod 'ObjectMapper'
+  pod 'Nimbus'
+  pod 'GoogleAnalytics'
 
-pod 'Typhoon'
-pod 'RamblerTyphoonUtils/AssemblyCollector'
-pod 'ViperMcFlurry'
+  pod 'Typhoon'
+  pod 'RamblerTyphoonUtils/AssemblyCollector'
+  pod 'ViperMcFlurry'
+end
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

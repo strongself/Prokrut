@@ -235,7 +235,7 @@ _model.delegate = (id)[NICellFactory class];
 [tableContents addObject:[NICellObject objectWithCellClass:[LoadMoreCell class]]];
 @endcode
  */
-@interface NICellObject : NSObject <NICellObject, NINibCellObject>
+@interface NICellObject : NSObject <NICellObject>
 
 // Designated initializer.
 - (id)initWithCellClass:(Class)cellClass userInfo:(id)userInfo;
@@ -245,7 +245,6 @@ _model.delegate = (id)[NICellFactory class];
 + (id)objectWithCellClass:(Class)cellClass;
 
 @property (nonatomic, strong) id userInfo;
-@property (nonatomic, strong) UINib *cellNib;
 
 @end
 

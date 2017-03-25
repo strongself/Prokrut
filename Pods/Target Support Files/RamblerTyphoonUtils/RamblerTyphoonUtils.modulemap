@@ -1,0 +1,6 @@
+framework module RamblerTyphoonUtils {
+  umbrella header "RamblerTyphoonUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}
