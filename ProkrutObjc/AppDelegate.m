@@ -12,6 +12,7 @@
 #import <Keys/ProkrutobjcKeys.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 #import "Parse/Parse.h"
+#import <GoogleAnalytics/GAI.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ProkrutobjcKeys *prokrutKeys = [ProkrutobjcKeys new];
+    [[GAI sharedInstance] startTracking];
     
     ParseClientConfiguration *parseClientConfiguration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = [prokrutKeys parseApplicationId];
