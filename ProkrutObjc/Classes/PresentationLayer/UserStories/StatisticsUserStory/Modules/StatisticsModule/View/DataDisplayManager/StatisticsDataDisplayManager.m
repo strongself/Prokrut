@@ -20,6 +20,7 @@ static NSUInteger const kStartRow = 1;
 @property (strong, nonatomic) NITableViewModel *tableViewModel;
 @property (strong, nonatomic) NITableViewActions *tableViewActions;
 @property (strong, nonatomic) NSArray *cellObjects;
+@property (strong, nonatomic) id<UITableViewDelegate> delegate;
 
 @end
 

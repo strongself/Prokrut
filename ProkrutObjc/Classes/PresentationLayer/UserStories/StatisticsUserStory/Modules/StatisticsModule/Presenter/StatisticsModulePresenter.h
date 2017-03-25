@@ -19,5 +19,6 @@
 @property (nonatomic, weak) id<StatisticsModuleViewInput> view;
 @property (nonatomic, strong) id<StatisticsModuleInteractorInput> interactor;
 @property (nonatomic, strong) id<StatisticsModuleRouterInput> router;
+@property (nonatomic, weak) LetterHelper* helpeer;
 
 @end

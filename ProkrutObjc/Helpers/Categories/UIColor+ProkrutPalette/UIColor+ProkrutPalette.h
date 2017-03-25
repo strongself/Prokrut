@@ -16,5 +16,6 @@
 + (UIColor *)prokrutNameGreenColor;
 + (UIColor *)prokrutNameBlueColor;
 + (UIColor *)prokrutNameYellowColor;
++ (UIColor *)brownColor;
 
 @end
