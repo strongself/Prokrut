@@ -39,7 +39,7 @@
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
     
-    NSIndexPath *startIndexPath = [self.dataDisplayManager obtainStartIndexPath];
+//      NSIndexPath *startIndexPath = [self.dataDisplayManager obtainStartIndexPath];
     [self.tableView scrollToRowAtIndexPath:startIndexPath
                           atScrollPosition:UITableViewScrollPositionTop
                                   animated:NO];

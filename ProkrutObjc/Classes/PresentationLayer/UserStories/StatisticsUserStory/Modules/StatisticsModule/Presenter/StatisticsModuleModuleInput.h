@@ -16,6 +16,6 @@
 
  Метод инициирует стартовую конфигурацию текущего модуля
  */
-- (void)configureModule;
+//- (void)configureModule;
 
 @end
