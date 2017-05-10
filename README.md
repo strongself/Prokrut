@@ -21,6 +21,6 @@ pod keys set ParseClientKey "PASTE_YOUR_CLIENT_KEY"
 ## Авторы
 Станислав Цыганов, Егор Толстой, Максим Савушкин, Вадим Смаль
 
-##Лицензия 
+## Лицензия 
 
 [MIT](https://github.com/strongself/Prokrut/blob/develop/LICENSE)
